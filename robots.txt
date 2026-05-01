@@ -1,0 +1,106 @@
+# =========================================
+# robots.txt - Amma Eye Care Hospital
+# Website: https://ammaeyecarehospital.com
+# Last Updated: 2026-04-10
+# =========================================
+
+# -----------------------------------------
+# Allow all major search engine bots
+# -----------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# -----------------------------------------
+# Default rules for all other bots
+# -----------------------------------------
+User-agent: *
+Allow: /
+
+# == MAIN PAGES ==
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /doctors
+Allow: /insurances
+Allow: /contact
+
+# == CONVERSION PAGES ==
+Allow: /appointment
+Allow: /video-consultation
+
+# == CORE SERVICE PAGES ==
+Allow: /service-detail?slug=cataract-surgery
+Allow: /service-detail?slug=lasik-surgery
+Allow: /service-detail?slug=glaucoma-treatment
+Allow: /service-detail?slug=childrens-eye-care
+
+# -----------------------------------------
+# Block admin & backend areas
+# -----------------------------------------
+Disallow: /admin/
+Disallow: /admin-panel/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /register/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# -----------------------------------------
+# Block patient-sensitive / private pages
+# -----------------------------------------
+Disallow: /patient-portal/
+Disallow: /patient-records/
+Disallow: /medical-records/
+Disallow: /appointments/manage/
+Disallow: /prescriptions/
+Disallow: /invoices/
+Disallow: /billing/
+
+# -----------------------------------------
+# Block internal search & duplicate content
+# -----------------------------------------
+Disallow: /search/
+Disallow: /?s=
+Disallow: /?q=
+
+# -----------------------------------------
+# Block dev / staging / temp pages
+# -----------------------------------------
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /dev/
+Disallow: /staging/
+Disallow: /test/
+
+# -----------------------------------------
+# Block checkout / order pages
+# -----------------------------------------
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /order-confirmation/
+
+# -----------------------------------------
+# Block low-value / print pages
+# -----------------------------------------
+Disallow: /tag/
+Disallow: /print/
+Disallow: /*?print=
+Disallow: /*?replytocom=
+
+# -----------------------------------------
+# Sitemap
+# -----------------------------------------
+Sitemap: https://ammaeyecarehospital.com/sitemap.xml
