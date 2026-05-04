@@ -50,7 +50,7 @@ export function Navigation() {
       }`}
       role="banner"
     >
-      <nav className="container" aria-label="Main navigation">
+      <nav className="container max-w-7xl" aria-label="Main navigation">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link
             href="/"
