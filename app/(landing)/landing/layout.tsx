@@ -10,30 +10,35 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ammaeyecarehospital.com"),
+
   title: {
     default: "Amma Eye Care Hospital - Advanced Eye Care Services",
     template: "%s | Amma Eye Care Hospital",
   },
+
   description:
-    "Comprehensive eye care services including cataract surgery, LASIK, children's eye care, glaucoma treatment, and more. Expert ophthalmologists with advanced technology.",
+    "Comprehensive eye care services including cataract surgery, LASIK, children's eye care, glaucoma treatment, and more.",
+
   keywords: [
-    "eye hospital",
-    "eye care",
-    "cataract surgery",
-    "LASIK",
-    "glaucoma",
+    "eye hospital Hyderabad",
+    "cataract surgery Hyderabad",
+    "LASIK Hyderabad",
+    "glaucoma treatment",
     "retina specialist",
-    "eye doctor",
-    "Hyderabad",
   ],
+
   authors: [{ name: "Amma Eye Care Hospital" }],
   creator: "Amma Eye Care Hospital",
   publisher: "Amma Eye Care Hospital",
 
+  alternates: {
+    canonical: "https://ammaeyecarehospital.com",
+  },
+
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://ammaeyecarehospital.com",
+    url: "/",
     siteName: "Amma Eye Care Hospital",
     title: "Amma Eye Care Hospital - Advanced Eye Care Services",
     description:
@@ -63,20 +68,19 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: "/apple-icon.png",
+    apple: "/apple-touch-icon.png",
   },
 
   manifest: "/manifest.json",
 }
 
 export const viewport: Viewport = {
-  themeColor: "#1e3a8a",
+  themeColor: "#3B2E8C",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
 }
 
 export default function RootLayout({
@@ -86,14 +90,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className="font-sans antialiased bg-background text-foreground">
         {children}
       </body>

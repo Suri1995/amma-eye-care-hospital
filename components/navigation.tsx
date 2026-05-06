@@ -92,7 +92,7 @@ export function Navigation() {
 
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="/appointment"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-lg border-2 border-[#1e3a8a] bg-transparent px-4 py-2 text-sm font-semibold text-[#1e3a8a] transition-all hover:bg-[#1e3a8a] hover:text-white"
             >
               Book Appointment
@@ -143,16 +143,10 @@ export function Navigation() {
             })}
             <div className="pt-4 px-4 flex flex-col gap-3">
               <Link
-                href="/appointment"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-lg bg-[#1e3a8a] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#1e3a8a]/90 w-full text-center"
               >
                 Book Appointment
-              </Link>
-              <Link
-                href="/video-consultation"
-                className="inline-flex items-center justify-center rounded-lg bg-[#dc2626] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#dc2626]/90 w-full text-center"
-              >
-                Video Consultation
               </Link>
             </div>
           </div>

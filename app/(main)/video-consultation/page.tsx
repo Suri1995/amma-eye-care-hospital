@@ -373,7 +373,7 @@ export default function VideoConsultationPage() {
                     Some conditions require in-person examination with specialized equipment.
                   </p>
                   <Link
-                    href="/appointment"
+                    href="/contact"
                     className="w-full inline-flex items-center justify-center rounded-lg border border-border bg-transparent px-4 py-2.5 font-medium hover:bg-muted transition-colors"
                   >
                     Book In-Person Appointment

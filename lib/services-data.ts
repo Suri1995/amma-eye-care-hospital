@@ -294,7 +294,7 @@ export const services: Service[] = [
   {
     slug: "customized-cataract-surgeries",
     name: "Customized Cataract Surgeries",
-    image: "/ customized-cataract-surgeries.png",
+    image: "/customized-cataract-surgeries.png",
     overview:
       "Cataract surgery is one of the safest and most effective procedures in modern medicine. We use advanced phacoemulsification technique - a bladeless, minimally invasive procedure that breaks up the cloudy lens using ultrasound waves and replaces it with a clear artificial lens (IOL). Most patients experience immediate vision improvement with minimal discomfort.",
     whoNeeds: [
@@ -1168,7 +1168,7 @@ export const services: Service[] = [
   {
     slug: "pharmacy",
     name: "Pharmacy",
-    image: "/clinic.png",
+    image: "/eye-pharmacy.jpg",
     overview:
       "Our in-house pharmacy stocks all essential eye medications, ensuring you can fill your prescriptions conveniently after your appointment. Our pharmacists are knowledgeable about eye medications and can provide guidance on proper use.",
     whoNeeds: [
