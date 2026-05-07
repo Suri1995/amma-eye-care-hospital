@@ -126,7 +126,7 @@ export function HeroSection() {
 
             <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
               <Image
-                src="/clinic.png"
+                src="/clinic.webp"
                 alt="Amma Eye Care Hospital clinic building in Hyderabad"
                 fill
                 priority
@@ -195,7 +195,7 @@ export function HeroSection() {
             <div aria-hidden="true" className="absolute inset-0 translate-x-2 translate-y-2 rounded-3xl bg-[#3B2E8C]/10" />
             <div className="relative w-full h-60 rounded-3xl overflow-hidden shadow-xl ring-1 ring-black/5">
               <Image
-                src="/clinic.png"
+                src="/clinic.webp"
                 alt="Amma Eye Care Hospital clinic"
                 fill
                 sizes="100vw"

@@ -58,7 +58,7 @@ export function Navigation() {
             aria-label="Amma Eye Care Hospital - Home"
           >
             <Image
-              src="/logo-5b1-5damma.png"
+              src="/amma-eye-care-logo.webp"
               alt="Amma Eye Care Hospital"
               width={180}
               height={50}

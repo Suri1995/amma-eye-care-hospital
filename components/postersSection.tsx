@@ -3,14 +3,14 @@
 import Image from "next/image";
 
 const POSTERS = [
-  { src: "/poster1-image.png",         alt: "Poster 1" },
-  { src: "/poster2-image.png",         alt: "Poster 2" },
-  { src: "/poster3-image.png",         alt: "Poster 3" },
-  { src: "/poster4-image.png",         alt: "Poster 4" },
-  { src: "/poster1-english-image.jpeg", alt: "Poster 1 English" },
-  { src: "/poster2-english-image.jpeg", alt: "Poster 2 English" },
-  { src: "/poster3-english-image.jpeg", alt: "Poster 3 English" },
-  { src: "/poster4-english-image.jpeg", alt: "Poster 4 English" },
+  { src: "/poster1-image.webp",         alt: "Poster 1" },
+  { src: "/poster2-image.webp",         alt: "Poster 2" },
+  { src: "/poster3-image.webp",         alt: "Poster 3" },
+  { src: "/poster4-image.webp",         alt: "Poster 4" },
+  { src: "/poster1-english-image.webp", alt: "Poster 1 English" },
+  { src: "/poster2-english-image.webp", alt: "Poster 2 English" },
+  { src: "/poster3-english-image.webp", alt: "Poster 3 English" },
+  { src: "/poster4-english-image.webp", alt: "Poster 4 English" },
 ];
 
 export default function PostersSection() {

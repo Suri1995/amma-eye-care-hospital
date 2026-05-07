@@ -2,22 +2,22 @@ import Image from "next/image"
 
 const trustIndicators = [
   {
-    icon: "/specialized-services-icon.jpg",
+    icon: "/specialized-services-icon.webp",
     title: "25+ Specialized Services",
     description: "Comprehensive eye care solutions",
   },
   {
-    icon: "/advanced-technology-icon.png",
+    icon: "/advanced-technology-icon.webp",
     title: "Advanced Technology",
     description: "Latest diagnostic & surgical equipment",
   },
   {
-    icon: "/insurance-accepted-icon.jpg",
+    icon: "/insurance-accepted-icon.webp",
     title: "Insurance Accepted",
     description: "Most major insurance plans covered",
   },
   {
-    icon: "/expert-ophthalmologists-icon.png",
+    icon: "/expert-ophthalmologists-icon.webp",
     title: "Expert Ophthalmologists",
     description: "Experienced & caring specialists",
   },

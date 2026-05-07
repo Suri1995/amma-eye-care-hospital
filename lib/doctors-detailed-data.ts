@@ -17,7 +17,7 @@ export const DOCTORS = [
     languages: "English, Telugu, Hindi",
     consultation: "Monday to Saturday",
     location: "Amma Eye Care Hospital L.B.Nagar, Vanasthalipuram Hyderabad",
-    photo: "/dr.sai-rupa-image.jpeg"
+    photo: "/dr.sai-rupa-image.webp"
   },
   {
     slug: "dr-pamba-venkateswarlu",
@@ -38,6 +38,6 @@ export const DOCTORS = [
     languages: "English, Telugu, Hindi",
     consultation: "Monday to Saturday",
     location: "Amma Eye Care Hospital L.B.Nagar, Vanasthalipuram Hyderabad",
-    photo: "/dr.pamba-venkateswarlu-image.jpeg"
+    photo: "/dr.pamba-venkateswarlu-image.webp"
   }
 ]

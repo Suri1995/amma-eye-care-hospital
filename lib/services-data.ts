@@ -18,7 +18,7 @@ export const services: Service[] = [
   {
     slug: "computerized-eye-testing",
     name: "Computerized Eye Testing",
-    image: "/computerized-eye-testing.jpg",
+    image: "/computerized-eye-testing.webp",
     overview:
       "Our advanced computerized diagnostic equipment provides precise, objective measurements of your eyes. These automated tests complement traditional examination methods and help us create the most accurate prescriptions and treatment plans. The process is quick, non-invasive, and highly accurate.",
     whoNeeds: [
@@ -64,7 +64,7 @@ export const services: Service[] = [
   {
     slug: "eye-pressure-test",
     name: "Eye Pressure Test",
-    image: "/eye-pressure-test.png",
+    image: "/eye-pressure-test.webp",
     overview:
       "Intraocular pressure (IOP) measurement is crucial for detecting glaucoma, a leading cause of blindness. Our advanced tonometry equipment provides accurate, comfortable eye pressure readings. Regular monitoring helps identify pressure changes early, allowing for timely intervention.",
     whoNeeds: [
@@ -110,7 +110,7 @@ export const services: Service[] = [
   {
     slug: "visual-fields-testing",
     name: "Visual Fields Testing",
-    image: "/visual-fields-testing.png",
+    image: "/visual-fields-testing.webp",
     overview:
       "Visual field testing measures your peripheral (side) vision and helps detect conditions like glaucoma, retinal diseases, and neurological problems. Our automated perimetry provides detailed mapping of your entire visual field, detecting even subtle vision loss.",
     whoNeeds: [
@@ -156,7 +156,7 @@ export const services: Service[] = [
   {
     slug: "oct-retina-scan",
     name: "OCT (Retina Scan)",
-    image: "/retina-scan.png",
+    image: "/retina-scan.webp",
     overview:
       "Optical Coherence Tomography (OCT) is a revolutionary imaging technology that creates detailed cross-sectional images of your retina. Like an ultrasound using light, it reveals the distinct layers of the retina, helping diagnose and monitor conditions affecting the macula and optic nerve.",
     whoNeeds: [
@@ -202,7 +202,7 @@ export const services: Service[] = [
   {
     slug: "diabetic-hypertension-retinopathy-screening",
     name: "Diabetic & Hypertension Retinopathy Screening",
-    image: "/diabetic-&-hypertension-retinopathy-screening.png",
+    image: "/diabetic-&-hypertension-retinopathy-screening.webp",
     overview:
       "Diabetes can damage the blood vessels in your retina, leading to vision loss if not detected and treated early. Our diabetic retinopathy screening uses advanced imaging to detect changes before you notice any symptoms. Early detection and treatment can prevent 95% of diabetes-related vision loss.",
     whoNeeds: [
@@ -248,7 +248,7 @@ export const services: Service[] = [
   {
     slug: "thyroid-eye-screening",
     name: "Thyroid Eye Screening",
-    image: "/thyroid-eye-screening.png",
+    image: "/thyroid-eye-screening.webp",
     overview:
       "Thyroid eye disease (Graves' ophthalmopathy) can cause significant changes to the eyes and surrounding tissues. Our specialized screening identifies early signs of thyroid-related eye problems, including inflammation, swelling, and eye muscle involvement, allowing for timely treatment.",
     whoNeeds: [
@@ -294,7 +294,7 @@ export const services: Service[] = [
   {
     slug: "customized-cataract-surgeries",
     name: "Customized Cataract Surgeries",
-    image: "/customized-cataract-surgeries.png",
+    image: "/customized-cataract-surgeries.webp",
     overview:
       "Cataract surgery is one of the safest and most effective procedures in modern medicine. We use advanced phacoemulsification technique - a bladeless, minimally invasive procedure that breaks up the cloudy lens using ultrasound waves and replaces it with a clear artificial lens (IOL). Most patients experience immediate vision improvement with minimal discomfort.",
     whoNeeds: [
@@ -340,7 +340,7 @@ export const services: Service[] = [
   {
     slug: "lasik-surgery",
     name: "LASIK - Freedom from Glasses & Contact Lens",
-    image: "/lasik-surgery.png",
+    image: "/lasik-surgery.webp",
     overview:
       "LASIK (Laser-Assisted In Situ Keratomileusis) is a revolutionary procedure that permanently corrects vision by reshaping the cornea. Our blade-free LASIK uses advanced wavefront technology for ultra-precise vision correction. The procedure takes only 10-15 minutes per eye, and most patients achieve 20/20 vision or better.",
     whoNeeds: [
@@ -386,7 +386,7 @@ export const services: Service[] = [
   {
     slug: "icl-implantable-contact-lens",
     name: "ICL - Implantable Contact Lens",
-    image: "/implantable-contact-lens.png",
+    image: "/implantable-contact-lens.webp",
     overview:
       "ICL (Implantable Collamer Lens) is an excellent option for those with high myopia, thin corneas, or dry eyes who may not be suitable for LASIK. This reversible procedure places a biocompatible lens inside your eye, providing exceptional vision quality without altering the cornea.",
     whoNeeds: [
@@ -432,7 +432,7 @@ export const services: Service[] = [
   {
     slug: "cornea-and-anterior-segment",
     name: "Cornea and Anterior Segment Services",
-    image: "/cornea-and-anterior-segment.png",
+    image: "/cornea-and-anterior-segment.webp",
     overview:
       "The cornea is essential for clear vision. Our corneal services include treatment for corneal ulcers, keratoconus, corneal dystrophies, and corneal transplantation. We use the latest techniques including DALK and DSAEK procedures for optimal visual outcomes.",
     whoNeeds: [
@@ -478,7 +478,7 @@ export const services: Service[] = [
   {
     slug: "oculoplasty",
     name: "Oculoplasty",
-    image: "/oculoplasty.png",
+    image: "/oculoplasty.webp",
     overview:
       "Oculoplasty involves surgical procedures for the eyelids, tear ducts, and orbit. Whether for functional improvement (droopy eyelids affecting vision) or cosmetic enhancement, our oculoplasty surgeon provides expert care using the latest techniques.",
     whoNeeds: [
@@ -524,7 +524,7 @@ export const services: Service[] = [
   {
     slug: "yag-laser",
     name: "YAG Laser",
-    image: "/yag-laser.png",
+    image: "/yag-laser.webp",
     overview:
       "YAG laser capsulotomy is a quick, painless procedure to treat posterior capsule opacification (PCO), also called 'secondary cataract.' After cataract surgery, the lens capsule can become cloudy, causing blurred vision. YAG laser creates a clear opening to restore vision.",
     whoNeeds: [
@@ -570,7 +570,7 @@ export const services: Service[] = [
   {
     slug: "advanced-refractive-procedures",
     name: "Advanced Refractive Procedures",
-    image: "/advanced-refractive-procedure.jpg",
+    image: "/advanced-refractive-procedure.webp",
     overview:
       "Our comprehensive refractive surgery program offers customized solutions for vision correction. Whether you're a young adult seeking freedom from glasses or need specialized treatment for complex prescriptions, we have advanced options tailored to your eyes.",
     whoNeeds: [
@@ -616,7 +616,7 @@ export const services: Service[] = [
   {
     slug: "myopia-management",
     name: "Myopia Management",
-    image: "/myopia.png",
+    image: "/myopia.webp",
     overview:
       "Myopia (nearsightedness) is increasing rapidly among children. Our myopia control program uses evidence-based interventions including special contact lenses, atropine drops, and orthokeratology to slow progression and protect long-term eye health.",
     whoNeeds: [
@@ -662,7 +662,7 @@ export const services: Service[] = [
   {
     slug: "refractive-cornea-collagen-cross-linking",
     name: "Refractive Cornea Collagen Cross-Linking",
-    image: "/refractive-cornea-collagen-cross-linking.png",
+    image: "/refractive-cornea-collagen-cross-linking.webp",
     overview:
       "Corneal collagen cross-linking (C3R/CXL) is a minimally invasive procedure that strengthens the cornea to halt progression of keratoconus and post-LASIK ectasia. By using riboflavin and UV light, we create new bonds between corneal collagen fibers.",
     whoNeeds: [
@@ -708,7 +708,7 @@ export const services: Service[] = [
   {
     slug: "soft-rgp-contact-lenses",
     name: "Contact Lenses - Soft & RGP Lenses",
-    image: "/soft-&-rgp-lenses.png",
+    image: "/soft-&-rgp-lenses.webp",
     overview:
       "Our contact lens clinic offers comprehensive fitting services for all types of contact lenses. From daily disposables to specialized rigid gas permeable lenses, we find the perfect solution for your eyes and lifestyle.",
     whoNeeds: [
@@ -754,7 +754,7 @@ export const services: Service[] = [
   {
     slug: "scleral-lenses",
     name: "Scleral Lenses",
-    image: "/scleral-lenses.jpg",
+    image: "/scleral-lenses.webp",
     overview:
       "Scleral lenses are large-diameter gas permeable lenses that vault over the cornea and rest on the sclera (white of the eye). They provide superior comfort and vision for patients with irregular corneas, severe dry eye, or those who have failed with other contact lenses.",
     whoNeeds: [
@@ -800,7 +800,7 @@ export const services: Service[] = [
   {
     slug: "orthokeratology",
     name: "Orthokeratology",
-    image: "/orthokeratology.jpeg",
+    image: "/orthokeratology.webp",
     overview:
       "Orthokeratology (Ortho-K) uses specially designed rigid gas permeable lenses worn overnight to temporarily reshape the cornea. Wake up to clear vision without glasses or daytime contacts. It's also proven effective for myopia control in children.",
     whoNeeds: [
@@ -846,7 +846,7 @@ export const services: Service[] = [
   {
     slug: "children-eye-checkup",
     name: "Children's Eye Checkup",
-    image: "/children-eye-checkup.png",
+    image: "/children-eye-checkup.webp",
     overview:
       "Children's vision is crucial for their development and learning. Our pediatric ophthalmology services are designed to be child-friendly and stress-free. We diagnose and treat all childhood eye conditions including lazy eye (amblyopia), crossed eyes (strabismus), and refractive errors. Early detection and treatment can prevent permanent vision problems.",
     whoNeeds: [
@@ -892,7 +892,7 @@ export const services: Service[] = [
   {
     slug: "gadget-vision-syndrome",
     name: "Gadget Vision Syndrome",
-    image: "/gadget-vision-syndrome.png",
+    image: "/gadget-vision-syndrome.webp",
     overview:
       "Computer Vision Syndrome affects millions of people who spend hours on digital devices. Symptoms include eye fatigue, headaches, dry eyes, and blurred vision. We provide comprehensive solutions including specialized computer glasses, blue light filtering options, and personalized recommendations for screen ergonomics and habits.",
     whoNeeds: [
@@ -938,7 +938,7 @@ export const services: Service[] = [
   {
     slug: "squint-treatment",
     name: "Squint Treatment",
-    image: "/exam.png",
+    image: "/exam.webp",
     overview:
       "Squint (strabismus) affects eye alignment and can impact vision, depth perception, and self-confidence. Our specialists provide comprehensive evaluation and treatment including non-surgical options (vision therapy, prisms) and surgical correction when needed, for patients of all ages.",
     whoNeeds: [
@@ -984,7 +984,7 @@ export const services: Service[] = [
   {
     slug: "low-vision-devices",
     name: "Low Vision Devices",
-    image: "/low-vision-devices.png",
+    image: "/low-vision-devices.webp",
     overview:
       "Low vision rehabilitation helps patients with significant vision loss maximize their remaining vision. We provide comprehensive assessment and training with specialized devices and techniques to help you maintain independence and quality of life.",
     whoNeeds: [
@@ -1030,7 +1030,7 @@ export const services: Service[] = [
   {
     slug: "glaucoma-services",
     name: "Glaucoma Services",
-    image: "/eye-pressure-test.png",
+    image: "/eye-pressure-test.webp",
     overview:
       "Glaucoma is often called the 'silent thief of sight' because it has no early symptoms. We provide comprehensive glaucoma management including early detection, medical treatment, laser therapy, and surgical options. Our goal is to preserve your vision through regular monitoring and appropriate treatment to control eye pressure.",
     whoNeeds: [
@@ -1076,7 +1076,7 @@ export const services: Service[] = [
   {
     slug: "retinal-detachment-treatment",
     name: "Retinal Detachment Treatment",
-    image: "/retina-scan.png",
+    image: "/retina-scan.webp",
     overview:
       "Retinal detachment is a sight-threatening emergency requiring immediate treatment. Our retina specialists are equipped to handle these urgent cases with advanced surgical techniques including vitrectomy, scleral buckle, and pneumatic retinopexy to preserve and restore vision.",
     whoNeeds: [
@@ -1122,7 +1122,7 @@ export const services: Service[] = [
   {
     slug: "optical-shop",
     name: "Optical Shop",
-    image: "/spectacular.png",
+    image: "/spectacular.webp",
     overview:
       "Our in-house optical shop offers a wide selection of frames from leading brands, along with high-quality lenses including progressive, anti-reflective, and blue-light filtering options. Our trained opticians help you find the perfect fit and style.",
     whoNeeds: [
@@ -1168,7 +1168,7 @@ export const services: Service[] = [
   {
     slug: "pharmacy",
     name: "Pharmacy",
-    image: "/eye-pharmacy.jpg",
+    image: "/eye-pharmacy.webp",
     overview:
       "Our in-house pharmacy stocks all essential eye medications, ensuring you can fill your prescriptions conveniently after your appointment. Our pharmacists are knowledgeable about eye medications and can provide guidance on proper use.",
     whoNeeds: [

@@ -6,7 +6,7 @@ export const DOCTORS = [
     specialization: "Cataract and Refractive Surgery",
     experience: "7+ Years",
     languages: "English, Telugu, Hindi",
-    photo: "/dr.sai-rupa-image.jpeg"
+    photo: "/dr.sai-rupa-image.webp"
   },
   {
     slug: "dr-pamba-venkateswarlu",
@@ -15,6 +15,6 @@ export const DOCTORS = [
     specialization: "Cataract, Medical Retina and Glaucoma, Paediatric eye care, Myopia Management and Geriatric Ophthalmology",
     experience: "45+ years experience in ophthalmology",
     languages: "English, Telugu, Hindi",
-    photo: "/dr.pamba-venkateswarlu-image.jpeg"
+    photo: "/dr.pamba-venkateswarlu-image.webp"
   }
 ]

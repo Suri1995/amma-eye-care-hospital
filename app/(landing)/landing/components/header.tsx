@@ -79,7 +79,7 @@ export function Header() {
           {/* Logo */}
           <a href="#" className="flex items-center group">
             <Image
-              src="/amma-eye-care-logo.png"
+              src="/amma-eye-care-logo.webp"
               alt="Amma Eye Care"
               width={200}
               height={50}
@@ -146,7 +146,7 @@ export function Header() {
                   <div className="flex items-center justify-between border-b border-gray-100 p-4 sm:p-5 bg-white">
                     <a href="#" onClick={() => setIsOpen(false)}>
                       <Image
-                        src="/amma-eye-care-logo.png"
+                        src="/amma-eye-care-logo.webp"
                         alt="Amma Eye Care"
                         width={140}
                         height={35}

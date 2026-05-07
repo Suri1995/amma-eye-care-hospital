@@ -25,7 +25,7 @@ export default function AboutStory() {
 
         <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden">
           <Image
-            src="/clinic.png"
+            src="/clinic.webp"
             alt="Amma Eye Care Hospital interior"
             fill
             className="object-cover"

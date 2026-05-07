@@ -62,7 +62,7 @@ export function ServicesSection() {
 
       {/* Right vector */}
       <Image
-        src="/right-vector-image.png"
+        src="/right-vector-image.webp"
         alt=""
         width={330}
         height={200}

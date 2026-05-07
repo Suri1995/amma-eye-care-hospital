@@ -96,7 +96,7 @@ export function Footer() {
           <div className="md:col-span-2 lg:col-span-1 pb-6 md:pb-0 border-b border-white/10 md:border-none">
             <a href="#" className="mb-5 sm:mb-6 flex items-center gap-2 sm:gap-3 group inline-flex">
               <Image
-                            src="/amma-eye-care-logo.png"
+                            src="/amma-eye-care-logo.webp"
                             alt="Amma Eye Care"
                             width={200}
                             height={50}
