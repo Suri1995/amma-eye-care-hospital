@@ -17,7 +17,7 @@ export default function AboutCTA() {
 
           <CardContent className="relative p-8 md:p-12 text-center text-white">
 
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">
+            <h2 className="text-4xl md:text-5xl leading-tight font-extrabold mb-4 tracking-tight">
               Experience the Difference
             </h2>
 

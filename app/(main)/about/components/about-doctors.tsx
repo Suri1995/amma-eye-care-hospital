@@ -19,7 +19,7 @@ export default function AboutDoctors() {
           {DOCTORS.map((doctor) => (
             <div
               key={doctor.slug}
-              className="flex flex-col md:flex-row gap-6 bg-white border border-[#e6edf6] rounded-[20px] shadow-sm hover:shadow-md transition-all duration-200 p-4 md:p-5"
+              className="group flex flex-col gap-6 rounded-[28px] border border-[#e8eef8] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl md:flex-row md:p-6"
             >
 
               {/* Image */}

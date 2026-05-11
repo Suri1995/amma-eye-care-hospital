@@ -2,34 +2,58 @@ import Image from "next/image"
 
 export default function AboutStory() {
   return (
-    <section className="py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-        
+    <section className="bg-white py-16 md:py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 lg:grid-cols-2">
+
+        {/* Content */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Story
+
+          <div className="mb-4 inline-flex rounded-full bg-blue-50 px-4 py-1 text-sm font-semibold text-[#1e3a8a]">
+            Our Journey
+          </div>
+
+          <h2 className="text-3xl font-bold leading-tight text-[#1e3a8a] md:text-5xl">
+            Building Trust Through Exceptional Vision Care
           </h2>
 
-          <div className="space-y-4 text-[#526B8C] leading-relaxed">
+          <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-[#526B8C] md:text-base">
             <p>
-              Founded with a vision to make world-class eye care accessible to everyone...
+              Amma Eye Care Hospital was founded with a mission to provide
+              accessible, ethical, and advanced eye care services for every
+              patient.
             </p>
+
             <p>
-              Our journey has been guided by a simple principle: every patient deserves the best possible care...
+              Over the years, we have combined compassionate healthcare with
+              modern ophthalmic technology to deliver outstanding treatment
+              outcomes and patient experiences.
             </p>
+
             <p>
-              Today, we offer a complete range of ophthalmology services...
+              Today, our hospital continues to serve patients with comprehensive
+              diagnostic, medical, and surgical eye care solutions under one
+              roof.
             </p>
           </div>
+
         </div>
 
-        <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden">
-          <Image
-            src="/about-image.webp"
-            alt="Amma Eye Care Hospital interior"
-            fill
-            className="object-cover"
-          />
+        {/* Image */}
+        <div className="relative">
+
+          <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-[#1e3a8a]/20 to-blue-200 blur-2xl" />
+
+          <div className="relative overflow-hidden rounded-[28px] border border-white/30 shadow-2xl">
+            <Image
+              src="/about-image.webp"
+              alt="Amma Eye Care Hospital"
+              width={800}
+              height={600}
+              className="h-[420px] w-full object-cover"
+              priority
+            />
+          </div>
+
         </div>
 
       </div>
