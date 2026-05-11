@@ -98,7 +98,7 @@ export function HeroSection() {
                   <Eye className="w-5 h-5 text-[#3B2E8C]" />
                 </div>
                 <div>
-                  <p className="text-2xl font-black text-black leading-none">20k+</p>
+                  <p className="text-2xl font-black text-black leading-none">50k+</p>
                   <p className="text-xs text-slate-500 mt-0.5">Happy Patients</p>
                 </div>
               </div>
@@ -241,7 +241,7 @@ export function HeroSection() {
                 <Eye className="w-4 h-4 text-[#3B2E8C]" />
               </div>
               <div>
-                <p className="text-xl font-black text-black leading-none">20k+</p>
+                <p className="text-xl font-black text-black leading-none">50k+</p>
                 <p className="text-[10px] text-slate-500 mt-0.5">Happy Patients</p>
               </div>
             </div>
