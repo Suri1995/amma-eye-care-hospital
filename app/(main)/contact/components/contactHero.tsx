@@ -50,7 +50,7 @@ export default function ContactHero() {
         {/* Quick stat chips */}
         <div className="mt-8 flex flex-wrap gap-3" role="list" aria-label="Hospital highlights">
           {[
-            { icon: "🕘", text: "Mon–Sat · 8AM–8PM" },
+            { icon: "🕘", text: "Mon–Sat : 8AM–8PM" },
             { icon: "📍", text: "Hyderabad, Telangana" },
             { icon: "📞", text: "+91 92464 46244" },
           ].map((item) => (

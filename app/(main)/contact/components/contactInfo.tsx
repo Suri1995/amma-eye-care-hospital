@@ -68,11 +68,9 @@ const INFO_ITEMS = [
     label: "Working hours",
     content: (
       <>
-        Monday – Saturday<br />
-        9:00 AM – 6:00 PM<br />
-        <span className="mt-0.5 inline-block text-[11.5px] text-[#8b92b8]">
-          Sunday: Closed
-        </span>
+        Monday – Saturday: 8:00 AM – 8:00 PM<br />
+        
+          Sunday: 10:00 AM - 4:00 PM
       </>
     ),
   },
