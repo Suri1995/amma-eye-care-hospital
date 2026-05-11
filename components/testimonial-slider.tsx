@@ -14,7 +14,7 @@ const GAP = 20
 
 function StarIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="#e8341c" aria-hidden="true">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="#FFDF00" aria-hidden="true">
       <path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.1l-3.6 1.9.7-4L2 5.2l4-.6z" />
     </svg>
   )
@@ -120,7 +120,7 @@ export function TestimonialSlider() {
               }}
             >
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between" }}>
-                <span style={{ fontSize: 52, lineHeight: 0.75, color: "rgba(232,52,28,0.25)", fontWeight: 700, userSelect: "none" }} aria-hidden="true">"</span>
+                <span style={{ fontSize: 52, lineHeight: 0.75, color: "#dc2626", fontWeight: 700, userSelect: "none" }} aria-hidden="true">"</span>
                 <div style={{ display: "flex", gap: 3, paddingTop: 2 }} aria-label="5 out of 5 stars">
                   {Array.from({ length: 5 }, (_, j) => <StarIcon key={j} />)}
                 </div>

@@ -19,12 +19,7 @@ export default function PostersSection() {
   return (
     <section
       aria-label="Amma Eye Care Hospital Posters"
-      className="py-16 overflow-hidden"
-      style={{
-        backgroundImage:
-          "radial-gradient(352.28% 126.05% at 23.26% 0, #a5f2f0 23.48%, #ddf9b6 100%)",
-      }}
-    >
+      className="py-16 overflow-hidden bg-gradient-to-br from-[#1e3a8a] via-[#2563eb] to-[#90bff9]">
       {/* Viewport */}
       <div className="w-full overflow-hidden">
 

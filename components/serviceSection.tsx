@@ -80,7 +80,7 @@ export function ServicesSection() {
           </div>
           <h2
             id="services-heading"
-            className="text-3xl font-black tracking-tight text-[#6a1818] sm:text-4xl lg:text-5xl"
+            className="text-3xl font-black tracking-tight text-primary sm:text-4xl lg:text-5xl"
           >
             Our Top Services
           </h2>

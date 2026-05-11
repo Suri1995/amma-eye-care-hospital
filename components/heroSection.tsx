@@ -155,7 +155,7 @@ export function HeroSection() {
                 </span>
                 <div>
                   <p className="text-sm font-bold leading-none">Doctors Available</p>
-                  <p className="text-xs opacity-70 mt-0.5">Mon – Sat, 10am – 8pm</p>
+                  <p className="text-xs opacity-70 mt-0.5">Mon – Sat, 8am – 8pm</p>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@ export function HeroSection() {
                 </span>
                 <div>
                   <p className="text-[11px] font-bold text-white leading-none">Doctors Available</p>
-                  <p className="text-[10px] text-white/65 mt-0.5">Mon – Sat, 10am – 8pm</p>
+                  <p className="text-[10px] text-white/65 mt-0.5">Mon – Sat, 8am – 8pm</p>
                 </div>
               </div>
             </div>

@@ -49,7 +49,7 @@ export function Header() {
             </span>
             <span className="hidden sm:flex items-center gap-1.5 text-xs sm:text-sm text-white/90">
               <Clock className="h-3.5 w-3.5" />
-              Mon-Sat: 10:30 AM - 8:00 PM
+              Mon-Sat: 8:00 AM - 8:00 PM
             </span>
           </div>
           <div className="flex items-center gap-4 sm:gap-6">

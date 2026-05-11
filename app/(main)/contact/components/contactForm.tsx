@@ -182,7 +182,7 @@ function FieldGroup({
     <div className="flex flex-col gap-1.5">
       <label
         htmlFor={id}
-        className="flex items-center gap-1.5 text-[11.5px] font-semibold uppercase tracking-[0.06em] text-[#7a93b3]"
+        className="flex items-center gap-1.5 text-[11.5px] font-semibold uppercase tracking-[0.06em] text-[#2a4972]"
       >
         {icon && <span aria-hidden="true">{icon}</span>}
         {label}
@@ -396,21 +396,21 @@ export default function ContactForm({
       {step === 0 && (
         <div className="space-y-4 animate-in fade-in slide-in-from-right-2 duration-200">
           <div className="grid gap-4 sm:grid-cols-2">
-            <FieldGroup id="firstName" label="First name" required icon={<User className="h-3 w-3 text-[#7a93b3]" />}>
+            <FieldGroup id="firstName" label="First name" required icon={<User className="h-3 w-3 text-[#2a4972]" />}>
               <FormInput id="firstName" name="firstName" type="text" placeholder="Ravi" required autoComplete="given-name" onChange={handleNativeChange} />
             </FieldGroup>
 
-            <FieldGroup id="lastName" label="Last name" required icon={<User className="h-3 w-3 text-[#7a93b3]" />}>
+            <FieldGroup id="lastName" label="Last name" required icon={<User className="h-3 w-3 text-[#2a4972]" />}>
               <FormInput id="lastName" name="lastName" type="text" placeholder="Kumar" required autoComplete="family-name" onChange={handleNativeChange} />
             </FieldGroup>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <FieldGroup id="email" label="Email" required icon={<Mail className="h-3 w-3 text-[#7a93b3]" />}>
+            <FieldGroup id="email" label="Email" required icon={<Mail className="h-3 w-3 text-[#2a4972]" />}>
               <FormInput id="email" name="email" type="email" placeholder="ravi@example.com" required autoComplete="email" onChange={handleNativeChange} />
             </FieldGroup>
 
-            <FieldGroup id="phone" label="Phone" required icon={<Phone className="h-3 w-3 text-[#7a93b3]" />}>
+            <FieldGroup id="phone" label="Phone" required icon={<Phone className="h-3 w-3 text-[#2a4972]" />}>
               <FormInput id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required autoComplete="tel" onChange={handleNativeChange} />
             </FieldGroup>
           </div>
@@ -420,7 +420,7 @@ export default function ContactForm({
               type="button"
               onClick={() => setStep(1)}
               disabled={!canAdvanceStep0}
-              className="inline-flex items-center gap-2 rounded-[10px] bg-[#1e3a8a] px-6 py-2.5 text-[13.5px] font-semibold text-white transition-all hover:bg-[#185fa5] disabled:opacity-40"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-[#1e3a8a] px-6 py-2.5 text-[13.5px] font-semibold text-white transition-all hover:bg-[#185fa5] disabled:opacity-40 cursor-pointer"
             >
               Continue
             </button>
@@ -436,7 +436,7 @@ export default function ContactForm({
           </FieldGroup>
 
           <div className="flex flex-col gap-1.5">
-            <div className="flex items-center gap-1.5 text-[11.5px] font-semibold uppercase text-[#7a93b3]">
+            <div className="flex items-center gap-1.5 text-[11.5px] font-semibold uppercase text-[#2a4972]">
               <Clock className="h-3 w-3" />
               Appointment time *
             </div>
@@ -458,7 +458,7 @@ export default function ContactForm({
               type="button"
               onClick={() => setStep(2)}
               disabled={!canAdvanceStep1}
-              className="bg-[#1e3a8a] text-white px-6 py-2.5 rounded-[10px] disabled:opacity-40"
+              className="bg-[#1e3a8a] text-white px-6 py-2.5 rounded-[10px] disabled:opacity-40 cursor-pointer"
             >
               Continue
             </button>
@@ -504,7 +504,7 @@ export default function ContactForm({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-[#1e3a8a] text-white px-6 py-2.5 rounded-[10px]"
+              className="bg-[#1e3a8a] text-white px-6 py-2.5 rounded-[10px] cursor-pointer"
             >
               {isSubmitting ? "Submitting..." : "Book Appointment"}
             </button>

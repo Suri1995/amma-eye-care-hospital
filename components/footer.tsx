@@ -101,17 +101,17 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/lasik-freedom-from-glasses-contact-lens" className="text-white/80 hover:text-white transition-colors">
+                <Link href="/services/lasik-surgery" className="text-white/80 hover:text-white transition-colors">
                   LASIK Surgery
                 </Link>
               </li>
               <li>
-                <Link href="/services/glaucoma" className="text-white/80 hover:text-white transition-colors">
+                <Link href="/services/glaucoma-services" className="text-white/80 hover:text-white transition-colors">
                   Glaucoma Treatment
                 </Link>
               </li>
               <li>
-                <Link href="/services/childrens-eye-checkup" className="text-white/80 hover:text-white transition-colors">
+                <Link href="/services/children-eye-checkup" className="text-white/80 hover:text-white transition-colors">
                   Children&apos;s Eye Care
                 </Link>
               </li>

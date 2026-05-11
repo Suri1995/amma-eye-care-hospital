@@ -936,6 +936,63 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "digital-eye-strain",
+    name: "Digital Eye Strain",
+    image: "/digital-eye-strain.webp",
+    overview:
+      "Digital Eye Strain (also known as Computer Vision Syndrome) is a growing concern in our screen-dependent world. Prolonged use of smartphones, tablets, laptops, and desktop monitors forces your eyes to work harder than normal — causing a cluster of symptoms that affect vision, comfort, and productivity. At Amma Eye Care, we offer a dedicated assessment and management programme to diagnose the root cause of your digital eye fatigue and provide lasting relief through a personalised combination of optical corrections, therapeutic drops, and evidence-based lifestyle guidance.",
+    whoNeeds: [
+      "Professionals spending 6+ hours a day on screens",
+      "Students attending online classes or using e-learning platforms",
+      "Gamers experiencing eye fatigue, redness, or blurred vision after long sessions",
+      "Children using tablets or smartphones for extended periods",
+      "Anyone with existing dry eye, uncorrected refractive errors, or poor workstation ergonomics",
+      "Those who frequently experience headaches or neck pain linked to screen use",
+    ],
+    diagnosis: [
+      "Comprehensive refraction to detect uncorrected or under-corrected refractive errors",
+      "Binocular vision and convergence assessment (near point of convergence testing)",
+      "Tear film evaluation and tear break-up time (TBUT) measurement",
+      "Meibomian gland assessment for evaporative dry eye",
+      "Contrast sensitivity and glare testing under simulated screen conditions",
+      "Ergonomics and screen-usage history review",
+    ],
+    treatment: [
+      "Personalised anti-reflective and blue-light-filtering spectacle prescription",
+      "Prescribed lubricating eye drops (preservative-free) tailored to dry eye severity",
+      "Vision therapy exercises to strengthen accommodation and convergence",
+      "Structured 20-20-20 break programme with patient-specific screen-time limits",
+      "Meibomian gland therapy (warm compresses + lid hygiene) for evaporative dry eye",
+      "Workstation optimisation advice: screen height, ambient lighting, font size, and refresh rate",
+    ],
+    faqs: [
+      {
+        q: "How is Digital Eye Strain different from Gadget Vision Syndrome?",
+        a: "Both refer to eye and visual discomfort caused by prolonged screen use. Digital Eye Strain is the clinically preferred term covering all digital devices — phones, tablets, laptops, and TVs — whereas Gadget Vision Syndrome is a broader colloquial term. Our dedicated Digital Eye Strain clinic goes deeper, addressing tear-film health, binocular vision imbalances, and ergonomic factors beyond just lens prescriptions.",
+      },
+      {
+        q: "Can digital screens permanently damage my eyes?",
+        a: "Current evidence does not show that screen use causes permanent structural damage to the eyes. However, chronic, unmanaged digital eye strain can worsen dry eye disease over time and may accelerate myopia progression in children. Early management prevents these secondary complications.",
+      },
+      {
+        q: "My child spends hours on a tablet for school. Should I be worried?",
+        a: "Yes, children are particularly vulnerable. Sustained near work on screens reduces blink rate, strains the focusing system, and is a well-established risk factor for myopia onset and progression. We recommend an eye assessment for any child spending more than 2 hours daily on screens, along with at least 1-2 hours of outdoor time per day.",
+      },
+      {
+        q: "Will blue-light-blocking glasses solve my problem?",
+        a: "Blue-light filters help reduce glare and may improve sleep quality when used in the evening, but they are only one part of the solution. Most digital eye strain symptoms stem from reduced blink rate, poor ergonomics, or an uncorrected refractive error — none of which are addressed by blue-light lenses alone. A full evaluation will identify what is actually driving your symptoms.",
+      },
+      {
+        q: "How quickly can I expect relief after starting treatment?",
+        a: "Many patients notice significant improvement in eye comfort within 1-2 weeks of following their prescribed drop schedule, wearing corrected lenses, and adopting structured screen breaks. Dry eye and binocular vision issues may take 4-8 weeks of therapy for full resolution.",
+      },
+      {
+        q: "Do I need to stop using screens entirely?",
+        a: "No. The goal of our programme is to make screen use sustainable and comfortable — not to eliminate it. We work around your professional and personal screen requirements, providing practical strategies that fit your lifestyle.",
+      },
+    ],
+  },
+  {
     slug: "squint-treatment",
     name: "Squint Treatment",
     image: "/exam.webp",
