@@ -114,7 +114,6 @@ function AppointmentTimePicker({
           selected={value}
           onSelect={onChange}
         />
-        <div className="w-px self-stretch bg-[#dce6f2]" aria-hidden="true" />
         <SlotColumn
           label="Afternoon"
           icon={<Sunset className="h-3 w-3 text-[#185fa5]" aria-hidden="true" />}
