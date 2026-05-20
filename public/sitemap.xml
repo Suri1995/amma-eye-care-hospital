@@ -7,43 +7,36 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://ammaeyecarehospital.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://ammaeyecarehospital.com/services</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://ammaeyecarehospital.com/doctors</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://ammaeyecarehospital.com/insurances</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://ammaeyecarehospital.com/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://ammaeyecarehospital.com/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
   <url>
     <loc>https://ammaeyecarehospital.com/video-consultation</loc>
     <changefreq>weekly</changefreq>
@@ -56,34 +49,160 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://ammaeyecarehospital.com/doctors/dr-pamba-venkateswarlu</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Services -->
+  <!-- All 30 Services -->
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/advanced-refractive-procedures</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/children-eye-checkup</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/childrens-eye-checkup</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/computerized-eye-testing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/cornea-and-anterior-segment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://ammaeyecarehospital.com/services/customized-cataract-surgeries</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://ammaeyecarehospital.com/services/lasik-surgery</loc>
+    <loc>https://ammaeyecarehospital.com/services/diabetic-hypertension-retinopathy-screening</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/digital-eye-strain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/eye-pressure-test</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/gadget-vision-syndrome</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/glaucoma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://ammaeyecarehospital.com/services/glaucoma-services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://ammaeyecarehospital.com/services/children-eye-checkup</loc>
+    <loc>https://ammaeyecarehospital.com/services/icl-implantable-contact-lens</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/lasik-freedom-from-glasses-contact-lens</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/lasik-surgery</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/low-vision-devices</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/myopia-management</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/oct-retina-scan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/oculoplasty</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/optical-shop</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/orthokeratology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/pharmacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/refractive-cornea-collagen-cross-linking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/retinal-detachment-treatment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/scleral-lenses</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/soft-rgp-contact-lenses</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/squint-treatment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/thyroid-eye-screening</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/visual-fields-testing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ammaeyecarehospital.com/services/yag-laser</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
