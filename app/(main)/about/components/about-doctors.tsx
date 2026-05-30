@@ -5,7 +5,7 @@ import { Award } from "lucide-react"
 export default function AboutDoctors() {
   return (
     <section className="py-12 md:py-16 bg-[#f8fafc]">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
         <div className="text-center mb-12">

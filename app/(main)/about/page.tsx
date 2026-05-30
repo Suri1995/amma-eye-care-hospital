@@ -4,6 +4,7 @@ import AboutStory from "./components/about-story"
 import AboutValues from "./components/about-values"
 import AboutDoctors from "./components/about-doctors"
 import AboutCTA from "./components/about-cta"
+import VisionMission from "./components/vision-mission"
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -16,6 +17,7 @@ export default function AboutPage() {
     <main id="main-content">
       <AboutHero />
       <AboutStory />
+      <VisionMission/>
       <AboutValues />
       <AboutDoctors />
       <AboutCTA />

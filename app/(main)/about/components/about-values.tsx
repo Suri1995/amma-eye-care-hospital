@@ -35,7 +35,7 @@ const values = [
 export default function AboutValues() {
   return (
     <section className="bg-[#f8fbff] py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-[#1e3a8a] md:text-5xl">

@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function AboutStory() {
   return (
     <section className="bg-white py-16 md:py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl px-4 sm:px-6 lg:px-8 items-center gap-14 px-4 lg:grid-cols-2">
 
         {/* Content */}
         <div>

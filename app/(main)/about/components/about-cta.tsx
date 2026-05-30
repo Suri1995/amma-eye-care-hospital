@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function AboutCTA() {
   return (
     <section className="py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <Card className="relative overflow-hidden rounded-2xl shadow-xl border-0">
           
