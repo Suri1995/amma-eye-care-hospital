@@ -55,7 +55,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     <main id="main-content">
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="bg-muted/30 py-3">
-        <div className="container">
+        <div className="container max-w-7xl">
           <ol
             className="flex items-center gap-2 text-sm flex-wrap"
             itemScope

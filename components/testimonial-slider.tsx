@@ -3,11 +3,31 @@
 import { useState, useCallback, useEffect, useRef } from "react"
 
 const testimonials = [
-  { name: "Ramesh Kumar", role: "Home Interior Client", text: "Craftvasi designed our home beautifully. Their team handled everything professionally from design to execution." },
-  { name: "Sneha Reddy", role: "Residential Client", text: "Their custom furniture quality is excellent. Highly recommended for home interiors." },
-  { name: "Anil Sharma", role: "Villa Project Client", text: "The entire journey was smooth and transparent. The final outcome matched exactly what was promised." },
-  { name: "Priya Nair", role: "Apartment Renovation Client", text: "Outstanding attention to detail and superb craftsmanship. Our living room transformation was beyond expectations." },
-  { name: "Vikram Mehta", role: "Commercial Office Client", text: "Craftvasi delivered our office interior on time and on budget. The team was responsive and creative throughout." },
+  {
+    name: "Ramesh Kumar",
+    role: "Cataract Surgery Patient",
+    text: "The entire cataract surgery process was seamless and professionally managed. Thanks to the expert care at Amma Eye Care Hospital, my vision is clearer than ever."
+  },
+  {
+    name: "Sneha Reddy",
+    role: "LASIK Patient",
+    text: "The doctors explained every step of the LASIK procedure and made me feel comfortable throughout. The results have been life-changing."
+  },
+  {
+    name: "Anil Sharma",
+    role: "Retina Care Patient",
+    text: "I received exceptional treatment for my retinal condition. The medical team was knowledgeable, caring, and highly responsive during every visit."
+  },
+  {
+    name: "Priya Nair",
+    role: "Pediatric Eye Care Parent",
+    text: "The doctors were wonderful with my child and conducted a detailed eye examination. We felt reassured and well-informed throughout the consultation."
+  },
+  {
+    name: "Vikram Mehta",
+    role: "Comprehensive Eye Check-up Patient",
+    text: "From appointment booking to consultation, the experience was smooth and efficient. The staff and doctors demonstrated genuine care and professionalism."
+  },
 ]
 
 const GAP = 20

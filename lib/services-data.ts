@@ -16,97 +16,105 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: "computerized-eye-testing",
-    name: "Computerized Eye Testing",
-    image: "/computerized-eye-testing.webp",
-    overview:
-      "Our advanced computerized diagnostic equipment provides precise, objective measurements of your eyes. These automated tests complement traditional examination methods and help us create the most accurate prescriptions and treatment plans. The process is quick, non-invasive, and highly accurate.",
-    whoNeeds: [
-      "Anyone getting a comprehensive eye examination",
-      "Patients preparing for LASIK or cataract surgery",
-      "Those needing precise prescription for glasses/contacts",
-      "Monitoring of progressive eye conditions",
-      "Children who can't provide reliable subjective feedback",
-    ],
-    diagnosis: [
-      "Autorefraction for objective prescription measurement",
-      "Corneal topography mapping",
-      "Wavefront aberrometry for higher-order aberrations",
-      "Automated perimetry for visual field testing",
-      "Non-contact tonometry for eye pressure",
-    ],
-    treatment: [
-      "Precise eyeglass and contact lens prescriptions",
-      "Custom LASIK treatment planning",
-      "IOL power calculation for cataract surgery",
-      "Keratoconus detection and monitoring",
-      "Glaucoma screening and follow-up",
-    ],
-    faqs: [
-      {
-        q: "Is computerized testing better than traditional methods?",
-        a: "It's complementary. Computerized testing provides objective measurements, while traditional subjective refraction fine-tunes based on your responses. Together they give the best results.",
-      },
-      {
-        q: "Does it replace the need for a doctor's examination?",
-        a: "No. Computerized testing is a diagnostic tool that enhances the doctor's examination, but doesn't replace the expertise of an ophthalmologist.",
-      },
-      {
-        q: "Is it safe for children?",
-        a: "Absolutely. All tests are non-invasive and safe for all ages. Many tests are actually easier and more accurate with children than traditional methods.",
-      },
-      {
-        q: "How long does computerized testing take?",
-        a: "Usually 10-15 minutes for a complete battery of tests. It's quick and painless.",
-      },
-    ],
-  },
+  slug: "computerized-eye-testing",
+  name: "Computerized Eye Testing",
+  image: "/computerized-eye-testing.webp",
+
+  overview:
+    "We use advanced computerized tools to measure your eyes accurately and objectively. These tests support traditional exams, helping us find the right prescriptions and treatment plans. The process is quick, safe, and precise.",
+
+  whoNeeds: [
+    "Anyone coming in for a full eye exam.",
+    "People preparing for LASIK or cataract surgery.",
+    "Anyone who needs an accurate prescription for glasses or contact lenses.",
+    "People who need to keep track of ongoing eye conditions.",
+    "Children who may have trouble describing what they see.",
+  ],
+
+  diagnosis: [
+    "Autorefraction, which measures your prescription automatically",
+    "Corneal topography provides a detailed scan that maps the shape and curve of your cornea.",
+    "Wavefront aberrometry looks for small vision problems.",
+    "Automated perimetry tests your field of vision.",
+    "Non-contact tonometry measures intraocular pressure without touching your eye.",
+  ],
+
+  treatment: [
+    "Get accurate prescriptions for glasses or contact lenses, and plan for LASIK treatment.",
+    "IOL power: Find the right lens strength for cataract surgery, and help with detection and monitoring.",
+    "Screen for glaucoma and monitor it over time",
+  ],
+
+  faqs: [
+    {
+      q: "Is computerized testing better than traditional methods?",
+      a: "They work together. Computerized testing provides objective measurements, while traditional exams help adjust your prescription based on your feedback. Using both methods gives the best results.",
+    },
+    {
+      q: "Does it replace the need for a doctor’s examination?",
+      a: "No, computerized testing is a helpful tool that supports your doctor’s exam, but it does not replace the experience and judgment of an ophthalmologist.",
+    },
+    {
+      q: "Is it safe for children?",
+      a: "Yes, all the tests are non-invasive and safe for people of any age. In fact, many of these tests are easier and more accurate for children than traditional methods.",
+    },
+    {
+      q: "How long does computerized testing take?",
+      a: "The entire computerized testing process typically takes 10–15 minutes. It is quick, convenient, and completely painless.",
+    },
+  ],
+}
+,
   {
-    slug: "eye-pressure-test",
-    name: "Eye Pressure Test",
-    image: "/eye-pressure-test.webp",
-    overview:
-      "Intraocular pressure (IOP) measurement is crucial for detecting glaucoma, a leading cause of blindness. Our advanced tonometry equipment provides accurate, comfortable eye pressure readings. Regular monitoring helps identify pressure changes early, allowing for timely intervention.",
-    whoNeeds: [
-      "People over 40 years of age",
-      "Those with family history of glaucoma",
-      "Patients with diabetes or high blood pressure",
-      "Anyone experiencing vision changes or eye pain",
-      "Contact lens wearers requiring regular check-ups",
-    ],
-    diagnosis: [
-      "Non-contact tonometry (air puff test)",
-      "Goldmann applanation tonometry",
-      "Pachymetry for corneal thickness measurement",
-      "Visual field testing if elevated pressure found",
-      "Optic nerve evaluation",
-    ],
-    treatment: [
-      "Pressure-lowering eye drops",
-      "Lifestyle modifications for IOP management",
-      "Laser procedures to improve drainage",
-      "Regular monitoring schedule",
-      "Surgical intervention when necessary",
-    ],
-    faqs: [
-      {
-        q: "Is the eye pressure test painful?",
-        a: "No, modern non-contact tonometry uses a gentle puff of air and is completely painless.",
-      },
-      {
-        q: "What is normal eye pressure?",
-        a: "Normal IOP ranges from 10-21 mmHg. However, glaucoma can occur at any pressure level, which is why comprehensive evaluation is important.",
-      },
-      {
-        q: "How often should I get my eye pressure checked?",
-        a: "Adults over 40 should have annual eye pressure checks. Those with risk factors may need more frequent monitoring.",
-      },
-      {
-        q: "Can high eye pressure be treated?",
-        a: "Yes, high eye pressure can be effectively managed with drops, laser treatment, or surgery to prevent glaucoma damage.",
-      },
-    ],
-  },
+  slug: "eye-pressure-test",
+  name: "Eye Pressure Test",
+  image: "/eye-pressure-test.webp",
+  overview:
+    "Regular intraocular pressure (IOP) testing plays a vital role in early glaucoma detection, a common cause of preventable blindness. Our modern diagnostic equipment ensures precise and painless eye pressure measurements, helping protect your vision through early intervention.",
+
+  whoNeeds: [
+    "People over 40 years of age",
+    "Those with a family history of glaucoma",
+    "Patients with diabetes or high blood pressure",
+    "Anyone experiencing vision changes or eye pain",
+    "Contact lens wearers requiring regular check-ups",
+  ],
+
+  diagnosis: [
+    "Non-contact tonometry (air puff test)",
+    "Goldmann applanation tonometry",
+    "Pachymetry for corneal thickness measurement",
+    "Visual field testing is conducted if elevated pressure found",
+    "Optic nerve evaluation",
+  ],
+
+  treatment: [
+    "Pressure-lowering eye drops",
+    "Lifestyle modifications for IOP management",
+    "Laser procedures to improve drainage",
+    "Regular monitoring schedule",
+    "Surgical intervention when necessary",
+  ],
+
+  faqs: [
+    {
+      q: "Is the eye pressure test painful?",
+      a: "No. Modern eye pressure testing is quick, comfortable, and completely painless. Non-contact tonometry uses a gentle puff of air to measure eye pressure without touching the eye.",
+    },
+    {
+      q: "What is considered normal eye pressure?",
+      a: "Normal intraocular pressure (IOP) typically falls between 10 and 21 mmHg. However, glaucoma can develop even when eye pressure is within the normal range, making regular comprehensive eye examinations essential.",
+    },
+    {
+      q: "How often should I have my eye pressure checked?",
+      a: "Adults aged 40 and above should undergo eye pressure testing at least once a year. Individuals with glaucoma risk factors may require more frequent monitoring as recommended by their eye specialist.",
+    },
+    {
+      q: "Can high eye pressure be treated?",
+      a: "Yes. Elevated eye pressure can be effectively controlled through prescription eye drops, laser procedures, or surgical treatments to help prevent glaucoma-related vision loss.",
+    },
+  ],
+},
   {
     slug: "visual-fields-testing",
     name: "Visual Fields Testing",
@@ -292,51 +300,56 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "customized-cataract-surgeries",
-    name: "Customized Cataract Surgeries",
-    image: "/customized-cataract-surgeries.webp",
-    overview:
-      "Cataract surgery is one of the safest and most effective procedures in modern medicine. We use advanced phacoemulsification technique - a bladeless, minimally invasive procedure that breaks up the cloudy lens using ultrasound waves and replaces it with a clear artificial lens (IOL). Most patients experience immediate vision improvement with minimal discomfort.",
-    whoNeeds: [
-      "Blurry or cloudy vision affecting daily activities",
-      "Difficulty reading or seeing road signs",
-      "Poor night vision or sensitivity to glare",
-      "Colors appearing faded or yellowed",
-      "Frequent changes in eyeglass prescription",
-    ],
-    diagnosis: [
-      "Comprehensive eye examination",
-      "Visual acuity testing",
-      "Slit-lamp examination to assess cataract density",
-      "IOL power calculation for optimal results",
-      "Dilated pupil examination of the retina",
-    ],
-    treatment: [
-      "Advanced phacoemulsification procedure (15-20 minutes)",
-      "Premium IOL options: Monofocal, Multifocal, Toric (for astigmatism)",
-      "Bladeless, sutureless technique",
-      "Same-day procedure with minimal downtime",
-      "Most patients return to normal activities within 24-48 hours",
-    ],
-    faqs: [
-      {
-        q: "Is cataract surgery painful?",
-        a: "No. The procedure is performed under local anesthesia with sedation. Most patients experience no pain during or after surgery.",
-      },
-      {
-        q: "How long does recovery take?",
-        a: "Most patients notice improved vision within 24 hours. Full recovery typically takes 4-6 weeks, but you can resume most activities within a few days.",
-      },
-      {
-        q: "Will I need glasses after cataract surgery?",
-        a: "It depends on the type of IOL chosen. Premium multifocal or accommodating IOLs can reduce or eliminate the need for glasses for most activities.",
-      },
-      {
-        q: "Is the procedure covered by insurance?",
-        a: "Yes, basic cataract surgery is typically covered by most insurance plans. Premium IOLs may have additional out-of-pocket costs.",
-      },
-    ],
-  },
+  slug: "customized-cataract-surgeries",
+  name: "Customized Cataract Surgeries",
+  image: "/customized-cataract-surgeries.webp",
+
+  overview:
+    "Cataract surgery is a safe and effective way to restore clear vision when cataracts begin to affect your daily life. Using advanced technology, the cloudy natural lens is gently removed and replaced with a clear artificial lens. The procedure is quick, comfortable, and helps most patients enjoy sharper vision with minimal discomfort and a fast recovery.",
+
+  whoNeeds: [
+    "Blurry or cloudy vision that impairs the performance of daily activities",
+    "Difficulty reading or recognizing road signs clearly",
+    "Difficulty seeing clearly at night or sensitivity to bright lights",
+    "Perception of faded colors or a yellowish tint",
+    "Frequent changes in eyeglass prescription",
+  ],
+
+  diagnosis: [
+    "Comprehensive eye examination",
+    "Visual acuity testing",
+    "Slit-lamp examination to assess cataract density",
+    "IOL power calculation for optimal results",
+    "Dilated pupil examination of the retina",
+  ],
+
+  treatment: [
+    "Advanced phacoemulsification procedure (15–20 minutes)",
+    "Premium IOL options: Monofocal, Multifocal, Toric (for astigmatism)",
+    "Bladeless, sutureless technique",
+    "Same-day procedure with minimal downtime",
+    "The majority of patients achieve a smooth recovery and typically resume normal activities within 24 to 48 hours.",
+  ],
+
+  faqs: [
+    {
+      q: "Is cataract surgery painful?",
+      a: "Many people see more clearly the day after surgery. Your eye will continue to heal for several weeks, but most patients return to their normal routines just a few days after the procedure.",
+    },
+    {
+      q: "How long does recovery take?",
+      a: "Most patients see a big improvement in their vision within the first day. Recovery continues over 4 to 6 weeks, but you can usually resume most everyday activities within a few days after surgery.",
+    },
+    {
+      q: "Will I need glasses after cataract surgery?",
+      a: "Whether you need glasses after surgery depends on the type of lens you get. Premium multifocal or accommodating lenses can help you do most things without glasses, or sometimes let you go without them altogether.",
+    },
+    {
+      q: "Is the procedure covered by insurance?",
+      a: "Yes, most insurance plans pay for standard cataract surgery. If you choose premium lenses, though, there may be extra costs that your insurance might not cover.",
+    },
+  ],
+},
   {
     slug: "lasik-surgery",
     name: "LASIK - Freedom from Glasses & Contact Lens",
