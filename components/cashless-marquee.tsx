@@ -11,13 +11,13 @@ export function CashlessMarquee() {
 
   return (
     <div
-      className="relative w-full bg-[#b8860b] text-white py-2 overflow-hidden"
+      className="relative w-full bg-[#0f5c3f] text-white py-2 overflow-hidden"
       aria-label="Cashless facility announcement"
       aria-live="polite"
     >
       {/* Gradient fade edges (premium look) */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#b8860b] to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#b8860b] to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0f5c3f] to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0f5c3f] to-transparent z-10" />
 
       <div className="flex w-max animate-marquee">
 

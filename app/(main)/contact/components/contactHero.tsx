@@ -74,9 +74,7 @@ export default function ContactHero() {
             {/* Quick stat chips */}
             <div className="mt-8 flex flex-wrap gap-3" role="list" aria-label="Hospital highlights">
               {[
-                { icon: "🕘", text: "Mon\u2013Sat : 8AM\u20138PM" },
                 { icon: "📍", text: "Hyderabad, Telangana" },
-                { icon: "📞", text: "+91 92464 46244" },
               ].map((item) => (
                 <div
                   key={item.text}

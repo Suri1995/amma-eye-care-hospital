@@ -5,10 +5,12 @@ import { ServicesSection } from "@/components/serviceSection"
 import { InsurancePartners } from "@/components/insurancePartners"
 import { TestimonialsSection } from "@/components/testimonialsSection"
 import PostersSection from "@/components/postersSection"
+import { NewBranchMarquee } from "@/components/ui/newBranchMarquee"
 
 export default function HomePage() {
   return (
     <>
+    <NewBranchMarquee/>
       <CashlessMarquee />
       <HeroSection />
       <TrustIndicators />

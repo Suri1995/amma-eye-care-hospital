@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-[#1e3a8a] text-white py-16 md:py-20" role="contentinfo">
       <div className="container max-w-7xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           {/* About Section */}
           <div>
             <h3 className="text-xl font-bold mb-6">Amma Eye Care Hospital</h3>
@@ -119,7 +119,7 @@ export function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-bold mb-6">Contact</h3>
             <ul className="space-y-3">
               <li>
@@ -146,7 +146,7 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Section */}

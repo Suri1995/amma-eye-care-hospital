@@ -46,17 +46,6 @@ function AnimatedCounter({
   return <span ref={ref}>{display}{suffix}</span>
 }
 
-/* ─────────────────────────────────────────
-   Eye animation
-   
-   KEY FIX: Every fill that sits inside a <clipPath> uses only:
-     • Solid hex colors           — always rendered correctly
-     • rgba() on <circle> fill   — always rendered correctly
-     • SVG <rect>/<ellipse> overlays for shading — no gradients inside clips
-   
-   radialGradient + clipPath = broken on iOS Safari / Android Chrome.
-   We simulate depth with stacked solid circles + semi-transparent overlays.
-───────────────────────────────────────── */
 function EyeAnimation() {
   const [blink, setBlink] = useState(false)
   const [pupilPos, setPupilPos] = useState({ x: 0, y: 0 })
