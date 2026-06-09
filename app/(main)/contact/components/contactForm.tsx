@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import { Send, Clock, Sun, Sunset, User, Mail, Phone, Calendar, MessageSquare, FileText, CheckCircle2, ArrowRight } from "lucide-react"
+import { Send, Clock, Sun, Sunset, User, Mail, Phone, Calendar, MessageSquare, FileText, CheckCircle2, ArrowRight, MapPin } from "lucide-react"
 
 interface FormData {
   firstName: string
@@ -11,6 +11,7 @@ interface FormData {
   appointmentDate: string
   appointmentTime: string
   message: string
+  location: string
 }
 
 const UNAVAILABLE: string[] = [] // populate from API: ["09:30","11:00"]
@@ -223,6 +224,43 @@ function FormInput({
   )
 }
 
+function FormSelect({
+  id,
+  name,
+  required,
+  autoComplete,
+  onChange,
+  value,
+  options,
+}: {
+  id: string
+  name: string
+  required?: boolean
+  autoComplete?: string
+  onChange?: React.ChangeEventHandler<HTMLSelectElement>
+  value?: string
+  options: { value: string; label: string }[]
+}) {
+  return (
+    <select
+      id={id}
+      name={name}
+      required={required}
+      autoComplete={autoComplete}
+      onChange={onChange}
+      value={value}
+      className="h-10 w-full rounded-[10px] border border-[#dce6f2] bg-white px-3.5 text-[13.5px] text-[#1a2f5a] transition-all duration-150 hover:border-[#85b7eb] focus:border-[#185fa5] focus:outline-none focus:ring-[3px] focus:ring-[rgba(24,95,165,0.1)]"
+    >
+      <option value="">Select location</option>
+      {options.map((option) => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      ))}
+    </select>
+  )
+}
+
 const STEPS = ["Personal", "Schedule", "Message"]
 
 function StepBar({ active }: { active: number }) {
@@ -337,9 +375,10 @@ export default function ContactForm({
     phone: "",
     appointmentDate: "",
     message: "",
+    location: "",
   })
 
-  const handleNativeChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleNativeChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
@@ -354,11 +393,12 @@ export default function ContactForm({
       appointmentDate: formData.get("appointmentDate") as string,
       appointmentTime: selectedTime ?? "",
       message: formData.get("message") as string,
+      location: formData.get("location") as string,
     })
     setStep(3)
   }
 
-  const canAdvanceStep0 = !!fields.firstName && !!fields.lastName && !!fields.email && !!fields.phone
+  const canAdvanceStep0 = !!fields.firstName && !!fields.lastName && !!fields.email && !!fields.phone && !!fields.location
   const canAdvanceStep1 = !!fields.appointmentDate && !!selectedTime
 
   const handleBackHome = () => {
@@ -413,6 +453,20 @@ export default function ContactForm({
               <FormInput id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required autoComplete="tel" onChange={handleNativeChange} />
             </FieldGroup>
           </div>
+
+          <FieldGroup id="location" label="Location" required icon={<MapPin className="h-3 w-3 text-[#2a4972]" />}>
+            <FormSelect 
+              id="location" 
+              name="location" 
+              required 
+              onChange={handleNativeChange}
+              value={fields.location}
+              options={[
+                { value: "Kokapet", label: "Kokapet" },
+                { value: "LB Nagar", label: "LB Nagar" }
+              ]}
+            />
+          </FieldGroup>
 
           <div className="pt-2">
             <button
@@ -472,6 +526,7 @@ export default function ContactForm({
           <div className="rounded-xl border border-[#dce6f2] bg-[#f8fbff] p-4">
             <p className="mb-2 text-xs font-semibold text-[#7a93b3]">Appointment summary</p>
             <div className="grid gap-2 text-sm">
+              <span>Location: {fields.location || "—"}</span>
               <span>Date: {fields.appointmentDate || "—"}</span>
               <span>Time: {selectedTime ? to12h(selectedTime) : "—"}</span>
               <span>Name: {fields.firstName} {fields.lastName}</span>
@@ -492,6 +547,7 @@ export default function ContactForm({
           <input type="hidden" name="lastName" value={fields.lastName} />
           <input type="hidden" name="email" value={fields.email} />
           <input type="hidden" name="phone" value={fields.phone} />
+          <input type="hidden" name="location" value={fields.location} />
           <input type="hidden" name="appointmentDate" value={fields.appointmentDate} />
           <input type="hidden" name="appointmentTime" value={selectedTime ?? ""} />
 

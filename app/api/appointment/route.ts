@@ -32,6 +32,7 @@ export async function POST(req: Request) {
       appointmentDate,
       appointmentTime,
       message,
+      location, // Added location field
     } = data
 
     // Validation
@@ -54,6 +55,7 @@ export async function POST(req: Request) {
     const safePhone = escapeHtml(phone)
     const safeAppointmentDate = escapeHtml(appointmentDate || "Not Selected")
     const safeAppointmentTime = escapeHtml(appointmentTime || "Not Selected")
+    const safeLocation = escapeHtml(location || "Not Selected") // Added location
     const safeMessage = message && message.trim() !== "" ? escapeHtml(message) : "No message provided"
 
     console.log("📥 New Appointment Lead:", data)
@@ -109,6 +111,7 @@ export async function POST(req: Request) {
                   <p><strong>Full Name:</strong> ${safeFirstName} ${safeLastName}</p>
                   <p><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
                   <p><strong>Phone:</strong> <a href="tel:${safePhone}">${safePhone}</a></p>
+                  <p><strong>Preferred Location:</strong> ${safeLocation}</p>
                 </div>
               </div>
 
@@ -191,6 +194,7 @@ export async function POST(req: Request) {
                 <div style="background: #f7fafc; border-radius: 12px; padding: 20px;">
                   <p><strong>Preferred Date:</strong> ${safeAppointmentDate}</p>
                   <p><strong>Preferred Time:</strong> ${safeAppointmentTime}</p>
+                  <p><strong>Preferred Location:</strong> ${safeLocation}</p>
                 </div>
               </div>
 
