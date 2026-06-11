@@ -2,6 +2,19 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function DoctorCard({ doctor }: any) {
+  // Function to get WhatsApp number based on doctor's location
+  const getWhatsAppNumber = (location: string) => {
+    if (location?.toLowerCase().includes("kokapet")) {
+      return "919000246244"
+    } else if (location?.toLowerCase().includes("lb nagar")) {
+      return "919246446244"
+    }
+    return "919246446244" // Default fallback
+  }
+
+  const whatsappNumber = getWhatsAppNumber(doctor.location)
+  const whatsappUrl = `https://wa.me/${whatsappNumber}`
+
   return (
     <article
       className="group relative rounded-2xl border border-[#e6edf6] bg-white shadow-sm transition-all duration-200 hover:shadow-xl hover:-translate-y-1 focus-within:ring-2 focus-within:ring-[#1e3a8a]/30"
@@ -60,6 +73,9 @@ export default function DoctorCard({ doctor }: any) {
             <span className="text-xs font-semibold text-[#355C9D] bg-[#355C9D]/10 border border-[#355C9D]/20 px-3 py-1 rounded-full">
               Languages: {doctor.languages}
             </span>
+            <span className="text-xs font-semibold text-[#355C9D] bg-[#355C9D]/10 border border-[#355C9D]/20 px-3 py-1 rounded-full">
+              Location: {doctor.location}
+            </span>
           </div>
 
           {/* Buttons */}
@@ -80,7 +96,7 @@ export default function DoctorCard({ doctor }: any) {
             </Link>
 
             <a
-              href="https://wa.me/919246446244"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Start WhatsApp consultation with ${doctor.name}`}

@@ -9,6 +9,7 @@ export type Doctor = {
   languages: string
   consultation: string
   location: string
+  address: string
   photo: string
 }
 

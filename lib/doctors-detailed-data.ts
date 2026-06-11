@@ -6,6 +6,7 @@ export const DOCTORS = [
     designation: "Consultant Ophthalmologist – Amma Eye Care Hospital, L.B.Nagar",
     specialization: "Cataract and Refractive Surgery",
     experience: "7+ Years in Clinical Ophthalmology",
+    address: "LB Nagar",
     treatments: [
       "Cataract Surgery",
       "Medical Retina",
@@ -26,6 +27,7 @@ export const DOCTORS = [
     designation: "Senior Ophthalmology - Amma Eye Care Hospital, L.B Nagar.",
     specialization: "Cataract, Medical Retina and Glaucoma, Paediatric eye care, Myopia Management and Geriatric Ophthalmology",
     experience: "45+ years experience Ophthalmology",
+    address: "LB Nagar",
     treatments: [
       "Cataract",
       "Medical Retina",
@@ -39,5 +41,26 @@ export const DOCTORS = [
     consultation: "Monday to Saturday",
     location: "Amma Eye Care Hospital L.B.Nagar, Vanasthalipuram Hyderabad",
     photo: "/dr.pamba-venkateswarlu-image.webp"
+  },
+  {
+    slug: "dr-rohini-pothireddy",
+    name: "Dr. Rohini Pothireddy",
+    qualification: "M.S Ophthalmology",
+    designation: "Medical Director, Chief Ophthalmic, Refractive and Cataract Eye Surgeon, Consultant Ophthalmologist",
+    specialization: "Cataract and Refractive Surgery",
+    experience: "25+ Years in Clinical Ophthalmology, 1 lakh + eye surgeries",
+    address: "Kokapet", // Changed from location to address for consistency
+    treatments: [
+      "Cataract Surgery",
+      "Refractive Surgery",
+      "Medical Retina",
+      "Glaucoma Care",
+      "Paediatric Eye Care",
+      "General Eye Check-ups"
+    ],
+    languages: "English, Telugu, Hindi",
+    consultation: "Monday to Saturday",
+    location: "Amma Eye Care Hospital, Kokapet, Hyderabad",
+    photo: "/rohini-doctor.webp"
   }
 ]

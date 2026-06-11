@@ -7,6 +7,7 @@ export default function DoctorDetails({
   doctor: Doctor
   aboutItems: AboutItem[]
 }) {
+
   return (
     <section className="py-8 md:py-10 bg-white" aria-labelledby="doctor-details-heading">
       <h2 id="doctor-details-heading" className="sr-only">

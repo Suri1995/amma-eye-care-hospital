@@ -6,6 +6,7 @@ export const DOCTORS = [
     specialization: "Cataract and Refractive Surgery",
     experience: "7+ Years",
     languages: "English, Telugu, Hindi",
+    location: "LB Nagar",
     photo: "/dr.sai-rupa-image.webp"
   },
   {
@@ -15,6 +16,17 @@ export const DOCTORS = [
     specialization: "Cataract, Medical Retina and Glaucoma, Paediatric eye care, Myopia Management and Geriatric Ophthalmology",
     experience: "45+ years experience in ophthalmology",
     languages: "English, Telugu, Hindi",
+    location: "LB Nagar",
     photo: "/dr.pamba-venkateswarlu-image.webp"
+  },
+  {
+    slug: "dr-rohini-pothireddy",
+    name: "Dr. Rohini Pothireddy",
+    qualification: "M.S Ophthalmology",
+    specialization: "M.S Ophthalmology (Cataract, Refractive Surgery)",
+    experience: "25+ Years, 1 lakh+ eye surgeries",
+    languages: "English, Telugu, Hindi",
+    location: "Kokapet",
+    photo: "/rohini-doctor.webp"
   }
 ]

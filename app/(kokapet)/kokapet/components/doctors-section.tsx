@@ -12,10 +12,12 @@ import {
   ChevronRight,
   ChevronLeft,
 } from "lucide-react"
+import Image from "next/image"
 import { Button } from "./ui/button"
 
 type Doctor = {
   id: string
+  imageSrc?: string
   initials: string
   panelFrom: string
   panelVia: string
@@ -29,143 +31,53 @@ type Doctor = {
   specializations: string[]
 }
 
-type Branch = {
-  id: string
-  name: string
-  address: string
-  doctors: Doctor[]
+const branch = {
+  id: "kokapet",
+  name: "Kokapet Branch",
+  address: "Kokapet Terminal, Hyderabad",
+  doctors: [
+    {
+      id: "d1",
+      imageSrc: "/rohini-doctor.webp",
+      initials: "RP",
+      panelFrom: "#085041",
+      panelVia: "#0F6E56",
+      panelTo: "#1D9E75",
+      name: "Dr. Rohini Pothireddy",
+      role: "Lead Surgeon & Branch Head",
+      credentials: "MS Ophthalmology, DNB, FMRF",
+      education: "MS Ophthalmology (Osmania), DNB, FMRF (Singapore)",
+      experience: "20 years in LASIK & corneal surgeries",
+      stats: [
+        { value: "20+", label: "Years Exp." },
+        { value: "40K+", label: "Patients" },
+      ],
+      specializations: [
+        "LASIK & SMILE Surgery",
+        "Cornea Transplant",
+        "Dry Eye Treatment",
+        "Cataract Surgery",
+        "Keratoconus Management",
+      ],
+    } satisfies Doctor,
+  ],
 }
-
-const branches: Branch[] = [
-  {
-    id: "lb-nagar",
-    name: "LB Nagar Branch",
-    address: "Chintalkunta, Hyderabad",
-    doctors: [
-      {
-        id: "d1",
-        initials: "AL",
-        panelFrom: "#F2B035",
-        panelVia: "#F28035",
-        panelTo: "#F22233",
-        name: "Dr. Amma Lakshmi",
-        role: "Chief Eye Surgeon & Founder",
-        credentials: "MS, DNB (Ophthalmology), FICO (London)",
-        education: "MS Ophthalmology (AIIMS), DNB, FICO Fellow (London)",
-        experience: "25+ years of excellence in comprehensive eye care",
-        stats: [
-          { value: "25+", label: "Years Exp." },
-          { value: "50K+", label: "Patients" },
-          // { value: "4.9", label: "Rating", hasStar: true },
-        ],
-        specializations: [
-          "Phaco Surgery Expert",
-          "Laser Vision Correction",
-          "Pediatric Ophthalmology",
-          "Cornea & Refractive Surgery",
-          "Glaucoma Management",
-          "Retinal Diseases",
-        ],
-      },
-      {
-        id: "d2",
-        initials: "RK",
-        panelFrom: "#3B2E8C",
-        panelVia: "#2e257a",
-        panelTo: "#1F5AA6",
-        name: "Dr. Ravi Kumar",
-        role: "Senior Ophthalmologist",
-        credentials: "MS Ophthalmology, FRCS (Edinburgh)",
-        education: "MS Ophthalmology (JIPMER), FRCS (Edinburgh)",
-        experience: "18 years specialising in retinal disorders",
-        stats: [
-          { value: "18+", label: "Years Exp." },
-          { value: "30K+", label: "Patients" },
-          // { value: "4.8", label: "Rating", hasStar: true },
-        ],
-        specializations: [
-          "Retinal Diseases",
-          "Vitreoretinal Surgery",
-          "Diabetic Retinopathy",
-          "Macular Degeneration",
-          "Uveitis Management",
-        ],
-      },
-    ],
-  },
-  {
-    id: "kokapet",
-    name: "Kokapet Branch",
-    address: "Kokapet Terminal, Hyderabad",
-    doctors: [
-      {
-        id: "d3",
-        initials: "SP",
-        panelFrom: "#085041",
-        panelVia: "#0F6E56",
-        panelTo: "#1D9E75",
-        name: "Dr. Sunita Prasad",
-        role: "Lead Surgeon & Branch Head",
-        credentials: "MS Ophthalmology, DNB, FMRF",
-        education: "MS Ophthalmology (Osmania), DNB, FMRF (Singapore)",
-        experience: "20 years in LASIK & corneal surgeries",
-        stats: [
-          { value: "20+", label: "Years Exp." },
-          { value: "40K+", label: "Patients" },
-          // { value: "4.9", label: "Rating", hasStar: true },
-        ],
-        specializations: [
-          "LASIK & SMILE Surgery",
-          "Cornea Transplant",
-          "Dry Eye Treatment",
-          "Cataract Surgery",
-          "Keratoconus Management",
-        ],
-      },
-      {
-        id: "d4",
-        initials: "MR",
-        panelFrom: "#72243E",
-        panelVia: "#993556",
-        panelTo: "#D4537E",
-        name: "Dr. Meera Reddy",
-        role: "Paediatric Eye Specialist",
-        credentials: "MS Ophthalmology, Fellowship Paed. Ophthalmology",
-        education: "MS Ophthalmology (AIIMS), Fellowship (LV Prasad)",
-        experience: "12 years in paediatric & squint surgery",
-        stats: [
-          { value: "12+", label: "Years Exp." },
-          { value: "20K+", label: "Patients" },
-          // { value: "4.9", label: "Rating", hasStar: true },
-        ],
-        specializations: [
-          "Pediatric Ophthalmology",
-          "Squint Surgery",
-          "Amblyopia Treatment",
-          "ROP Screening",
-          "Congenital Cataract",
-        ],
-      },
-    ],
-  },
-]
 
 // ─── Doctor Card ──────────────────────────────────────────────────────────────
 
 function DoctorCard({ doctor }: { doctor: Doctor }) {
   return (
     <article
-      className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-100 hover:shadow-lg hover:ring-gray-200 transition-all duration-300 h-full"
+      className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-100 hover:shadow-lg hover:ring-gray-200 transition-all duration-300 h-full w-full max-w-sm"
       aria-label={`${doctor.name}, ${doctor.role}`}
     >
-      {/* ── Coloured top panel: image + name only ── */}
+      {/* ── Coloured top panel ── */}
       <div
         className="relative flex flex-col items-center px-6 pt-8 pb-6 overflow-hidden"
         style={{
           background: `linear-gradient(135deg, ${doctor.panelFrom}, ${doctor.panelVia}, ${doctor.panelTo})`,
         }}
       >
-        {/* Dot texture */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
           aria-hidden="true"
@@ -179,31 +91,30 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
         {/* Avatar */}
         <div className="relative z-10 mb-4">
           <div className="h-24 w-24 rounded-full overflow-hidden ring-4 ring-white/30 shadow-xl">
-            {/*
-              Replace with real photo:
+            {doctor.imageSrc ? (
               <Image
-                src="/images/doctors/doctor-id.jpg"
+                src={doctor.imageSrc}
                 alt={doctor.name}
-                fill
-                sizes="96px"
-                className="object-cover object-top"
+                width={96}
+                height={96}
+                className="object-cover object-top w-full h-full"
                 priority
               />
-            */}
-            <div
-              className="w-full h-full flex items-center justify-center"
-              style={{
-                background: `linear-gradient(135deg, ${doctor.panelFrom}, ${doctor.panelTo})`,
-              }}
-              role="img"
-              aria-label={`${doctor.name} avatar`}
-            >
-              <span className="text-3xl font-bold text-white select-none">
-                {doctor.initials}
-              </span>
-            </div>
+            ) : (
+              <div
+                className="w-full h-full flex items-center justify-center"
+                style={{
+                  background: `linear-gradient(135deg, ${doctor.panelFrom}, ${doctor.panelTo})`,
+                }}
+                role="img"
+                aria-label={`${doctor.name} avatar`}
+              >
+                <span className="text-3xl font-bold text-white select-none">
+                  {doctor.initials}
+                </span>
+              </div>
+            )}
           </div>
-          {/* Verified badge */}
           <div
             className="absolute -bottom-1 -right-1 z-20 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-md ring-2 ring-black/5"
             aria-label="Verified doctor"
@@ -212,7 +123,6 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
           </div>
         </div>
 
-        {/* Name only */}
         <div className="relative z-10 text-center">
           <p className="text-base font-bold text-white leading-tight">{doctor.name}</p>
         </div>
@@ -220,7 +130,6 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
 
       {/* ── Info panel ── */}
       <div className="flex flex-col flex-1 p-5">
-        {/* Role badge */}
         <span className="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-[#F22233]/10 px-3 py-1 text-[11px] font-semibold text-[#F22233] border border-[#F22233]/15">
           <span className="h-1.5 w-1.5 rounded-full bg-[#F22233]" aria-hidden="true" />
           {doctor.role}
@@ -228,9 +137,8 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
 
         <p className="text-xs font-semibold text-[#3B2E8C] mb-3">{doctor.credentials}</p>
 
-        {/* Stats row */}
         <div
-          className="mb-4 grid grid-cols-3 gap-2"
+          className="mb-4 grid grid-cols-2 gap-2"
           role="list"
           aria-label={`${doctor.name} statistics`}
         >
@@ -251,7 +159,6 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
           ))}
         </div>
 
-        {/* Qualifications */}
         <div className="space-y-2 mb-4" role="list" aria-label="Qualifications">
           {[
             {
@@ -288,7 +195,6 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
           ))}
         </div>
 
-        {/* Specializations */}
         <div className="mb-5">
           <div className="flex items-center gap-1.5 mb-2">
             <Users className="h-3.5 w-3.5 text-[#3B2E8C]" aria-hidden="true" />
@@ -306,7 +212,6 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
           </ul>
         </div>
 
-        {/* CTA */}
         <div className="mt-auto">
           <Button
             className="w-full bg-[#F22233] text-white hover:bg-[#d91e2c] active:scale-[0.97] shadow-md shadow-[#F22233]/20 hover:shadow-lg hover:shadow-[#F22233]/25 h-10 text-sm font-semibold rounded-xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F22233] focus-visible:ring-offset-2"
@@ -350,11 +255,7 @@ function MobileCarousel({ doctors }: { doctors: Doctor[] }) {
       aria-label="Doctors carousel"
       aria-roledescription="carousel"
     >
-      <div
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-        className="overflow-hidden"
-      >
+      <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} className="overflow-hidden">
         <div
           className="flex transition-transform duration-300 ease-in-out will-change-transform"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -363,7 +264,7 @@ function MobileCarousel({ doctors }: { doctors: Doctor[] }) {
           {doctors.map((doctor, i) => (
             <div
               key={doctor.id}
-              className="w-full shrink-0"
+              className="w-full shrink-0 flex justify-center"
               role="group"
               aria-roledescription="slide"
               aria-label={`${i + 1} of ${doctors.length}: ${doctor.name}`}
@@ -426,9 +327,6 @@ function MobileCarousel({ doctors }: { doctors: Doctor[] }) {
 // ─── Section ──────────────────────────────────────────────────────────────────
 
 export function DoctorsSection() {
-  const [activeBranchId, setActiveBranchId] = useState(branches[0].id)
-  const activeBranch = branches.find((b) => b.id === activeBranchId) ?? branches[0]
-
   return (
     <section
       id="doctor"
@@ -454,93 +352,33 @@ export function DoctorsSection() {
             Our <span className="text-[#F22233]">Doctors</span>
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
-            Experienced specialists across both our branches, dedicated to your perfect vision.
+            Experienced specialists dedicated to your perfect vision.
           </p>
         </div>
 
-        {/* Branch Selector */}
-        <div
-          className="mb-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3"
-          role="tablist"
-          aria-label="Select hospital branch"
-        >
-          {branches.map((branch) => {
-            const isActive = branch.id === activeBranchId
-            return (
-              <button
-                key={branch.id}
-                role="tab"
-                aria-selected={isActive}
-                aria-controls={`panel-${branch.id}`}
-                id={`tab-${branch.id}`}
-                onClick={() => setActiveBranchId(branch.id)}
-                className={`group relative flex items-center gap-3 rounded-2xl px-5 py-3.5 text-left border-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3B2E8C] focus-visible:ring-offset-2 ${
-                  isActive
-                    ? "border-[#3B2E8C] bg-[#3B2E8C] text-white shadow-lg shadow-[#3B2E8C]/20"
-                    : "border-gray-200 bg-white text-gray-700 hover:border-[#3B2E8C]/40 hover:bg-[#3B2E8C]/5 hover:shadow-md"
-                }`}
-              >
-                <div
-                  className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-colors ${
-                    isActive ? "bg-white/20" : "bg-[#3B2E8C]/10 group-hover:bg-[#3B2E8C]/20"
-                  }`}
-                  aria-hidden="true"
-                >
-                  <MapPin className={`h-4 w-4 ${isActive ? "text-white" : "text-[#3B2E8C]"}`} />
-                </div>
-                <div className="min-w-0">
-                  <p className={`text-sm font-bold leading-tight ${isActive ? "text-white" : "text-gray-900"}`}>
-                    {branch.name}
-                  </p>
-                  <p className={`text-[11px] mt-0.5 ${isActive ? "text-white/70" : "text-gray-500"}`}>
-                    {branch.address}
-                  </p>
-                </div>
-                <ChevronRight
-                  className={`h-4 w-4 shrink-0 ml-1 transition-all duration-200 ${
-                    isActive
-                      ? "text-white rotate-90"
-                      : "text-gray-400 group-hover:text-[#3B2E8C] group-hover:translate-x-0.5"
-                  }`}
-                  aria-hidden="true"
-                />
-              </button>
-            )
-          })}
-        </div>
-
         {/* Branch info bar */}
-        <div
-          className="mb-6 flex items-center justify-between gap-3 rounded-xl bg-[#3B2E8C]/5 border border-[#3B2E8C]/10 px-4 py-2.5"
-          role="status"
-          aria-live="polite"
-          aria-atomic="true"
-        >
+        <div className="mb-6 flex items-center justify-between gap-3 rounded-xl bg-[#3B2E8C]/5 border border-[#3B2E8C]/10 px-4 py-2.5">
           <div className="flex items-center gap-2 min-w-0">
             <MapPin className="h-3.5 w-3.5 text-[#3B2E8C] shrink-0" aria-hidden="true" />
-            <span className="text-xs font-semibold text-[#3B2E8C] truncate">{activeBranch.name}</span>
-            <span className="text-xs text-gray-500 hidden sm:inline">— {activeBranch.address}</span>
+            <span className="text-xs font-semibold text-[#3B2E8C] truncate">{branch.name}</span>
+            <span className="text-xs text-gray-500 hidden sm:inline">— {branch.address}</span>
           </div>
           <span className="shrink-0 inline-flex items-center gap-1 rounded-full bg-[#3B2E8C]/10 px-2.5 py-1 text-[11px] font-semibold text-[#3B2E8C]">
             <Users className="h-3 w-3" aria-hidden="true" />
-            {activeBranch.doctors.length} doctor{activeBranch.doctors.length > 1 ? "s" : ""}
+            {branch.doctors.length} doctor{branch.doctors.length > 1 ? "s" : ""}
           </span>
         </div>
 
         {/* Cards */}
-        <div
-          id={`panel-${activeBranch.id}`}
-          role="tabpanel"
-          aria-labelledby={`tab-${activeBranch.id}`}
-        >
+        <div role="region" aria-label="Our doctors">
           {/* Mobile: carousel */}
           <div className="md:hidden">
-            <MobileCarousel doctors={activeBranch.doctors} />
+            <MobileCarousel doctors={branch.doctors} />
           </div>
 
-          {/* Desktop: 2-col grid */}
-          <div className="hidden md:grid md:grid-cols-2 gap-5 lg:gap-6">
-            {activeBranch.doctors.map((doctor) => (
+          {/* Desktop: centered flex-wrap (1 card → centered; 2+ → side by side; 3+ → wraps) */}
+          <div className="hidden md:flex md:flex-wrap justify-center gap-5 lg:gap-6">
+            {branch.doctors.map((doctor) => (
               <DoctorCard key={doctor.id} doctor={doctor} />
             ))}
           </div>
