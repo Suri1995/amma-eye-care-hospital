@@ -235,3 +235,28 @@ html {
     scroll-behavior: auto;
   }
 }
+
+@keyframes locationBlink {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+    filter: brightness(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+.location-badge {
+  animation: locationBlink 1.8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
