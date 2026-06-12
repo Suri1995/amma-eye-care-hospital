@@ -1,5 +1,25 @@
 export const DOCTORS = [
   {
+    slug: "dr-rohini-pothireddy",
+    name: "Dr. Rohini Pothireddy",
+    qualification: "M.S Ophthalmology",
+    specialization: "M.S Ophthalmology (Cataract, Refractive Surgery)",
+    experience: "25+ Years, 1 lakh+ eye surgeries",
+    languages: "English, Telugu, Hindi",
+    location: "Kokapet",
+    photo: "/rohini-doctor.webp"
+  },
+  {
+    slug: "dr-yelampalle-sushmitha",
+    name: "Dr. Yelampalle Sushmitha",
+    qualification: "MBBS, DNB Ophthalmology",
+    specialization: "Cataract, Medical Retina and Glaucoma, Paediatric Eye Care and Geriatric Ophthalmology",
+    experience: "4+ Years",
+    languages: "English, Telugu, Hindi",
+    location: "Kokapet",
+    photo: "/dr-yelampalle-sushmitha.webp"
+  },
+  {
     slug: "dr-sai-rupa-sree-p",
     name: "Dr. Sai Rupa Sree P",
     qualification: "MBBS (Osmania, Gold Medalist), MS Ophthalmology (Osmania, Gold Medalist)",
@@ -18,15 +38,5 @@ export const DOCTORS = [
     languages: "English, Telugu, Hindi",
     location: "LB Nagar",
     photo: "/dr.pamba-venkateswarlu-image.webp"
-  },
-  {
-    slug: "dr-rohini-pothireddy",
-    name: "Dr. Rohini Pothireddy",
-    qualification: "M.S Ophthalmology",
-    specialization: "M.S Ophthalmology (Cataract, Refractive Surgery)",
-    experience: "25+ Years, 1 lakh+ eye surgeries",
-    languages: "English, Telugu, Hindi",
-    location: "Kokapet",
-    photo: "/rohini-doctor.webp"
   }
 ]

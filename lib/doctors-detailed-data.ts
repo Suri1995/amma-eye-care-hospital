@@ -48,7 +48,7 @@ export const DOCTORS = [
     qualification: "M.S Ophthalmology",
     designation: "Medical Director, Chief Ophthalmic, Refractive and Cataract Eye Surgeon, Consultant Ophthalmologist",
     specialization: "Cataract and Refractive Surgery",
-    experience: "25+ Years in Clinical Ophthalmology, 1 lakh + eye surgeries",
+    experience: "25+ Years in Clinical Ophthalmology, 1 lakh+ eye surgeries",
     address: "Kokapet", // Changed from location to address for consistency
     treatments: [
       "Cataract Surgery",
@@ -62,5 +62,26 @@ export const DOCTORS = [
     consultation: "Monday to Saturday",
     location: "Amma Eye Care Hospital, Kokapet, Hyderabad",
     photo: "/rohini-doctor.webp"
-  }
+  },
+  {
+  slug: "dr-yelampalle-sushmitha",
+  name: "Dr. Yelampalle Sushmitha",
+  qualification: "MBBS, DNB Ophthalmology",
+  designation: "Consultant Ophthalmologist",
+  specialization: "Cataract, Medical Retina and Glaucoma, Paediatric Eye Care, Geriatric Ophthalmology",
+  experience: "4+ Years in Clinical Ophthalmology",
+  address: "Kokapet",
+  treatments: [
+    "Cataract Surgery",
+    "Medical Retina",
+    "Glaucoma Care",
+    "Paediatric Eye Care",
+    "Geriatric Ophthalmology",
+    "General Eye Check-ups"
+  ],
+  languages: "English, Telugu, Hindi",
+  consultation: "Monday to Saturday: 5:00 PM - 8:00 PM, Sunday: 10:00 AM - 1:00 PM",
+  location: "Amma Eye Care Hospital, Kokapet, Hyderabad",
+  photo: "/dr-yelampalle-sushmitha.webp"
+}
 ]
