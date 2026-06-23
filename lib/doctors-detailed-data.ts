@@ -58,7 +58,7 @@ export const DOCTORS = [
       "Paediatric Eye Care",
       "General Eye Check-ups"
     ],
-    languages: "English, Telugu, Hindi",
+    languages: "English, Telugu, Hindi, Oriya",
     consultation: "Monday to Saturday",
     location: "Amma Eye Care Hospital, Kokapet, Hyderabad",
     photo: "/rohini-doctor.webp"

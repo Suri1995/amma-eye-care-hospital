@@ -29,9 +29,9 @@ const branches: BranchData[] = [
     directionsUrl:
       "https://www.google.com/maps/dir/?api=1&destination=Amma+Eye+Care+Hospital+Chintalkunta+LB+Nagar+Hyderabad",
     embedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8!2d78.5488!3d17.3616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b5555555555%3A0x1234567890abcdef!2sAmma+Eye+Care+Hospital!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=Amma+Eye+Care+Hospital,+Chintalkunta,+L.B.+Nagar,+Vanasthalipuram,+Hyderabad,+Telangana+500070",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.9!2d78.5556240!3d17.3412647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98a906c50f4f%3A0x27f26d05063b4290!2sAmma+Eye+Care+Hospital!5e0!3m2!1sen!2sin!4v1750000000001!5m2!1sen!2sin",
     copyAddress:
-      "Chintalkunta, L.B. Nagar, Vanasthalipuram, Hyderabad, Telangana 500070",
+      "Amma Eye Care Hospital, Chintalkunta Check post, Hyderabad - Vijayawada Hwy, near Vanasthalipuram, L. B. Nagar, Hyderabad, Telangana 500070",
   },
   {
     id: "kokapet",
@@ -41,9 +41,9 @@ const branches: BranchData[] = [
     address: "Suite 420 & 421, 4th Floor, Kokapet Terminal, Gandipet & Shakarpally Junction, Kokapet, Narsingi, Hyderabad - 500075",
     phone: "90001 96244 / 90002 46244",
     hours: "Mon – Sat : 8 AM – 8 PM  Sun : 10 AM - 1 PM",
-    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=17.385025,78.3292389",
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.2!2d78.3266640!3d17.3850250!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzA2LjEiTiA3OMKwMTknNDUuMyJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=17.385025,78.3292389",
-    copyAddress: "Suite 420 & 421, 4th Floor, Kokapet Terminal, Gandipet & Shakarpally Junction, Kokapet, Narsingi, Hyderabad - 500075",
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=17.3850525,78.3291999",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.2!2d78.3266250!3d17.3850576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb95ad43832651%3A0x30abd9d08f4baec6!2sAmma+Eye+Care+Hospital!5e0!3m2!1sen!2sin!4v1750000000002!5m2!1sen!2sin",
+    copyAddress: "Amma Eye Care Hospital, Suite 420 & 421, 4th Floor, Kokapet Terminal, Gandipet & Shakarpally Junction, Kokapet, Narsingi, Hyderabad - 500075",
 }
 ];
 
