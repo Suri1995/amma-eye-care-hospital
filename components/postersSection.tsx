@@ -44,7 +44,7 @@ export default function PostersSection() {
                   alt={poster.alt}
                   width={400}
                   height={550}
-                  className="h-auto w-[clamp(200px,42vw,450px)] object-cover select-none transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+                  className="h-auto sm:w-[clamp(200px,42vw,450px)] object-cover select-none transition-transform duration-300 ease-out group-hover:scale-[1.03]"
                   loading={i < POSTERS.length ? "eager" : "lazy"}
                   draggable={false}
                 />
