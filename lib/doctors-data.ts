@@ -38,5 +38,15 @@ export const DOCTORS = [
     languages: "English, Telugu, Hindi",
     location: "LB Nagar",
     photo: "/dr.pamba-venkateswarlu-image.webp"
+  },
+  {
+    slug: "dr-c-omana-reddy",
+    name: "Dr. C Omana Reddy",
+    qualification: "MBBS, MS Ophthalmology (Osmania University)",
+    specialization: "Cataract",
+    experience: "6+ Years",
+    languages: "English, Telugu, Hindi",
+    location: "LB Nagar",
+    photo: "/dr-c-omana-reddy.webp"
   }
 ]

@@ -49,7 +49,7 @@ export const DOCTORS = [
     designation: "Medical Director, Chief Ophthalmic, Refractive and Cataract Eye Surgeon, Consultant Ophthalmologist",
     specialization: "Cataract and Refractive Surgery",
     experience: "25+ Years in Clinical Ophthalmology, 1 lakh+ eye surgeries",
-    address: "Kokapet", // Changed from location to address for consistency
+    address: "Kokapet",
     treatments: [
       "Cataract Surgery",
       "Refractive Surgery",
@@ -64,24 +64,44 @@ export const DOCTORS = [
     photo: "/rohini-doctor.webp"
   },
   {
-  slug: "dr-yelampalle-sushmitha",
-  name: "Dr. Yelampalle Sushmitha",
-  qualification: "MBBS, DNB Ophthalmology",
-  designation: "Consultant Ophthalmologist",
-  specialization: "Cataract, Medical Retina and Glaucoma, Paediatric Eye Care, Geriatric Ophthalmology",
-  experience: "4+ Years in Clinical Ophthalmology",
-  address: "Kokapet",
-  treatments: [
-    "Cataract Surgery",
-    "Medical Retina",
-    "Glaucoma Care",
-    "Paediatric Eye Care",
-    "Geriatric Ophthalmology",
-    "General Eye Check-ups"
-  ],
-  languages: "English, Telugu, Hindi",
-  consultation: "Monday to Saturday: 5:00 PM - 8:00 PM, Sunday: 10:00 AM - 1:00 PM",
-  location: "Amma Eye Care Hospital, Kokapet, Hyderabad",
-  photo: "/dr-yelampalle-sushmitha.webp"
-}
+    slug: "dr-yelampalle-sushmitha",
+    name: "Dr. Yelampalle Sushmitha",
+    qualification: "MBBS, DNB Ophthalmology",
+    designation: "Consultant Ophthalmologist",
+    specialization: "Cataract, Medical Retina and Glaucoma, Paediatric Eye Care, Geriatric Ophthalmology",
+    experience: "4+ Years in Clinical Ophthalmology",
+    address: "Kokapet",
+    treatments: [
+      "Cataract Surgery",
+      "Medical Retina",
+      "Glaucoma Care",
+      "Paediatric Eye Care",
+      "Geriatric Ophthalmology",
+      "General Eye Check-ups"
+    ],
+    languages: "English, Telugu, Hindi",
+    consultation: "Monday to Saturday: 5:00 PM - 8:00 PM, Sunday: 10:00 AM - 1:00 PM",
+    location: "Amma Eye Care Hospital, Kokapet, Hyderabad",
+    photo: "/dr-yelampalle-sushmitha.webp"
+  },
+  {
+    slug: "dr-c-omana-reddy",
+    name: "Dr. C Omana Reddy",
+    qualification: "MBBS, MS Ophthalmology (Osmania University)",
+    designation: "Consultant Ophthalmologist – Amma Eye Care Hospital, L.B.Nagar",
+    specialization: "Cataract",
+    experience: "6+ Years in Clinical Ophthalmology",
+    address: "LB Nagar",
+    treatments: [
+      "Cataract Surgeon",
+      "Medical Retina",
+      "Glaucoma Care",
+      "Paediatric Eye Care",
+      "General Eye Check-ups"
+    ],
+    languages: "English, Telugu, Hindi",
+    consultation: "Monday to Saturday 9 AM - 5 PM",
+    location: "Amma Eye Care Hospital L.B.Nagar, Vanasthalipuram Hyderabad",
+    photo: "/dr-c-omana-reddy.webp"
+  }
 ]
