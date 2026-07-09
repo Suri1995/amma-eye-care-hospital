@@ -102,6 +102,6 @@ export const DOCTORS = [
     languages: "English, Telugu, Hindi",
     consultation: "Monday to Saturday 9 AM - 5 PM",
     location: "Amma Eye Care Hospital L.B.Nagar, Vanasthalipuram Hyderabad",
-    photo: "/dr-omana-reddy.webp"
+    photo: "/dr-omana-reddy.jpeg"
   }
 ]
