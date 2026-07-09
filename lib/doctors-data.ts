@@ -43,7 +43,7 @@ export const DOCTORS = [
     slug: "dr-c-omana-reddy",
     name: "Dr. C Omana Reddy",
     qualification: "MBBS, MS Ophthalmology (Osmania University)",
-    specialization: "Cataract",
+    specialization: "Cataract, Refractive Surgeon",
     experience: "6+ Years",
     languages: "English, Telugu, Hindi",
     location: "LB Nagar",

@@ -89,7 +89,7 @@ export const DOCTORS = [
     name: "Dr. C Omana Reddy",
     qualification: "MBBS, MS Ophthalmology (Osmania University)",
     designation: "Consultant Ophthalmologist – Amma Eye Care Hospital, L.B.Nagar",
-    specialization: "Cataract",
+    specialization: "Cataract, Refractive Surgeon",
     experience: "6+ Years in Clinical Ophthalmology",
     address: "LB Nagar",
     treatments: [
