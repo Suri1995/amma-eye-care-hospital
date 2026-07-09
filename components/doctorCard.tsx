@@ -113,6 +113,7 @@ export default function DoctorCard({ doctor }: any) {
               alt={`Portrait of ${doctor.name}`}
               width={160}
               height={200}
+              unoptimized={process.env.NODE_ENV === 'production'}
               itemProp="image"
               priority={false}
               sizes="(max-width: 640px) 130px, 155px"
