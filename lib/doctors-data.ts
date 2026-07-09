@@ -47,6 +47,6 @@ export const DOCTORS = [
     experience: "6+ Years",
     languages: "English, Telugu, Hindi",
     location: "LB Nagar",
-    photo: "/dr-c-omana-reddy.webp"
+    photo: "/dr-omana-reddy.webp"
   }
 ]
