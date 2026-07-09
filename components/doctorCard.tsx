@@ -186,13 +186,6 @@ export default function DoctorCard({ doctor }: any) {
               </svg>
               {doctor.languages}
             </li>
-            {/* Location */}
-            <li className="inline-flex items-center gap-1.5 rounded-full border border-[rgba(53,92,157,0.15)] bg-[rgba(53,92,157,0.08)] px-2.5 py-1 text-[11.5px] font-semibold text-[#2B508A]">
-              <svg width="10" height="12" viewBox="0 0 11 14" fill="none" aria-hidden="true">
-                <path d="M5.5 0C2.462 0 0 2.462 0 5.5c0 3.857 5.5 8.5 5.5 8.5S11 9.357 11 5.5C11 2.462 8.538 0 5.5 0Zm0 7.5a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" fill="currentColor"/>
-              </svg>
-              {doctor.location}
-            </li>
           </ul>
 
           {/* CTA buttons */}
