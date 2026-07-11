@@ -87,7 +87,7 @@ export const DOCTORS = [
   {
     slug: "dr-c-omana-reddy",
     name: "Dr. C Omana Reddy",
-    qualification: "MBBS (Gandhi Medical College), MS Ophthalmology (Sarojini Devi Eye Hospital)",
+    qualification: "MS Ophthalmology (Gandhi Medical College / Sarojini Devi Eye Hospital)",
     designation: "Consultant Ophthalmologist – Amma Eye Care Hospital, L.B.Nagar",
     specialization: "Cataract, Refractive Surgeon",
     experience: "6+ Years in Clinical Ophthalmology",
