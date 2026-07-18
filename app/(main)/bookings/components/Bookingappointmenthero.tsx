@@ -75,8 +75,6 @@ export default function BookAppointmentHero() {
             <div className="mt-8 flex flex-wrap gap-3" role="list" aria-label="Booking highlights">
               {[
                 { icon: "📍", text: "Kokapet & LB Nagar" },
-                { icon: "⏱️", text: "Confirmed within 2–4 hrs" },
-                { icon: "🗓️", text: "Morning & afternoon slots" },
               ].map((item) => (
                 <div
                   key={item.text}
