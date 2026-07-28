@@ -29,7 +29,7 @@ export default function ThankYouCard({
             </div>
 
             <h2 className="mb-2 text-2xl font-bold text-[#0c2a5e]">
-              Thank You!
+              Thank You for Choosing Amma Eye Care Hospital
             </h2>
 
             {appointmentId && (
@@ -44,8 +44,9 @@ export default function ThankYouCard({
             )}
 
             <p className="mx-auto mb-8 max-w-sm text-sm leading-relaxed text-[#526b8c]">
-              Your request has been submitted successfully. Our team will
-              review the details and get back to you shortly.
+              Your request has been received and is being reviewed by our
+              team. We truly appreciate you trusting us with your eye care,
+              and will get back to you shortly to confirm the details.
             </p>
 
             <div className="flex flex-col gap-3">
@@ -67,12 +68,25 @@ export default function ThankYouCard({
         </div>
 
         {/* Footer note */}
-        <p className="mt-5 text-center text-xs text-[#8b9cb8]">
-          Questions?{" "}
-          <a href="tel:+919246446244" className="text-[#185fa5] hover:underline">
-            Call us at +91 92464 46244
-          </a>
-        </p>
+        <div className="mt-5 text-center text-xs text-[#8b9cb8]">
+          <p className="mb-1">Questions? Reach out to us:</p>
+          <p>
+            <span className="font-semibold text-[#526b8c]">Kokapet:</span>{" "}
+            <a href="tel:+919000196244" className="text-[#185fa5] hover:underline">
+              90001 96244
+            </a>
+            {" / "}
+            <a href="tel:+919000246244" className="text-[#185fa5] hover:underline">
+              90002 46244
+            </a>
+          </p>
+          <p>
+            <span className="font-semibold text-[#526b8c]">LB Nagar:</span>{" "}
+            <a href="tel:+919246446244" className="text-[#185fa5] hover:underline">
+              92464 46244
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   )
