@@ -1,0 +1,6 @@
+# robots.txt for Amma Eye Care Hospital
+# https://www.ammaeyecarehospital.com/
+User-agent: *
+Allow: /
+# XML Sitemap
+Sitemap: https://www.ammaeyecarehospital.com/sitemap.xml
