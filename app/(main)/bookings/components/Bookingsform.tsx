@@ -426,7 +426,8 @@ export default function BookingsForm({
       message: formData.get("message") as string,
       location: formData.get("location") as string,
     })
-    setStep(3)
+    // Redirect immediately without showing success screen
+    onSuccess?.()
   }
 
   const canAdvanceStep0 = !!fields.firstName && !!fields.lastName && !!fields.email && !!fields.phone && !!fields.location

@@ -4,7 +4,6 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { useToast } from "@/hooks/use-toast"
 
-import ContactSuccess from "./components/contactSuccess"
 import ContactHero from "./components/contactHero"
 import ContactForm from "./components/contactForm"
 import ContactInfo from "./components/contactInfo"
@@ -15,8 +14,6 @@ export default function ContactPage() {
   const router = useRouter()
 
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [appointmentId, setAppointmentId] = useState("")
 
   const handleSubmit = async (data: {
     firstName: string
@@ -40,18 +37,13 @@ export default function ContactPage() {
 
       if (!result.success) throw new Error("Submission failed")
 
-      setAppointmentId(result.id)
-      setIsSubmitted(true)
-
       toast({
         title: "Appointment Booked",
         description: `Your registration ID is ${result.id}`,
       })
 
-      // Redirect to thank you page after 1.5 seconds
-      setTimeout(() => {
-        router.push("/thankyou")
-      }, 1500)
+      // Redirect to thank you page immediately
+      router.push("/thankyou")
     } catch {
       toast({
         title: "Submission Failed",
@@ -61,18 +53,6 @@ export default function ContactPage() {
     } finally {
       setIsSubmitting(false)
     }
-  }
-
-  if (isSubmitted) {
-    return (
-      <ContactSuccess
-        appointmentId={appointmentId}
-        onReset={() => {
-          setIsSubmitted(false)
-          setAppointmentId("")
-        }}
-      />
-    )
   }
 
   return (
