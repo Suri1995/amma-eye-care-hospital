@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import { Clock, Sun, Sunset, User, Mail, Phone, Calendar, MessageSquare, FileText, CheckCircle2, ArrowRight, MapPin } from "lucide-react"
+import { useRouter } from "next/navigation"
+import { Clock, Sun, Sunset, User, Mail, Phone, Calendar, MessageSquare, FileText, ArrowRight, MapPin } from "lucide-react"
 
 export interface BookingFormData {
   firstName: string
@@ -321,50 +322,6 @@ function StepBar({ active }: { active: number }) {
   )
 }
 
-function SuccessScreen({ onBackHome }: { onBackHome: () => void }) {
-  return (
-    <div className="flex min-h-[420px] items-center justify-center px-4 py-10 sm:px-6">
-      <div className="w-full max-w-xl rounded-3xl border border-[#dce6f2] bg-white p-6 text-center shadow-sm sm:p-8">
-        <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#eaf8f1]">
-          <CheckCircle2 className="h-8 w-8 text-[#1d9e75]" />
-        </div>
-
-        <h3 className="text-2xl font-bold text-[#0c2a5e] sm:text-3xl">Thank you!</h3>
-        <p className="mx-auto mt-3 max-w-md text-[14px] leading-6 text-[#526b8c] sm:text-[15px]">
-          Your appointment request has been submitted successfully. We&apos;ll review the details and confirm shortly.
-        </p>
-
-        <div className="mt-6 rounded-2xl border border-[#dce6f2] bg-[#f8fbff] p-4 text-left">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-[#7a93b3]">What happens next</p>
-          <ul className="mt-3 space-y-2 text-[13px] text-[#2a3f6f]">
-            <li className="flex items-start gap-2">
-              <span className="mt-1 h-2 w-2 rounded-full bg-[#1d9e75]" />
-              We will contact you using your submitted email or phone number.
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1 h-2 w-2 rounded-full bg-[#1d9e75]" />
-              Your selected time slot has been recorded for review.
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1 h-2 w-2 rounded-full bg-[#1d9e75]" />
-              Please keep your phone available for confirmation.
-            </li>
-          </ul>
-        </div>
-
-        <button
-          type="button"
-          onClick={onBackHome}
-          className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-[10px] bg-[#1e3a8a] px-6 py-3 text-[14px] font-semibold text-white transition-all hover:bg-[#185fa5] hover:-translate-y-px active:scale-[0.98] sm:w-auto"
-        >
-          Back to Home
-          <ArrowRight className="h-4 w-4" />
-        </button>
-      </div>
-    </div>
-  )
-}
-
 export default function BookingsForm({
   onSubmit,
   isSubmitting,
@@ -374,6 +331,7 @@ export default function BookingsForm({
   isSubmitting: boolean
   error?: string | null
 }) {
+  const router = useRouter()
   const [step, setStep] = useState(0)
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
   const [unavailableSlots, setUnavailableSlots] = useState<string[]>([])
@@ -416,15 +374,11 @@ export default function BookingsForm({
       message: formData.get("message") as string,
       location: formData.get("location") as string,
     })
-    setStep(3)
+    router.push("/thankyou")
   }
 
   const canAdvanceStep0 = !!fields.firstName && !!fields.lastName && !!fields.email && !!fields.phone && !!fields.location
   const canAdvanceStep1 = !!fields.appointmentDate && !!selectedTime
-
-  const handleBackHome = () => {
-    window.location.href = "/"
-  }
 
   return (
     <div className="w-full">
@@ -454,228 +408,224 @@ export default function BookingsForm({
             </div>
           )}
 
-          {step === 3 ? (
-            <SuccessScreen key="success" onBackHome={handleBackHome} />
-          ) : (
-            <form onSubmit={handleSubmit} aria-label="Appointment booking form" noValidate>
+          <form onSubmit={handleSubmit} aria-label="Appointment booking form" noValidate>
 
-              {/* ── Step 0 ── */}
-              {step === 0 && (
-                <div className="space-y-4 animate-in fade-in slide-in-from-right-2 duration-200">
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <FieldGroup id="firstName" label="First name" required icon={<User className="h-3 w-3 text-[#2a4972]" />}>
-                      <FormInput 
-                        id="firstName" 
-                        name="firstName" 
-                        type="text" 
-                        placeholder="Ravi" 
-                        required 
-                        autoComplete="given-name" 
-                        onChange={handleNativeChange}
-                        value={fields.firstName}
-                      />
-                    </FieldGroup>
-
-                    <FieldGroup id="lastName" label="Last name" required icon={<User className="h-3 w-3 text-[#2a4972]" />}>
-                      <FormInput 
-                        id="lastName" 
-                        name="lastName" 
-                        type="text" 
-                        placeholder="Kumar" 
-                        required 
-                        autoComplete="family-name" 
-                        onChange={handleNativeChange}
-                        value={fields.lastName}
-                      />
-                    </FieldGroup>
-                  </div>
-
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <FieldGroup id="email" label="Email" required icon={<Mail className="h-3 w-3 text-[#2a4972]" />}>
-                      <FormInput 
-                        id="email" 
-                        name="email" 
-                        type="email" 
-                        placeholder="ravi@example.com" 
-                        required 
-                        autoComplete="email" 
-                        onChange={handleNativeChange}
-                        value={fields.email}
-                      />
-                    </FieldGroup>
-
-                    <FieldGroup id="phone" label="Phone" required icon={<Phone className="h-3 w-3 text-[#2a4972]" />}>
-                      <FormInput 
-                        id="phone" 
-                        name="phone" 
-                        type="tel" 
-                        placeholder="+91 98765 43210" 
-                        required 
-                        autoComplete="tel" 
-                        onChange={handleNativeChange}
-                        value={fields.phone}
-                      />
-                    </FieldGroup>
-                  </div>
-
-                  <FieldGroup id="location" label="Location" required icon={<MapPin className="h-3 w-3 text-[#2a4972]" />}>
-                    <FormSelect 
-                      id="location" 
-                      name="location" 
-                      required 
-                      onChange={handleNativeChange}
-                      value={fields.location}
-                      options={[
-                        { value: "Kokapet", label: "Kokapet" },
-                        { value: "LB Nagar", label: "LB Nagar" }
-                      ]}
-                    />
-                  </FieldGroup>
-
-                  <div className="pt-2">
-                    <button
-                      type="button"
-                      onClick={() => setStep(1)}
-                      disabled={!canAdvanceStep0}
-                      className="inline-flex items-center gap-2 rounded-[10px] bg-[#1e3a8a] px-6 py-2.5 text-[13.5px] font-semibold text-white transition-all hover:bg-[#185fa5] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
-                    >
-                      Continue
-                      <ArrowRight className="h-4 w-4" />
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {/* ── Step 1 ── */}
-              {step === 1 && (
-                <div className="space-y-4 animate-in fade-in slide-in-from-right-2 duration-200">
-                  <FieldGroup id="appointmentDate" label="Appointment date" required icon={<Calendar className="h-3 w-3 text-[#7a93b3]" />}>
+            {/* ── Step 0 ── */}
+            {step === 0 && (
+              <div className="space-y-4 animate-in fade-in slide-in-from-right-2 duration-200">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <FieldGroup id="firstName" label="First name" required icon={<User className="h-3 w-3 text-[#2a4972]" />}>
                     <FormInput 
-                      id="appointmentDate" 
-                      name="appointmentDate" 
-                      type="date" 
+                      id="firstName" 
+                      name="firstName" 
+                      type="text" 
+                      placeholder="Ravi" 
                       required 
+                      autoComplete="given-name" 
                       onChange={handleNativeChange}
-                      value={fields.appointmentDate}
+                      value={fields.firstName}
                     />
                   </FieldGroup>
 
-                  <div className="flex flex-col gap-1.5">
-                    <div className="flex items-center gap-1.5 text-[11.5px] font-semibold uppercase text-[#2a4972]">
-                      <Clock className="h-3 w-3" />
-                      Appointment time *
-                    </div>
-
-                    <AppointmentTimePicker
-                      value={selectedTime}
-                      onChange={setSelectedTime}
-                      unavailableSlots={unavailableSlots}
-                      name="appointmentTime"
-                      required
-                    />
-                  </div>
-
-                  <div className="flex gap-3 pt-2">
-                    <button 
-                      type="button" 
-                      onClick={() => setStep(0)} 
-                      className="border border-[#dce6f2] px-5 py-2.5 rounded-[10px] text-[13.5px] font-medium text-[#2a3f6f] hover:bg-[#f5f8fc] transition-colors"
-                    >
-                      Back
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => setStep(2)}
-                      disabled={!canAdvanceStep1}
-                      className="inline-flex items-center gap-2 rounded-[10px] bg-[#1e3a8a] px-6 py-2.5 text-[13.5px] font-semibold text-white transition-all hover:bg-[#185fa5] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
-                    >
-                      Continue
-                      <ArrowRight className="h-4 w-4" />
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {/* ── Step 2 ── */}
-              {step === 2 && (
-                <div className="space-y-4 animate-in fade-in slide-in-from-right-2 duration-200">
-
-                  <div className="rounded-xl border border-[#dce6f2] bg-[#f8fbff] p-4">
-                    <p className="mb-2 text-xs font-semibold text-[#7a93b3]">Appointment summary</p>
-                    <div className="grid gap-2 text-sm text-[#2a3f6f]">
-                      <div className="flex justify-between">
-                        <span className="text-[#7a93b3]">Location:</span>
-                        <span className="font-medium">{fields.location || "—"}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-[#7a93b3]">Date:</span>
-                        <span className="font-medium">{fields.appointmentDate || "—"}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-[#7a93b3]">Time:</span>
-                        <span className="font-medium">{selectedTime ? to12h(selectedTime) : "—"}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-[#7a93b3]">Name:</span>
-                        <span className="font-medium">{fields.firstName} {fields.lastName}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-[#7a93b3]">Phone:</span>
-                        <span className="font-medium">{fields.phone}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <FieldGroup id="message" label="Message" icon={<MessageSquare className="h-3 w-3 text-[#7a93b3]" />}>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={3}
-                      placeholder="Any special requests or additional information..."
+                  <FieldGroup id="lastName" label="Last name" required icon={<User className="h-3 w-3 text-[#2a4972]" />}>
+                    <FormInput 
+                      id="lastName" 
+                      name="lastName" 
+                      type="text" 
+                      placeholder="Kumar" 
+                      required 
+                      autoComplete="family-name" 
                       onChange={handleNativeChange}
-                      value={fields.message}
-                      className="w-full rounded-[10px] border border-[#dce6f2] bg-white px-3.5 py-2.5 text-[13.5px] text-[#1a2f5a] placeholder:text-[#b0bfd4] transition-all duration-150 hover:border-[#85b7eb] focus:border-[#185fa5] focus:outline-none focus:ring-[3px] focus:ring-[rgba(24,95,165,0.1)] resize-y min-h-[80px]"
+                      value={fields.lastName}
+                    />
+                  </FieldGroup>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <FieldGroup id="email" label="Email" required icon={<Mail className="h-3 w-3 text-[#2a4972]" />}>
+                    <FormInput 
+                      id="email" 
+                      name="email" 
+                      type="email" 
+                      placeholder="ravi@example.com" 
+                      required 
+                      autoComplete="email" 
+                      onChange={handleNativeChange}
+                      value={fields.email}
                     />
                   </FieldGroup>
 
-                  <input type="hidden" name="firstName" value={fields.firstName} />
-                  <input type="hidden" name="lastName" value={fields.lastName} />
-                  <input type="hidden" name="email" value={fields.email} />
-                  <input type="hidden" name="phone" value={fields.phone} />
-                  <input type="hidden" name="location" value={fields.location} />
-                  <input type="hidden" name="appointmentDate" value={fields.appointmentDate} />
-                  <input type="hidden" name="appointmentTime" value={selectedTime ?? ""} />
+                  <FieldGroup id="phone" label="Phone" required icon={<Phone className="h-3 w-3 text-[#2a4972]" />}>
+                    <FormInput 
+                      id="phone" 
+                      name="phone" 
+                      type="tel" 
+                      placeholder="+91 98765 43210" 
+                      required 
+                      autoComplete="tel" 
+                      onChange={handleNativeChange}
+                      value={fields.phone}
+                    />
+                  </FieldGroup>
+                </div>
 
-                  <div className="flex gap-3 pt-2">
-                    <button 
-                      type="button" 
-                      onClick={() => setStep(1)} 
-                      className="border border-[#dce6f2] px-5 py-2.5 rounded-[10px] text-[13.5px] font-medium text-[#2a3f6f] hover:bg-[#f5f8fc] transition-colors"
-                    >
-                      Back
-                    </button>
+                <FieldGroup id="location" label="Location" required icon={<MapPin className="h-3 w-3 text-[#2a4972]" />}>
+                  <FormSelect 
+                    id="location" 
+                    name="location" 
+                    required 
+                    onChange={handleNativeChange}
+                    value={fields.location}
+                    options={[
+                      { value: "Kokapet", label: "Kokapet" },
+                      { value: "LB Nagar", label: "LB Nagar" }
+                    ]}
+                  />
+                </FieldGroup>
 
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="inline-flex items-center justify-center gap-2 flex-1 rounded-[10px] bg-[#1e3a8a] px-6 py-2.5 text-[13.5px] font-semibold text-white transition-all hover:bg-[#185fa5] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                          Submitting...
-                        </>
-                      ) : (
-                        "Book Appointment"
-                      )}
-                    </button>
+                <div className="pt-2">
+                  <button
+                    type="button"
+                    onClick={() => setStep(1)}
+                    disabled={!canAdvanceStep0}
+                    className="inline-flex items-center gap-2 rounded-[10px] bg-[#1e3a8a] px-6 py-2.5 text-[13.5px] font-semibold text-white transition-all hover:bg-[#185fa5] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                  >
+                    Continue
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ── Step 1 ── */}
+            {step === 1 && (
+              <div className="space-y-4 animate-in fade-in slide-in-from-right-2 duration-200">
+                <FieldGroup id="appointmentDate" label="Appointment date" required icon={<Calendar className="h-3 w-3 text-[#7a93b3]" />}>
+                  <FormInput 
+                    id="appointmentDate" 
+                    name="appointmentDate" 
+                    type="date" 
+                    required 
+                    onChange={handleNativeChange}
+                    value={fields.appointmentDate}
+                  />
+                </FieldGroup>
+
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex items-center gap-1.5 text-[11.5px] font-semibold uppercase text-[#2a4972]">
+                    <Clock className="h-3 w-3" />
+                    Appointment time *
+                  </div>
+
+                  <AppointmentTimePicker
+                    value={selectedTime}
+                    onChange={setSelectedTime}
+                    unavailableSlots={unavailableSlots}
+                    name="appointmentTime"
+                    required
+                  />
+                </div>
+
+                <div className="flex gap-3 pt-2">
+                  <button 
+                    type="button" 
+                    onClick={() => setStep(0)} 
+                    className="border border-[#dce6f2] px-5 py-2.5 rounded-[10px] text-[13.5px] font-medium text-[#2a3f6f] hover:bg-[#f5f8fc] transition-colors"
+                  >
+                    Back
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setStep(2)}
+                    disabled={!canAdvanceStep1}
+                    className="inline-flex items-center gap-2 rounded-[10px] bg-[#1e3a8a] px-6 py-2.5 text-[13.5px] font-semibold text-white transition-all hover:bg-[#185fa5] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                  >
+                    Continue
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ── Step 2 ── */}
+            {step === 2 && (
+              <div className="space-y-4 animate-in fade-in slide-in-from-right-2 duration-200">
+
+                <div className="rounded-xl border border-[#dce6f2] bg-[#f8fbff] p-4">
+                  <p className="mb-2 text-xs font-semibold text-[#7a93b3]">Appointment summary</p>
+                  <div className="grid gap-2 text-sm text-[#2a3f6f]">
+                    <div className="flex justify-between">
+                      <span className="text-[#7a93b3]">Location:</span>
+                      <span className="font-medium">{fields.location || "—"}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#7a93b3]">Date:</span>
+                      <span className="font-medium">{fields.appointmentDate || "—"}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#7a93b3]">Time:</span>
+                      <span className="font-medium">{selectedTime ? to12h(selectedTime) : "—"}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#7a93b3]">Name:</span>
+                      <span className="font-medium">{fields.firstName} {fields.lastName}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#7a93b3]">Phone:</span>
+                      <span className="font-medium">{fields.phone}</span>
+                    </div>
                   </div>
                 </div>
-              )}
 
-            </form>
-          )}
+                <FieldGroup id="message" label="Message" icon={<MessageSquare className="h-3 w-3 text-[#7a93b3]" />}>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={3}
+                    placeholder="Any special requests or additional information..."
+                    onChange={handleNativeChange}
+                    value={fields.message}
+                    className="w-full rounded-[10px] border border-[#dce6f2] bg-white px-3.5 py-2.5 text-[13.5px] text-[#1a2f5a] placeholder:text-[#b0bfd4] transition-all duration-150 hover:border-[#85b7eb] focus:border-[#185fa5] focus:outline-none focus:ring-[3px] focus:ring-[rgba(24,95,165,0.1)] resize-y min-h-[80px]"
+                  />
+                </FieldGroup>
+
+                <input type="hidden" name="firstName" value={fields.firstName} />
+                <input type="hidden" name="lastName" value={fields.lastName} />
+                <input type="hidden" name="email" value={fields.email} />
+                <input type="hidden" name="phone" value={fields.phone} />
+                <input type="hidden" name="location" value={fields.location} />
+                <input type="hidden" name="appointmentDate" value={fields.appointmentDate} />
+                <input type="hidden" name="appointmentTime" value={selectedTime ?? ""} />
+
+                <div className="flex gap-3 pt-2">
+                  <button 
+                    type="button" 
+                    onClick={() => setStep(1)} 
+                    className="border border-[#dce6f2] px-5 py-2.5 rounded-[10px] text-[13.5px] font-medium text-[#2a3f6f] hover:bg-[#f5f8fc] transition-colors"
+                  >
+                    Back
+                  </button>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="inline-flex items-center justify-center gap-2 flex-1 rounded-[10px] bg-[#1e3a8a] px-6 py-2.5 text-[13.5px] font-semibold text-white transition-all hover:bg-[#185fa5] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                        Submitting...
+                      </>
+                    ) : (
+                      "Book Appointment"
+                    )}
+                  </button>
+                </div>
+              </div>
+            )}
+
+          </form>
         </div>
       </div>
     </div>
