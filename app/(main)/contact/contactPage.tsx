@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { useToast } from "@/hooks/use-toast"
 
 import ContactSuccess from "./components/contactSuccess"
@@ -11,6 +12,7 @@ import ContactMap from "./components/contactMap"
 
 export default function ContactPage() {
   const { toast } = useToast()
+  const router = useRouter()
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -45,6 +47,11 @@ export default function ContactPage() {
         title: "Appointment Booked",
         description: `Your registration ID is ${result.id}`,
       })
+
+      // Redirect to thank you page after 1.5 seconds
+      setTimeout(() => {
+        router.push("/thankyou")
+      }, 1500)
     } catch {
       toast({
         title: "Submission Failed",

@@ -321,7 +321,15 @@ function StepBar({ active }: { active: number }) {
   )
 }
 
-function SuccessScreen({ onBackHome }: { onBackHome: () => void }) {
+function SuccessScreen({ onBackHome, onSuccess }: { onBackHome: () => void; onSuccess?: () => void }) {
+  useEffect(() => {
+    // Automatically redirect after 1.5 seconds
+    const timer = setTimeout(() => {
+      onSuccess?.()
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [onSuccess])
+
   return (
     <div className="flex min-h-[420px] items-center justify-center px-4 py-10 sm:px-6">
       <div className="w-full max-w-xl rounded-3xl border border-[#dce6f2] bg-white p-6 text-center shadow-sm sm:p-8">
@@ -369,10 +377,12 @@ export default function BookingsForm({
   onSubmit,
   isSubmitting,
   error,
+  onSuccess,
 }: {
   onSubmit: (data: BookingFormData) => Promise<void> | void
   isSubmitting: boolean
   error?: string | null
+  onSuccess?: () => void
 }) {
   const [step, setStep] = useState(0)
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
@@ -455,7 +465,7 @@ export default function BookingsForm({
           )}
 
           {step === 3 ? (
-            <SuccessScreen key="success" onBackHome={handleBackHome} />
+            <SuccessScreen key="success" onBackHome={handleBackHome} onSuccess={onSuccess} />
           ) : (
             <form onSubmit={handleSubmit} aria-label="Appointment booking form" noValidate>
 

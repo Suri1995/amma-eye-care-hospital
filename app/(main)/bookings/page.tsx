@@ -27,10 +27,7 @@ export default function BookingsPage() {
         throw new Error(result.error || "Submission failed")
       }
       
-      // Success - redirect to thank you page
-      setTimeout(() => {
-        router.push("/thankyou")
-      }, 1500)
+      // Success - form will handle redirect via onSuccess callback
       
     } catch (error) {
       console.error("Booking submission failed:", error)
@@ -38,6 +35,10 @@ export default function BookingsPage() {
     } finally {
       setIsSubmitting(false)
     }
+  }
+
+  const handleSuccess = () => {
+    router.push("/thankyou")
   }
 
   return (
@@ -48,6 +49,7 @@ export default function BookingsPage() {
           onSubmit={handleSubmit} 
           isSubmitting={isSubmitting} 
           error={error}
+          onSuccess={handleSuccess}
         />
       </div>
     </main>
