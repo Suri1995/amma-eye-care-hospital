@@ -1,12 +1,14 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import BookingsForm, { BookingFormData } from "./components/Bookingsform"
 import Bookingappointmenthero from "./components/Bookingappointmenthero"
 
 export default function BookingsPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const router = useRouter()
 
   const handleSubmit = async (data: BookingFormData) => {
     setIsSubmitting(true)
@@ -25,7 +27,10 @@ export default function BookingsPage() {
         throw new Error(result.error || "Submission failed")
       }
       
-      // Success - form will show success screen via step change
+      // Success - redirect to thank you page
+      setTimeout(() => {
+        router.push("/thankyou")
+      }, 1500)
       
     } catch (error) {
       console.error("Booking submission failed:", error)
