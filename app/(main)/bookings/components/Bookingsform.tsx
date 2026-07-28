@@ -207,6 +207,9 @@ function FormInput({
   autoComplete,
   onChange,
   value,
+  maxLength,
+  pattern,
+  inputMode,
 }: {
   id: string
   name: string
@@ -216,6 +219,9 @@ function FormInput({
   autoComplete?: string
   onChange?: React.ChangeEventHandler<HTMLInputElement>
   value?: string
+  maxLength?: number
+  pattern?: string
+  inputMode?: React.HTMLAttributes<HTMLInputElement>["inputMode"]
 }) {
   return (
     <input
@@ -227,6 +233,9 @@ function FormInput({
       autoComplete={autoComplete}
       onChange={onChange}
       value={value}
+      maxLength={maxLength}
+      pattern={pattern}
+      inputMode={inputMode}
       className="h-10 w-full rounded-[10px] border border-[#dce6f2] bg-white px-3.5 text-[13.5px] text-[#1a2f5a] placeholder:text-[#b0bfd4] transition-all duration-150 hover:border-[#85b7eb] focus:border-[#185fa5] focus:outline-none focus:ring-[3px] focus:ring-[rgba(24,95,165,0.1)]"
     />
   )
@@ -361,6 +370,11 @@ export default function BookingsForm({
     setFields((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const digitsOnly = e.target.value.replace(/\D/g, "").slice(0, 10)
+    setFields((prev) => ({ ...prev, phone: digitsOnly }))
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
@@ -377,7 +391,7 @@ export default function BookingsForm({
     router.push("/thankyou")
   }
 
-  const canAdvanceStep0 = !!fields.firstName && !!fields.lastName && !!fields.email && !!fields.phone && !!fields.location
+  const canAdvanceStep0 = !!fields.firstName && !!fields.lastName && !!fields.email && fields.phone.length === 10 && !!fields.location
   const canAdvanceStep1 = !!fields.appointmentDate && !!selectedTime
 
   return (
@@ -460,11 +474,14 @@ export default function BookingsForm({
                       id="phone" 
                       name="phone" 
                       type="tel" 
-                      placeholder="+91 98765 43210" 
+                      placeholder="9876543210" 
                       required 
                       autoComplete="tel" 
-                      onChange={handleNativeChange}
+                      onChange={handlePhoneChange}
                       value={fields.phone}
+                      maxLength={10}
+                      pattern="[0-9]{10}"
+                      inputMode="numeric"
                     />
                   </FieldGroup>
                 </div>
