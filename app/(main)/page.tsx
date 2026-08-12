@@ -4,7 +4,7 @@ import { TrustIndicators } from "@/components/trustIndicators"
 import { ServicesSection } from "@/components/serviceSection"
 import { InsurancePartners } from "@/components/insurancePartners"
 import { TestimonialsSection } from "@/components/testimonialsSection"
-import PostersSection from "@/components/postersSection"
+import MainDoctorsPortfolio from "@/components/mainDoctorsPortfolio"
 import { NewBranchMarquee } from "@/components/ui/newBranchMarquee"
 
 export default function HomePage() {
@@ -14,7 +14,7 @@ export default function HomePage() {
       <CashlessMarquee />
       <HeroSection />
       <TrustIndicators />
-      <PostersSection/>
+      <MainDoctorsPortfolio />
       <ServicesSection />
       <InsurancePartners />
       <TestimonialsSection />
