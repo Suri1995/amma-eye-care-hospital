@@ -38,7 +38,7 @@ const branch = {
   doctors: [
     {
       id: "d1",
-      imageSrc: "/rohini-doctor.webp",
+      imageSrc: "/dr.rohini.webp",
       initials: "RP",
       panelFrom: "#085041",
       panelVia: "#0F6E56",

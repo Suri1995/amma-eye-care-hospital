@@ -31,7 +31,7 @@ export function HeroSection() {
         {/* ═══════════════════════════════
             DESKTOP
         ═══════════════════════════════ */}
-        <div className="hidden lg:grid grid-cols-2 gap-16 py-20 xl:py-24 items-center">
+        <div className="hidden lg:grid grid-cols-2 gap-16 pt-16 pb-20 items-center">
 
           {/* LEFT */}
           <div className="max-w-xl">
@@ -126,7 +126,7 @@ export function HeroSection() {
 
             <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
               <Image
-                src="/clinic.webp"
+                src="/doctors-team.webp"
                 alt="Amma Eye Care Hospital clinic building in Hyderabad"
                 fill
                 priority
@@ -154,8 +154,8 @@ export function HeroSection() {
                   <span className="h-2.5 w-2.5 rounded-full bg-green-400 animate-pulse" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="text-sm font-bold leading-none">Doctors Available</p>
-                  <p className="text-xs opacity-70 mt-0.5">Mon – Sat, 8am – 8pm</p>
+                  <p className="text-sm md:text-2xl font-bold leading-none">Amma Eye Care - Expert Doctors</p>
+                  {/* <p className="text-xs opacity-70 mt-0.5">Mon – Sat, 8am – 8pm</p> */}
                 </div>
               </div>
             </div>

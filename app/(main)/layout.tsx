@@ -7,6 +7,7 @@ import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { MobileCTA } from "@/components/mobile-cta"
+import WhatsAppWidget from "@/components/whatsapp-widget"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -176,6 +177,8 @@ export default function RootLayout({
         <Footer />
 
         <MobileCTA />
+
+        <WhatsAppWidget/>
 
         <Analytics />
       </body>

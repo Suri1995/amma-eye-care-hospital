@@ -40,7 +40,7 @@ export const DOCTORS = [
     languages: "English, Telugu, Hindi",
     consultation: "Monday to Saturday",
     location: "Amma Eye Care Hospital L.B.Nagar, Vanasthalipuram Hyderabad",
-    photo: "/dr.pamba-venkateswarlu-image.webp"
+    photo: "/dr.pamba.webp"
   },
   {
     slug: "dr-rohini-pothireddy",
@@ -61,7 +61,7 @@ export const DOCTORS = [
     languages: "English, Telugu, Hindi, Oriya",
     consultation: "Monday to Saturday",
     location: "Amma Eye Care Hospital, Kokapet, Hyderabad",
-    photo: "/rohini-doctor.webp"
+    photo: "/dr.rohini.webp"
   },
   {
     slug: "dr-yelampalle-sushmitha",
@@ -82,7 +82,7 @@ export const DOCTORS = [
     languages: "English, Telugu, Hindi",
     consultation: "Monday to Saturday: 5:00 PM - 8:00 PM, Sunday: 10:00 AM - 1:00 PM",
     location: "Amma Eye Care Hospital, Kokapet, Hyderabad",
-    photo: "/dr-yelampalle-sushmitha.webp"
+    photo: "/dr.sushmitha.webp"
   },
   {
     slug: "dr-c-omana-reddy",
@@ -102,6 +102,6 @@ export const DOCTORS = [
     languages: "English, Telugu, Hindi",
     consultation: "Monday to Saturday 9 AM - 5 PM",
     location: "Amma Eye Care Hospital L.B.Nagar, Vanasthalipuram Hyderabad",
-    photo: "/dr-omana-reddy.webp"
+    photo: "/dr.omana.webp"
   }
 ]
