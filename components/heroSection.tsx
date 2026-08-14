@@ -31,7 +31,7 @@ export function HeroSection() {
         {/* ═══════════════════════════════
             DESKTOP
         ═══════════════════════════════ */}
-        <div className="hidden lg:grid grid-cols-2 gap-16 py-20 xl:py-24 items-center">
+        <div className="hidden lg:grid grid-cols-2 gap-16 pt-16 pb-20 items-center">
 
           {/* LEFT */}
           <div className="max-w-xl">
@@ -126,7 +126,7 @@ export function HeroSection() {
 
             <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
               <Image
-                src="/clinic.webp"
+                src="/doctors-team.webp"
                 alt="Amma Eye Care Hospital clinic building in Hyderabad"
                 fill
                 priority

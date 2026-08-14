@@ -37,11 +37,11 @@ export default function DoctorProfileCard({
         <div className="flex flex-col md:flex-row gap-4 md:items-center">
 
           {/* Image */}
-          <div className="bg-white rounded-[22px] border border-[#1e3a8a]/10 shadow-lg overflow-hidden h-[300px] md:h-[240px] w-full md:w-[160px] flex-shrink-0 mx-auto md:mx-0">
+          <div className="bg-white rounded-[22px] border border-[#1e3a8a]/10 shadow-lg overflow-hidden h-[300px] md:h-[240px] w-full md:w-[200px] flex-shrink-0 mx-auto md:mx-0">
             <Image
               src={doctor.photo}
               alt={`${doctor.name} - ${doctor.specialization}`}
-              width={160}
+              width={200}
               height={240}
               className="w-full h-full object-cover object-[50%_18%]"
               priority

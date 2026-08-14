@@ -7,7 +7,7 @@ export const DOCTORS = [
     experience: "25+ Years, 1 lakh+ eye surgeries",
     languages: "English, Telugu, Hindi, Oriya",
     location: "Kokapet",
-    photo: "/rohini-doctor.webp"
+    photo: "/dr.rohini.webp"
   },
   {
     slug: "dr-yelampalle-sushmitha",
@@ -17,7 +17,7 @@ export const DOCTORS = [
     experience: "4+ Years",
     languages: "English, Telugu, Hindi",
     location: "Kokapet",
-    photo: "/dr-yelampalle-sushmitha.webp"
+    photo: "/dr.sushmitha.webp"
   },
   {
     slug: "dr-sai-rupa-sree-p",
@@ -37,7 +37,7 @@ export const DOCTORS = [
     experience: "45+ years experience in ophthalmology",
     languages: "English, Telugu, Hindi",
     location: "LB Nagar",
-    photo: "/dr.pamba-venkateswarlu-image.webp"
+    photo: "/dr.pamba.webp"
   },
   {
     slug: "dr-c-omana-reddy",
@@ -47,6 +47,6 @@ export const DOCTORS = [
     experience: "6+ Years",
     languages: "English, Telugu, Hindi",
     location: "LB Nagar",
-    photo: "/dr-omana-reddy.webp"
+    photo: "/dr.omana.webp"
   }
 ]
