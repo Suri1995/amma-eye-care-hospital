@@ -154,8 +154,8 @@ export function HeroSection() {
                   <span className="h-2.5 w-2.5 rounded-full bg-green-400 animate-pulse" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="text-sm font-bold leading-none">Doctors Available</p>
-                  <p className="text-xs opacity-70 mt-0.5">Mon – Sat, 8am – 8pm</p>
+                  <p className="text-sm md:text-2xl font-bold leading-none">Amma Eye Care - Expert Doctors</p>
+                  {/* <p className="text-xs opacity-70 mt-0.5">Mon – Sat, 8am – 8pm</p> */}
                 </div>
               </div>
             </div>
