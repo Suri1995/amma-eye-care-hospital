@@ -193,9 +193,9 @@ export function HeroSection() {
           <div className="relative">
             {/* offset shadow */}
             <div aria-hidden="true" className="absolute inset-0 translate-x-2 translate-y-2 rounded-3xl bg-[#3B2E8C]/10" />
-            <div className="relative w-full h-60 rounded-3xl overflow-hidden shadow-xl ring-1 ring-black/5">
+            <div className="relative w-full h-72 rounded-3xl overflow-hidden shadow-xl ring-1 ring-black/5">
               <Image
-                src="/clinic.webp"
+                src="/doctors-team.webp"
                 alt="Amma Eye Care Hospital clinic"
                 fill
                 sizes="100vw"
@@ -222,8 +222,8 @@ export function HeroSection() {
                   <span className="h-2 w-2 rounded-full bg-green-400" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="text-[11px] font-bold text-white leading-none">Doctors Available</p>
-                  <p className="text-[10px] text-white/65 mt-0.5">Mon – Sat, 8am – 8pm</p>
+                  <p className="text-[16px] font-bold text-white leading-none">Amma Eye Care - Expert Doctors</p>
+                  {/* <p className="text-[10px] text-white/65 mt-0.5">Mon – Sat, 8am – 8pm</p> */}
                 </div>
               </div>
             </div>
