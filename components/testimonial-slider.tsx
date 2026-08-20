@@ -16,7 +16,7 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     name: "Patient Testimonial",
-    surgeryType: "Video Testimonial",
+    surgeryType: "Video",
     type: "video",
     videoUrl: "/testimonial-1.mp4",
     poster: "/testimonial-1-poster.jpg",
@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "Patient Testimonial",
-    surgeryType: "Video Testimonial",
+    surgeryType: "Video",
     type: "video",
     videoUrl: "/testimonial-2.mp4",
     poster: "/testimonial-2-poster.jpg",
@@ -42,7 +42,7 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "Patient Testimonial",
-    surgeryType: "Video Testimonial",
+    surgeryType: "Video",
     type: "video",
     videoUrl: "/testimonial-3.mp4",
     poster: "/testimonial-3-poster.jpg",
@@ -55,7 +55,7 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "Patient Testimonial",
-    surgeryType: "Video Testimonial",
+    surgeryType: "Video",
     type: "video",
     videoUrl: "/testimonial-4.mp4",
     poster: "/testimonial-4-poster.jpg",
