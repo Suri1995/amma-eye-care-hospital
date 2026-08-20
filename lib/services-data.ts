@@ -116,6 +116,52 @@ export const services: Service[] = [
   ],
 },
   {
+    slug: "smile-surgery",
+    name: "SMILE Surgery",
+    image: "/smile-surgery.webp",
+    overview:
+      "SMILE (Small Incision Lenticule Extraction) is a next-generation, blade-free and flap-free laser vision correction procedure. Using a single femtosecond laser, a thin lens-shaped tissue (lenticule) is created within the cornea and removed through a tiny 2-4mm incision — reshaping the cornea to correct your vision with minimal disruption to the corneal surface. It's one of the most advanced options for people with active lifestyles who want fast recovery with less dependence on glasses or contact lenses.",
+    whoNeeds: [
+      "People aged 18+ with stable vision for at least 1 year",
+      "Myopia (nearsightedness) up to -10 diopters",
+      "Astigmatism up to 5 diopters",
+      "Those with mild to moderate dry eyes or thinner corneas not ideal for LASIK",
+      "Athletes, defense personnel, and those wanting a flap-free, minimally invasive option",
+    ],
+    diagnosis: [
+      "Comprehensive eye examination",
+      "Corneal topography to map corneal surface",
+      "Pachymetry to measure corneal thickness",
+      "Wavefront and tear film analysis",
+      "Pupil size measurement in different lighting conditions",
+    ],
+    treatment: [
+      "Single femtosecond laser creates a precise lenticule within the cornea",
+      "Lenticule is removed through a tiny 2-4mm keyhole incision",
+      "No corneal flap is created, preserving greater corneal strength",
+      "Procedure takes about 20-25 seconds of actual laser time per eye",
+      "Most patients notice clear vision within a day or two",
+    ],
+    faqs: [
+      {
+        q: "How is SMILE different from LASIK?",
+        a: "LASIK creates a corneal flap using a laser and then reshapes the tissue underneath. SMILE skips the flap entirely, removing a lenticule of tissue through a tiny incision, which means less disruption to corneal nerves and structure.",
+      },
+      {
+        q: "Is SMILE painful?",
+        a: "No, the procedure is performed under numbing eye drops and is generally painless. Some patients feel mild pressure during the laser step, and slight grittiness for a day afterward.",
+      },
+      {
+        q: "What's the recovery time for SMILE?",
+        a: "Most patients resume normal activities within 1-2 days. Because there's no flap, the risk of flap-related complications is eliminated, and many patients report less dry eye compared to LASIK.",
+      },
+      {
+        q: "Am I a good candidate for SMILE?",
+        a: "Good candidates typically have myopia with or without astigmatism, stable prescriptions, and adequate corneal thickness. A comprehensive evaluation will confirm suitability compared to LASIK or PRK.",
+      },
+    ],
+  },
+  {
     slug: "visual-fields-testing",
     name: "Visual Fields Testing",
     image: "/visual-fields-testing.webp",

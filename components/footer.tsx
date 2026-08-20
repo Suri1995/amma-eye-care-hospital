@@ -228,10 +228,10 @@ export function Footer() {
 
               <li>
                 <Link
-                  href="/services/children-eye-checkup"
+                  href="/services/smile-surgery"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  SMILE
+                  SMILE Surgery
                 </Link>
               </li>
             </ul>
