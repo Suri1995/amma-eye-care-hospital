@@ -16,8 +16,9 @@ export default function HomePage() {
       <HeroSection />
       {/* <TrustIndicators /> */}
       <MainDoctorsPortfolio />
-      <ServicesSection />
       <InsurancePartners />
+      <ServicesSection />
+
       <TestimonialsSection />
       {/* <PostersSection/> */}
       <div className="h-20 md:hidden" aria-hidden="true" />

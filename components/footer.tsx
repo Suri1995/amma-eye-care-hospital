@@ -219,10 +219,10 @@ export function Footer() {
 
               <li>
                 <Link
-                  href="/services/glaucoma-services"
+                  href="/services/icl-implantable-contact-lens"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  Glaucoma Treatment
+                  ICL
                 </Link>
               </li>
 
@@ -231,7 +231,7 @@ export function Footer() {
                   href="/services/children-eye-checkup"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  Children&apos;s Eye Care
+                  SMILE
                 </Link>
               </li>
             </ul>

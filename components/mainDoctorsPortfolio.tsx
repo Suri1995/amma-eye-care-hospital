@@ -263,7 +263,7 @@ function AppointmentLeadForm({ doctor, onClose }: { doctor: Doctor; onClose: () 
 function DoctorCard({ doctor, onBook }: { doctor: Doctor; onBook: (doctor: Doctor) => void }) {
   return (
     <article
-      className="group relative flex h-72 flex-col overflow-hidden rounded-2xl bg-white text-slate-900 ring-1 ring-slate-900/5 transition-[transform,box-shadow] duration-300 ease-out motion-safe:hover:-translate-y-1 hover:shadow-[0_20px_45px_-15px_rgba(15,23,60,0.35)] focus-within:-translate-y-1 focus-within:shadow-[0_20px_45px_-15px_rgba(15,23,60,0.35)] sm:h-80"
+      className="group relative flex h-80 flex-col overflow-hidden rounded-2xl bg-white text-slate-900 ring-1 ring-slate-900/5 transition-[transform,box-shadow] duration-300 ease-out motion-safe:hover:-translate-y-1 hover:shadow-[0_20px_45px_-15px_rgba(15,23,60,0.35)] focus-within:-translate-y-1 focus-within:shadow-[0_20px_45px_-15px_rgba(15,23,60,0.35)] sm:h-80"
       style={{ boxShadow: "0 8px 20px -10px rgba(15,23,60,0.25)" }}
     >
       {/* Slim gold accent bar signals a premium, editorial feel on hover/focus */}
@@ -286,17 +286,17 @@ function DoctorCard({ doctor, onBook }: { doctor: Doctor; onBook: (doctor: Docto
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/35 to-transparent" />
 
         {/* Hover/focus-reveal Book Appointment button, overlaid on the bottom of the image */}
-        <div className="pointer-events-auto absolute inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-black/70 via-black/20 to-transparent p-2 opacity-0 transition-all duration-200 ease-out motion-safe:translate-y-2 group-hover:opacity-100 group-focus-within:opacity-100 motion-safe:group-hover:translate-y-0 motion-safe:group-focus-within:translate-y-0">
-          <Button
-            type="button"
-            onClick={() => onBook(doctor)}
-            aria-label={`Book appointment with ${doctor.name}`}
-            className="cursor-pointer h-8 w-full rounded-lg bg-[#e21d3b] text-[11px] font-semibold text-white shadow-sm transition-colors hover:bg-[#c91834] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-          >
-            <CalendarDays aria-hidden="true" data-icon="inline-start" className="size-3.5" />
-            Book Appointment
-          </Button>
-        </div>
+        <div className="pointer-events-auto absolute inset-x-0 bottom-0 flex translate-y-0 justify-center bg-gradient-to-t from-black/70 via-black/20 to-transparent p-2 opacity-100 transition-all duration-200 ease-out [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:translate-y-2 [@media(hover:hover)]:group-hover:translate-y-0 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-focus-within:translate-y-0 [@media(hover:hover)]:group-focus-within:opacity-100">
+  <Button
+    type="button"
+    onClick={() => onBook(doctor)}
+    aria-label={`Book appointment with ${doctor.name}`}
+    className="cursor-pointer h-8 w-full rounded-lg bg-[#e21d3b] text-[11px] font-semibold text-white shadow-sm transition-colors hover:bg-[#c91834] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+  >
+    <CalendarDays aria-hidden="true" data-icon="inline-start" className="size-3.5" />
+    Book Appointment
+  </Button>
+</div>
       </div>
 
       {/* Text area — 40% of the card height */}
@@ -405,7 +405,7 @@ export default function MainDoctorsPortfolio() {
       : ORDERED_DOCTORS.filter((doctor) => getBranchKey(doctor.location) === activeFilter)
 
   return (
-    <section id="doctors" aria-labelledby="doctors-heading" className="relative overflow-hidden bg-[#d9e1fc] px-4 py-16 text-white">
+    <section id="doctors" aria-labelledby="doctors-heading" className="relative overflow-hidden md:px-4 py-10 md:py-20 text-white">
       {/* Decorative blobs — clipped to the section via overflow-hidden above, softened with blur so they read as ambient light rather than hard shapes */}
       <div
         aria-hidden="true"
@@ -425,7 +425,7 @@ export default function MainDoctorsPortfolio() {
             id="services-heading"
             className="text-3xl font-black tracking-tight text-primary sm:text-4xl lg:text-5xl"
           >
-            Meet the experts behind your care
+            Meet the experts behind {""}<span className="text-accent">Amma Eye Care</span>
           </h2>
           <p className="mt-3 text-base text-black">
             Experienced ophthalmologists offering trusted, compassionate eye care across Amma Eye Care Hospital.
