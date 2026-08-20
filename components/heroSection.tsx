@@ -1,8 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
-import { CalendarDays, CheckCircle2 } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
+import { createPortal } from "react-dom"
+import { CalendarDays, Check, CheckCircle2, ChevronDown } from "lucide-react"
 import { DOCTORS } from "@/lib/doctors-detailed-data"
 
 const LOCATIONS = [
@@ -12,15 +13,163 @@ const LOCATIONS = [
 
 // TODO: swap in your real service list — this is a placeholder set.
 const SERVICES = [
-  "Comprehensive Eye Checkup",
   "Cataract Surgery",
   "LASIK & Refractive Surgery",
+  "ICL",
+  "SMILE Surgery",
+  "Comprehensive Eye Checkup",
   "Retina Care",
   "Glaucoma Treatment",
   "Pediatric Eye Care",
   "Cornea & Contact Lens",
   "Oculoplasty & Cosmetic",
 ]
+
+/**
+ * Premium custom dropdown used for the "Choose Service" field.
+ * Renders a hidden input so it plugs straight into the existing
+ * FormData-based submit() logic — no changes needed there.
+ */
+function PremiumServiceSelect({
+  name,
+  placeholder,
+  options,
+}: {
+  name: string
+  placeholder: string
+  options: string[]
+}) {
+  const [open, setOpen] = useState(false)
+  const [value, setValue] = useState("")
+  const [mounted, setMounted] = useState(false)
+  const [coords, setCoords] = useState({ top: 0, left: 0, width: 0 })
+  const containerRef = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
+
+  // Portals need the DOM, so only render one after mount (SSR-safe).
+  useEffect(() => setMounted(true), [])
+
+  function updateCoords() {
+    if (!buttonRef.current) return
+    const rect = buttonRef.current.getBoundingClientRect()
+    setCoords({ top: rect.bottom + 8, left: rect.left, width: rect.width })
+  }
+
+  // Computed BEFORE the panel opens (not in an effect after it renders),
+  // so React batches the coords + open state into one paint and the panel
+  // never flashes at {0,0} before jumping into place.
+  function toggleOpen() {
+    if (!open) updateCoords()
+    setOpen((prev) => !prev)
+  }
+
+  // Once open, keep it glued to the trigger on scroll (capture:true also
+  // catches the card's internal overflow-y-auto scroll, not just the
+  // window) or resize.
+  useEffect(() => {
+    if (!open) return
+    window.addEventListener("scroll", updateCoords, true)
+    window.addEventListener("resize", updateCoords)
+    return () => {
+      window.removeEventListener("scroll", updateCoords, true)
+      window.removeEventListener("resize", updateCoords)
+    }
+  }, [open])
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(target) &&
+        panelRef.current &&
+        !panelRef.current.contains(target)
+      ) {
+        setOpen(false)
+      }
+    }
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpen(false)
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener("keydown", handleEscape)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("keydown", handleEscape)
+    }
+  }, [])
+
+  const panel = (
+    <div
+      ref={panelRef}
+      role="listbox"
+      style={{ position: "fixed", top: coords.top, left: coords.left, width: coords.width, zIndex: 9999 }}
+      className={`origin-top overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-2xl shadow-slate-900/20 transition-[opacity,transform] duration-200 ease-out ${
+        open ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"
+      }`}
+    >
+      <ul className="max-h-64 overflow-y-auto py-1.5 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-200 [&::-webkit-scrollbar-track]:bg-transparent">
+        {options.map((option) => {
+          const active = option === value
+          return (
+            <li key={option}>
+              <button
+                type="button"
+                role="option"
+                aria-selected={active}
+                onClick={() => {
+                  setValue(option)
+                  setOpen(false)
+                }}
+                className={`flex w-full items-center justify-between gap-3 px-4 py-2.5 text-left text-sm transition-colors duration-150 ${
+                  active
+                    ? "bg-gradient-to-r from-[#3B2E8C]/10 to-[#EC1876]/10 font-semibold text-[#3B2E8C]"
+                    : "text-slate-700 hover:bg-slate-50"
+                }`}
+              >
+                <span className="truncate">{option}</span>
+                {active && <Check aria-hidden="true" className="size-4 shrink-0 text-[#EC1876]" />}
+              </button>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
+
+  return (
+    <div ref={containerRef} className="relative">
+      {/* Keeps FormData.get("service") working exactly as before */}
+      <input type="hidden" name={name} value={value} />
+
+      <button
+        ref={buttonRef}
+        type="button"
+        onClick={toggleOpen}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        className={`flex w-full items-center justify-between rounded-xl border bg-white px-4 py-2 text-sm shadow-sm transition-all duration-200 ${
+          open
+            ? "border-[#3B2E8C] ring-2 ring-[#3B2E8C]/15"
+            : "border-slate-200 hover:border-slate-300 hover:shadow-md"
+        } ${value ? "text-slate-800" : "text-slate-400"}`}
+      >
+        <span className="truncate">{value || placeholder}</span>
+        <ChevronDown
+          aria-hidden="true"
+          className={`ml-2 size-4 shrink-0 transition-transform duration-200 ${
+            open ? "rotate-180 text-[#3B2E8C]" : "text-slate-400"
+          }`}
+        />
+      </button>
+
+      {/* Rendered into document.body so the card's overflow-y-auto and
+          rounded corners can never clip the open panel. */}
+      {mounted ? createPortal(panel, document.body) : null}
+    </div>
+  )
+}
 
 function HeroAppointmentForm() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
@@ -125,7 +274,7 @@ function HeroAppointmentForm() {
         className="w-full appearance-none rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-800 focus:border-[#3B2E8C] focus:outline-none focus:ring-2 focus:ring-[#3B2E8C]/15"
       >
         <option value="" disabled>
-          Select Location
+          Select Branch
         </option>
         {LOCATIONS.map((loc) => (
           <option key={loc.value} value={loc.value}>
@@ -133,20 +282,10 @@ function HeroAppointmentForm() {
           </option>
         ))}
       </select>
-      <select
-        name="service"
-        defaultValue=""
-        className="w-full appearance-none rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-800 focus:border-[#3B2E8C] focus:outline-none focus:ring-2 focus:ring-[#3B2E8C]/15"
-      >
-        <option value="" disabled>
-          Choose Service
-        </option>
-        {SERVICES.map((service) => (
-          <option key={service} value={service}>
-            {service}
-          </option>
-        ))}
-      </select>
+
+      {/* ── Premium custom dropdown (was a native <select>) ── */}
+      <PremiumServiceSelect name="service" placeholder="Choose Service" options={SERVICES} />
+
       <select
         name="doctor"
         defaultValue=""

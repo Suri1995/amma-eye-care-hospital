@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 /**
  * Edit this array to add/remove branches. Keep it in sync with your
@@ -29,19 +29,18 @@ type ChatMessage = {
   text: string
 }
 
+type WhatsAppWidgetProps = {
+  /** Controlled from FloatingWidgets so only one widget is open at a time. */
+  open: boolean
+  onOpen: () => void
+  onClose: () => void
+}
+
 function WhatsAppIcon({ size = 22 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12.032 2.002c-5.514 0-10 4.486-10 10 0 1.79.475 3.553 1.375 5.094l-1.459 5.326 5.459-1.427c1.483.818 3.158 1.25 4.875 1.25 5.514 0 10-4.486 10-10s-4.486-10-10-10zm0 18.5c-1.482 0-2.94-.365-4.24-1.057l-.305-.181-3.24.846.864-3.157-.196-.318C4.125 15.08 3.782 13.557 3.782 12c0-4.554 3.696-8.25 8.25-8.25s8.25 3.696 8.25 8.25-3.696 8.25-8.25 8.25z" />
       <path d="M16.234 14.598c-.238-.119-1.406-.693-1.624-.772-.218-.08-.376-.119-.535.119-.159.238-.619.773-.759.931-.14.16-.28.18-.518.06-.238-.119-1.005-.37-1.914-1.18-.707-.63-1.184-1.408-1.323-1.646-.14-.238-.015-.367.105-.486.108-.108.24-.282.36-.422.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.535-1.29-.734-1.766-.193-.462-.39-.4-.535-.408-.14-.008-.3-.008-.46-.008-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.09 3.62.57.25 1.02.4 1.37.51.58.19 1.11.16 1.53.1.47-.06 1.45-.59 1.66-1.16.21-.57.21-1.06.15-1.16-.06-.1-.22-.16-.46-.26z" />
-    </svg>
-  )
-}
-
-function CloseIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
     </svg>
   )
 }
@@ -54,16 +53,14 @@ function ChevronDownIcon() {
   )
 }
 
-export default function WhatsAppWidget() {
-  const [open, setOpen] = useState(false)
+export default function WhatsAppWidget({ open, onOpen, onClose }: WhatsAppWidgetProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([{ from: "bot", text: GREETING }])
 
-  // Auto-open on every page load / reload. No dismissal is remembered —
-  // closing only hides it for the current page view.
-  useEffect(() => {
-    const timer = setTimeout(() => setOpen(true), 700)
-    return () => clearTimeout(timer)
-  }, [])
+  // NOTE: the "open after 700ms on load" auto-open behavior and all
+  // open/closed state now live in the parent <FloatingWidgets> — this
+  // component just renders whatever `open` it's given and reports user
+  // interactions back up via onOpen/onClose so the Call widget can be
+  // closed automatically whenever this one opens (and vice versa).
 
   function handleSelect(location: (typeof LOCATIONS)[number]) {
     // Show the customer's pick as a chat reply, then a short bot confirmation.
@@ -81,7 +78,7 @@ export default function WhatsAppWidget() {
   }
 
   return (
-    <div className="fixed bottom-16 right-6 md:bottom-6 md:right-6 z-30 flex flex-col items-end gap-3">
+    <div className="flex flex-col items-end gap-3">
       {/* Chat panel */}
       {open && (
         <div
@@ -96,7 +93,7 @@ export default function WhatsAppWidget() {
               <span className="text-sm font-semibold">Amma Eye Care Hospital</span>
             </div>
             <button
-              onClick={() => setOpen(false)}
+              onClick={onClose}
               aria-label="Collapse chat"
               className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 text-white transition-colors hover:bg-white/25"
             >
@@ -146,7 +143,7 @@ export default function WhatsAppWidget() {
       {/* Toggle button — only shown when the panel is closed */}
       {!open && (
         <button
-          onClick={() => setOpen(true)}
+          onClick={onOpen}
           aria-label="Chat with us on WhatsApp"
           aria-expanded={false}
           className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
