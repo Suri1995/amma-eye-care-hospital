@@ -15,6 +15,12 @@ type Testimonial = {
 // types attached yet — swap in the real details once you have them.
 const testimonials: Testimonial[] = [
   {
+    name: "Murthy Maddirala",
+    surgeryType: "Excellent Surgery Experience",
+    type: "text",
+    text: "Dr. Rohini madam is known to us for more than 20 years. She has treated the eyes for our parents, in-laws and now for our family. Her expertise in surgery and post operative care is the base foe confidence built in us over a generation. She is kind in listening and attending the eye issues succssfully. The team she has also kind and receive and attend the patients with love."
+  },
+  {
     name: "Patient Testimonial",
     surgeryType: "Video",
     type: "video",
