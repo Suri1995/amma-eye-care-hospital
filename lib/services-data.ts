@@ -16,6 +16,196 @@ export interface Service {
 
 export const services: Service[] = [
   {
+  slug: "customized-cataract-surgeries",
+  name: "Customized Cataract Surgeries",
+  image: "/cataract-evaluation.webp",
+
+  overview:
+    "Cataract surgery is a safe and effective way to restore clear vision when cataracts begin to affect your daily life. Using advanced technology, the cloudy natural lens is gently removed and replaced with a clear artificial lens. The procedure is quick, comfortable, and helps most patients enjoy sharper vision with minimal discomfort and a fast recovery.",
+
+  whoNeeds: [
+    "Blurry or cloudy vision that impairs the performance of daily activities",
+    "Difficulty reading or recognizing road signs clearly",
+    "Difficulty seeing clearly at night or sensitivity to bright lights",
+    "Perception of faded colors or a yellowish tint",
+    "Frequent changes in eyeglass prescription",
+  ],
+
+  diagnosis: [
+    "Comprehensive eye examination",
+    "Visual acuity testing",
+    "Slit-lamp examination to assess cataract density",
+    "IOL power calculation for optimal results",
+    "Dilated pupil examination of the retina",
+  ],
+
+  treatment: [
+    "Advanced phacoemulsification procedure (15–20 minutes)",
+    "Premium IOL options: Monofocal, Multifocal, Toric (for astigmatism)",
+    "Bladeless, sutureless technique",
+    "Same-day procedure with minimal downtime",
+    "The majority of patients achieve a smooth recovery and typically resume normal activities within 24 to 48 hours.",
+  ],
+
+  faqs: [
+    {
+      q: "Is cataract surgery painful?",
+      a: "Many people see more clearly the day after surgery. Your eye will continue to heal for several weeks, but most patients return to their normal routines just a few days after the procedure.",
+    },
+    {
+      q: "How long does recovery take?",
+      a: "Most patients see a big improvement in their vision within the first day. Recovery continues over 4 to 6 weeks, but you can usually resume most everyday activities within a few days after surgery.",
+    },
+    {
+      q: "Will I need glasses after cataract surgery?",
+      a: "Whether you need glasses after surgery depends on the type of lens you get. Premium multifocal or accommodating lenses can help you do most things without glasses, or sometimes let you go without them altogether.",
+    },
+    {
+      q: "Is the procedure covered by insurance?",
+      a: "Yes, most insurance plans pay for standard cataract surgery. If you choose premium lenses, though, there may be extra costs that your insurance might not cover.",
+    },
+  ],
+},
+
+  {
+    slug: "icl-implantable-contact-lens",
+    name: "ICL - Implantable Contact Lens",
+    image: "/implantable-contact-lens.webp",
+    overview:
+      "ICL (Implantable Collamer Lens) is an excellent option for those with high myopia, thin corneas, or dry eyes who may not be suitable for LASIK. This reversible procedure places a biocompatible lens inside your eye, providing exceptional vision quality without altering the cornea.",
+    whoNeeds: [
+      "High myopia (-6 to -20 diopters)",
+      "Patients not suitable for LASIK due to thin corneas",
+      "Those with dry eye syndrome",
+      "Young patients seeking reversible option",
+      "People wanting superior visual quality",
+    ],
+    diagnosis: [
+      "Comprehensive eye examination",
+      "Anterior chamber depth measurement",
+      "Endothelial cell count",
+      "Pupil size evaluation",
+      "Detailed corneal mapping",
+    ],
+    treatment: [
+      "Outpatient procedure taking 20-30 minutes",
+      "Lens placed behind iris, in front of natural lens",
+      "No corneal tissue removal",
+      "Both eyes can be done same day or different days",
+      "Quick visual recovery within days",
+    ],
+    faqs: [
+      {
+        q: "How is ICL different from LASIK?",
+        a: "ICL adds a lens inside the eye without removing corneal tissue, while LASIK reshapes the cornea. ICL is reversible and suitable for higher prescriptions.",
+      },
+      {
+        q: "Can the lens be felt inside the eye?",
+        a: "No, the ICL is completely invisible and cannot be felt once implanted. It becomes a permanent part of your eye.",
+      },
+      {
+        q: "Is ICL surgery safe?",
+        a: "Yes, ICL has an excellent safety record. The procedure is reversible, meaning the lens can be removed if needed in the future.",
+      },
+      {
+        q: "What is the advantage over contact lenses?",
+        a: "ICL provides permanent correction without daily maintenance, dry eye issues, or infection risk associated with external contact lenses.",
+      },
+    ],
+  },
+  {
+    slug: "lasik-surgery",
+    name: "LASIK - Freedom from Glasses & Contact Lens",
+    image: "/lasik-surgery.webp",
+    overview:
+      "LASIK (Laser-Assisted In Situ Keratomileusis) is a revolutionary procedure that permanently corrects vision by reshaping the cornea. Our blade-free LASIK uses advanced wavefront technology for ultra-precise vision correction. The procedure takes only 10-15 minutes per eye, and most patients achieve 20/20 vision or better.",
+    whoNeeds: [
+      "People aged 18+ with stable vision for at least 1 year",
+      "Myopia (nearsightedness) up to -10 diopters",
+      "Hyperopia (farsightedness) up to +6 diopters",
+      "Astigmatism up to 6 diopters",
+      "Those seeking freedom from glasses and contacts",
+    ],
+    diagnosis: [
+      "Comprehensive eye examination",
+      "Corneal topography to map corneal surface",
+      "Pachymetry to measure corneal thickness",
+      "Wavefront analysis for customized treatment",
+      "Pupil size measurement in different lighting",
+    ],
+    treatment: [
+      "Blade-free femtosecond laser creates corneal flap",
+      "Excimer laser reshapes cornea based on your prescription",
+      "Flap is repositioned - no stitches needed",
+      "Procedure takes 10-15 minutes per eye",
+      "Most patients see clearly by the next day",
+    ],
+    faqs: [
+      {
+        q: "Am I a good candidate for LASIK?",
+        a: "Most people with stable prescriptions are good candidates. A comprehensive evaluation will determine if LASIK is right for you based on corneal thickness, prescription, and overall eye health.",
+      },
+      {
+        q: "Is LASIK permanent?",
+        a: "Yes, the corneal reshaping is permanent. However, age-related changes like presbyopia (need for reading glasses after 40) can still occur.",
+      },
+      {
+        q: "What's the recovery time?",
+        a: "Most patients return to work within 24-48 hours. Vision continues to stabilize over 3-6 months.",
+      },
+      {
+        q: "Can both eyes be done on the same day?",
+        a: "Yes, we typically treat both eyes during the same visit for convenience and faster visual recovery.",
+      },
+    ],
+  },
+  {
+    slug: "smile-surgery",
+    name: "SMILE Surgery",
+    image: "/smile-surgery.webp",
+    overview:
+      "SMILE (Small Incision Lenticule Extraction) is a next-generation, blade-free and flap-free laser vision correction procedure. Using a single femtosecond laser, a thin lens-shaped tissue (lenticule) is created within the cornea and removed through a tiny 2-4mm incision — reshaping the cornea to correct your vision with minimal disruption to the corneal surface. It's one of the most advanced options for people with active lifestyles who want fast recovery with less dependence on glasses or contact lenses.",
+    whoNeeds: [
+      "People aged 18+ with stable vision for at least 1 year",
+      "Myopia (nearsightedness) up to -10 diopters",
+      "Astigmatism up to 5 diopters",
+      "Those with mild to moderate dry eyes or thinner corneas not ideal for LASIK",
+      "Athletes, defense personnel, and those wanting a flap-free, minimally invasive option",
+    ],
+    diagnosis: [
+      "Comprehensive eye examination",
+      "Corneal topography to map corneal surface",
+      "Pachymetry to measure corneal thickness",
+      "Wavefront and tear film analysis",
+      "Pupil size measurement in different lighting conditions",
+    ],
+    treatment: [
+      "Single femtosecond laser creates a precise lenticule within the cornea",
+      "Lenticule is removed through a tiny 2-4mm keyhole incision",
+      "No corneal flap is created, preserving greater corneal strength",
+      "Procedure takes about 20-25 seconds of actual laser time per eye",
+      "Most patients notice clear vision within a day or two",
+    ],
+    faqs: [
+      {
+        q: "How is SMILE different from LASIK?",
+        a: "LASIK creates a corneal flap using a laser and then reshapes the tissue underneath. SMILE skips the flap entirely, removing a lenticule of tissue through a tiny incision, which means less disruption to corneal nerves and structure.",
+      },
+      {
+        q: "Is SMILE painful?",
+        a: "No, the procedure is performed under numbing eye drops and is generally painless. Some patients feel mild pressure during the laser step, and slight grittiness for a day afterward.",
+      },
+      {
+        q: "What's the recovery time for SMILE?",
+        a: "Most patients resume normal activities within 1-2 days. Because there's no flap, the risk of flap-related complications is eliminated, and many patients report less dry eye compared to LASIK.",
+      },
+      {
+        q: "Am I a good candidate for SMILE?",
+        a: "Good candidates typically have myopia with or without astigmatism, stable prescriptions, and adequate corneal thickness. A comprehensive evaluation will confirm suitability compared to LASIK or PRK.",
+      },
+    ],
+  },
+  {
   slug: "computerized-eye-testing",
   name: "Computerized Eye Testing",
   image: "/computerized-eye-testing.webp",
@@ -116,52 +306,6 @@ export const services: Service[] = [
   ],
 },
   {
-    slug: "smile-surgery",
-    name: "SMILE Surgery",
-    image: "/smile-surgery.webp",
-    overview:
-      "SMILE (Small Incision Lenticule Extraction) is a next-generation, blade-free and flap-free laser vision correction procedure. Using a single femtosecond laser, a thin lens-shaped tissue (lenticule) is created within the cornea and removed through a tiny 2-4mm incision — reshaping the cornea to correct your vision with minimal disruption to the corneal surface. It's one of the most advanced options for people with active lifestyles who want fast recovery with less dependence on glasses or contact lenses.",
-    whoNeeds: [
-      "People aged 18+ with stable vision for at least 1 year",
-      "Myopia (nearsightedness) up to -10 diopters",
-      "Astigmatism up to 5 diopters",
-      "Those with mild to moderate dry eyes or thinner corneas not ideal for LASIK",
-      "Athletes, defense personnel, and those wanting a flap-free, minimally invasive option",
-    ],
-    diagnosis: [
-      "Comprehensive eye examination",
-      "Corneal topography to map corneal surface",
-      "Pachymetry to measure corneal thickness",
-      "Wavefront and tear film analysis",
-      "Pupil size measurement in different lighting conditions",
-    ],
-    treatment: [
-      "Single femtosecond laser creates a precise lenticule within the cornea",
-      "Lenticule is removed through a tiny 2-4mm keyhole incision",
-      "No corneal flap is created, preserving greater corneal strength",
-      "Procedure takes about 20-25 seconds of actual laser time per eye",
-      "Most patients notice clear vision within a day or two",
-    ],
-    faqs: [
-      {
-        q: "How is SMILE different from LASIK?",
-        a: "LASIK creates a corneal flap using a laser and then reshapes the tissue underneath. SMILE skips the flap entirely, removing a lenticule of tissue through a tiny incision, which means less disruption to corneal nerves and structure.",
-      },
-      {
-        q: "Is SMILE painful?",
-        a: "No, the procedure is performed under numbing eye drops and is generally painless. Some patients feel mild pressure during the laser step, and slight grittiness for a day afterward.",
-      },
-      {
-        q: "What's the recovery time for SMILE?",
-        a: "Most patients resume normal activities within 1-2 days. Because there's no flap, the risk of flap-related complications is eliminated, and many patients report less dry eye compared to LASIK.",
-      },
-      {
-        q: "Am I a good candidate for SMILE?",
-        a: "Good candidates typically have myopia with or without astigmatism, stable prescriptions, and adequate corneal thickness. A comprehensive evaluation will confirm suitability compared to LASIK or PRK.",
-      },
-    ],
-  },
-  {
     slug: "visual-fields-testing",
     name: "Visual Fields Testing",
     image: "/visual-fields-testing.webp",
@@ -256,7 +400,7 @@ export const services: Service[] = [
   {
     slug: "diabetic-hypertension-retinopathy-screening",
     name: "Diabetic & Hypertension Retinopathy Screening",
-    image: "/diabetic-&-hypertension-retinopathy-screening.webp",
+    image: "/diabetic-rentinopathy-evaluation.webp",
     overview:
       "Diabetes can damage the blood vessels in your retina, leading to vision loss if not detected and treated early. Our diabetic retinopathy screening uses advanced imaging to detect changes before you notice any symptoms. Early detection and treatment can prevent 95% of diabetes-related vision loss.",
     whoNeeds: [
@@ -342,149 +486,6 @@ export const services: Service[] = [
       {
         q: "What can I do to prevent worsening?",
         a: "Stop smoking (crucial), maintain good thyroid control, use lubricating drops, and attend regular monitoring appointments.",
-      },
-    ],
-  },
-  {
-  slug: "customized-cataract-surgeries",
-  name: "Customized Cataract Surgeries",
-  image: "/customized-cataract-surgeries.webp",
-
-  overview:
-    "Cataract surgery is a safe and effective way to restore clear vision when cataracts begin to affect your daily life. Using advanced technology, the cloudy natural lens is gently removed and replaced with a clear artificial lens. The procedure is quick, comfortable, and helps most patients enjoy sharper vision with minimal discomfort and a fast recovery.",
-
-  whoNeeds: [
-    "Blurry or cloudy vision that impairs the performance of daily activities",
-    "Difficulty reading or recognizing road signs clearly",
-    "Difficulty seeing clearly at night or sensitivity to bright lights",
-    "Perception of faded colors or a yellowish tint",
-    "Frequent changes in eyeglass prescription",
-  ],
-
-  diagnosis: [
-    "Comprehensive eye examination",
-    "Visual acuity testing",
-    "Slit-lamp examination to assess cataract density",
-    "IOL power calculation for optimal results",
-    "Dilated pupil examination of the retina",
-  ],
-
-  treatment: [
-    "Advanced phacoemulsification procedure (15–20 minutes)",
-    "Premium IOL options: Monofocal, Multifocal, Toric (for astigmatism)",
-    "Bladeless, sutureless technique",
-    "Same-day procedure with minimal downtime",
-    "The majority of patients achieve a smooth recovery and typically resume normal activities within 24 to 48 hours.",
-  ],
-
-  faqs: [
-    {
-      q: "Is cataract surgery painful?",
-      a: "Many people see more clearly the day after surgery. Your eye will continue to heal for several weeks, but most patients return to their normal routines just a few days after the procedure.",
-    },
-    {
-      q: "How long does recovery take?",
-      a: "Most patients see a big improvement in their vision within the first day. Recovery continues over 4 to 6 weeks, but you can usually resume most everyday activities within a few days after surgery.",
-    },
-    {
-      q: "Will I need glasses after cataract surgery?",
-      a: "Whether you need glasses after surgery depends on the type of lens you get. Premium multifocal or accommodating lenses can help you do most things without glasses, or sometimes let you go without them altogether.",
-    },
-    {
-      q: "Is the procedure covered by insurance?",
-      a: "Yes, most insurance plans pay for standard cataract surgery. If you choose premium lenses, though, there may be extra costs that your insurance might not cover.",
-    },
-  ],
-},
-  {
-    slug: "lasik-surgery",
-    name: "LASIK - Freedom from Glasses & Contact Lens",
-    image: "/lasik-surgery.webp",
-    overview:
-      "LASIK (Laser-Assisted In Situ Keratomileusis) is a revolutionary procedure that permanently corrects vision by reshaping the cornea. Our blade-free LASIK uses advanced wavefront technology for ultra-precise vision correction. The procedure takes only 10-15 minutes per eye, and most patients achieve 20/20 vision or better.",
-    whoNeeds: [
-      "People aged 18+ with stable vision for at least 1 year",
-      "Myopia (nearsightedness) up to -10 diopters",
-      "Hyperopia (farsightedness) up to +6 diopters",
-      "Astigmatism up to 6 diopters",
-      "Those seeking freedom from glasses and contacts",
-    ],
-    diagnosis: [
-      "Comprehensive eye examination",
-      "Corneal topography to map corneal surface",
-      "Pachymetry to measure corneal thickness",
-      "Wavefront analysis for customized treatment",
-      "Pupil size measurement in different lighting",
-    ],
-    treatment: [
-      "Blade-free femtosecond laser creates corneal flap",
-      "Excimer laser reshapes cornea based on your prescription",
-      "Flap is repositioned - no stitches needed",
-      "Procedure takes 10-15 minutes per eye",
-      "Most patients see clearly by the next day",
-    ],
-    faqs: [
-      {
-        q: "Am I a good candidate for LASIK?",
-        a: "Most people with stable prescriptions are good candidates. A comprehensive evaluation will determine if LASIK is right for you based on corneal thickness, prescription, and overall eye health.",
-      },
-      {
-        q: "Is LASIK permanent?",
-        a: "Yes, the corneal reshaping is permanent. However, age-related changes like presbyopia (need for reading glasses after 40) can still occur.",
-      },
-      {
-        q: "What's the recovery time?",
-        a: "Most patients return to work within 24-48 hours. Vision continues to stabilize over 3-6 months.",
-      },
-      {
-        q: "Can both eyes be done on the same day?",
-        a: "Yes, we typically treat both eyes during the same visit for convenience and faster visual recovery.",
-      },
-    ],
-  },
-  {
-    slug: "icl-implantable-contact-lens",
-    name: "ICL - Implantable Contact Lens",
-    image: "/implantable-contact-lens.webp",
-    overview:
-      "ICL (Implantable Collamer Lens) is an excellent option for those with high myopia, thin corneas, or dry eyes who may not be suitable for LASIK. This reversible procedure places a biocompatible lens inside your eye, providing exceptional vision quality without altering the cornea.",
-    whoNeeds: [
-      "High myopia (-6 to -20 diopters)",
-      "Patients not suitable for LASIK due to thin corneas",
-      "Those with dry eye syndrome",
-      "Young patients seeking reversible option",
-      "People wanting superior visual quality",
-    ],
-    diagnosis: [
-      "Comprehensive eye examination",
-      "Anterior chamber depth measurement",
-      "Endothelial cell count",
-      "Pupil size evaluation",
-      "Detailed corneal mapping",
-    ],
-    treatment: [
-      "Outpatient procedure taking 20-30 minutes",
-      "Lens placed behind iris, in front of natural lens",
-      "No corneal tissue removal",
-      "Both eyes can be done same day or different days",
-      "Quick visual recovery within days",
-    ],
-    faqs: [
-      {
-        q: "How is ICL different from LASIK?",
-        a: "ICL adds a lens inside the eye without removing corneal tissue, while LASIK reshapes the cornea. ICL is reversible and suitable for higher prescriptions.",
-      },
-      {
-        q: "Can the lens be felt inside the eye?",
-        a: "No, the ICL is completely invisible and cannot be felt once implanted. It becomes a permanent part of your eye.",
-      },
-      {
-        q: "Is ICL surgery safe?",
-        a: "Yes, ICL has an excellent safety record. The procedure is reversible, meaning the lens can be removed if needed in the future.",
-      },
-      {
-        q: "What is the advantage over contact lenses?",
-        a: "ICL provides permanent correction without daily maintenance, dry eye issues, or infection risk associated with external contact lenses.",
       },
     ],
   },
@@ -629,7 +630,7 @@ export const services: Service[] = [
   {
     slug: "advanced-refractive-procedures",
     name: "Advanced Refractive Procedures",
-    image: "/advanced-refractive-procedure.webp",
+    image: "/refractive-surgery-evaluation.webp",
     overview:
       "Our comprehensive refractive surgery program offers customized solutions for vision correction. Whether you're a young adult seeking freedom from glasses or need specialized treatment for complex prescriptions, we have advanced options tailored to your eyes.",
     whoNeeds: [
@@ -1054,7 +1055,7 @@ export const services: Service[] = [
   {
     slug: "squint-treatment",
     name: "Squint Treatment",
-    image: "/exam.webp",
+    image: "/squint-evaluation.webp",
     overview:
       "Squint (strabismus) affects eye alignment and can impact vision, depth perception, and self-confidence. Our specialists provide comprehensive evaluation and treatment including non-surgical options (vision therapy, prisms) and surgical correction when needed, for patients of all ages.",
     whoNeeds: [
@@ -1238,7 +1239,7 @@ export const services: Service[] = [
   {
     slug: "optical-shop",
     name: "Optical Shop",
-    image: "/spectacular.webp",
+    image: "/opticals.webp",
     overview:
       "Our in-house optical shop offers a wide selection of frames from leading brands, along with high-quality lenses including progressive, anti-reflective, and blue-light filtering options. Our trained opticians help you find the perfect fit and style.",
     whoNeeds: [
