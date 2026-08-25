@@ -41,10 +41,10 @@ const testimonials: Testimonial[] = [
     poster: "/testimonial-2-poster.jpg",
   },
   {
-    name: "Geetha Reddy Maddi",
-    surgeryType: "LASIK Surgery",
+    name: "Shiva Khadaraiah",
+    surgeryType: "Cataract Surgery",
     type: "text",
-    text: "I have gone through LASIK and extremely satisfied with the treatment.\nI would recommend Amma Eye Care Hospital to everyone who really seeks clear vision.\nIt is equipped with advanced machinery, experienced doctors, excellent service and utmost care to patients, which makes the hospital trustworthy.\nThank you Dr. Prasad Reddy, Dr. Keerthi and the entire team of Amma for your service."
+    text: "I am 50 years old and I got cataracts due to an eye injury when I was a child... The doctors performed the operation very successfully... I will forever be grateful to this hospital for that."
   },
   {
     name: "Patient Testimonial",
@@ -54,10 +54,10 @@ const testimonials: Testimonial[] = [
     poster: "/testimonial-3-poster.jpg",
   },
   {
-    name: "Paruchuri Chaya Lakshmi",
-    surgeryType: "Cataract Surgery",
+    name: "Saideswar Rao",
+    surgeryType: "Excellent Hospitality",
     type: "text",
-    text: "Visited Amma Eye Care Hospital as my father-in-law had eyesight problems because of diabetes. After conducting the tests, Dr. Prasad Reddy, Dr. Keerthi and Dr. Vishnu Preethi clearly explained the situation and recommended cataract surgery.\nDoctors and staff took utmost care of my father-in-law throughout the entire process, as a result of which he now has better eye vision.\nI sincerely thank Prasad Reddy garu, Keerthi garu and Vishnu Preethi garu for the great work."
+    text: "I brought my kid to Amma Eye Care and the experience was amazing. The treatment was excellent and the hospitality was beyond what I’ve ever seen in any hospital. The doctor mam treated my child with so much love and patience, she truly felt like a mother. Prices are very reasonable too. Thank you so much doctor mam and the entire team for your care. Highly recommend Amma Eye Care to everyone!"
   },
   {
     name: "Patient Testimonial",
