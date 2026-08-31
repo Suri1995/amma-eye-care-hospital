@@ -21,7 +21,7 @@ const BRANCHES: Branch[] = [
   },
   {
     name: "Kokapet",
-    numbers: [{ tel: "9000146244", display: "90001 46244", label: "Main line" }],
+    numbers: [{ tel: "9000196244", display: "90001 96244", label: "Main line" }],
   },
 ]
 
