@@ -126,16 +126,20 @@ function SeamCrest() {
   )
 }
 
-/** Small chevron that flips when the parent <details> is open. */
+/** Circular button housing the chevron, so the disclosure reads as clickable. */
 function DisclosureChevron() {
   return (
-    <svg
-      viewBox="0 0 20 20"
-      className="h-4 w-4 flex-shrink-0 text-[var(--brand-teal)] transition-transform duration-200 group-open:rotate-180"
+    <span
+      className="flex h-9 w-9 flex-shrink-0 animate-[bounce_2.4s_ease-in-out_infinite] items-center justify-center rounded-full border border-3 border-[var(--brand-teal)]/40 bg-[var(--brand-teal)]/[0.08] text-[var(--brand-teal)] transition-colors duration-200 group-open:animate-none group-open:bg-[var(--brand-teal)] group-open:text-white group-hover:animate-none group-hover:border-[var(--brand-teal)] motion-reduce:animate-none"
       aria-hidden="true"
     >
-      <path d="M5 7.5 10 13 15 7.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+      <svg
+        viewBox="0 0 20 20"
+        className="h-6 w-6 transition-transform duration-200 group-open:rotate-180"
+      >
+        <path d="M5 7.5 10 13 15 7.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
   )
 }
 
@@ -289,7 +293,7 @@ export function GovernmentRecognition() {
               {/* Complete order — collapsed by default, full text on open */}
               <details className="group px-6 py-2 md:px-12">
                 <summary
-                  className="flex cursor-pointer list-none items-center justify-between gap-4 py-6 [&::-webkit-details-marker]:hidden"
+                  className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl py-6 transition-colors hover:bg-secondary/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--brand-teal)] focus-visible:outline-offset-2 [&::-webkit-details-marker]:hidden"
                 >
                   <span>
                     <span className="block text-[15px] font-bold text-foreground">
