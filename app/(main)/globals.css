@@ -4,26 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #f8f9fa;
-  --foreground: #333333;
+  --background: #f7f5f0;
+  --foreground: #172329;
   --card: #ffffff;
-  --card-foreground: #333333;
+  --card-foreground: #172329;
   --popover: #ffffff;
-  --popover-foreground: #333333;
-  --primary: #1e3a8a;
+  --popover-foreground: #172329;
+  --primary: #315551;
   --primary-foreground: #ffffff;
-  --secondary: #e3f2fd;
-  --secondary-foreground: #1e3a8a;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #dc2626;
+  --secondary: #e8eeea;
+  --secondary-foreground: #315551;
+  --muted: #eef1ed;
+  --muted-foreground: #687471;
+  --accent: #c75c48;
   --accent-foreground: #ffffff;
-  --destructive: #dc3545;
+  --destructive: #a94738;
   --destructive-foreground: #ffffff;
-  --border: #e1e4e8;
-  --input: #e1e4e8;
-  --ring: #1e3a8a;
-  --radius: 0.5rem;
+  --border: #d9ded9;
+  --input: #d9ded9;
+  --ring: #c75c48;
+  --radius: 0.25rem;
   
   /* Brand colors */
   --brand-blue: #1e3a8a;
