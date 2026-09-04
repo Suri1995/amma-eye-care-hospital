@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/insurances", label: "Insurances" },
   { href: "/doctors", label: "Doctors" },
   { href: "/about", label: "About" },
-  { href: "/blogs", label: "Blog" },
+  // { href: "/blogs", label: "Blog" },
   { href: "/contact", label: "Contact" }
 ]
 
