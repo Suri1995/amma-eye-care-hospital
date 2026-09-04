@@ -16,8 +16,6 @@ const navLinks = [
   { href: "/contact", label: "Contact" }
 ]
 
-// Shown in the slim utility bar above the main nav (lg and up).
-// Kept out of the main row to reduce clutter at the 1024–1440px range.
 const TOP_BAR_HREFS = ["/about", "/blogs"]
 
 const topBarLinks = navLinks.filter((link) => TOP_BAR_HREFS.includes(link.href))
@@ -56,7 +54,7 @@ export function Navigation() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-200 ${
+      className={`sticky top-0 z-1000 w-full transition-all duration-200 ${
         isScrolled ? "bg-white shadow-md" : "bg-white border-b border-border"
       }`}
       role="banner"
@@ -151,14 +149,41 @@ export function Navigation() {
             )}
           </button>
         </div>
+      </nav>
 
-        <div
-          id="mobile-menu"
-          className={`lg:hidden ${isOpen ? "block" : "hidden"}`}
-          role="menu"
-          aria-orientation="vertical"
-        >
-          <div className="border-t border-border py-4 space-y-1">
+      {/* Mobile menu — full-screen fixed overlay, rendered above floating widgets */}
+      <div
+        id="mobile-menu"
+        className={`lg:hidden fixed inset-0 z-[60] bg-white transition-opacity duration-200 ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        role="menu"
+        aria-orientation="vertical"
+      >
+        <div className="flex h-full flex-col">
+          {/* Header row inside the overlay: logo + close button */}
+          <div className="flex h-16 items-center justify-between px-4 border-b border-border flex-shrink-0">
+            <Link href="/" aria-label="Amma Eye Care Hospital - Home">
+              <Image
+                src="/amma-eye-care-logo.webp"
+                alt="Amma Eye Care Hospital"
+                width={180}
+                height={50}
+                className="h-12 w-auto"
+              />
+            </Link>
+            <button
+              type="button"
+              onClick={() => setIsOpen(false)}
+              className="p-2 rounded-lg hover:bg-muted transition-colors"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+
+          {/* Scrollable link list */}
+          <div className="flex-1 overflow-y-auto py-4 space-y-1">
             {navLinks.map((link) => {
               const isActive = isLinkActive(link.href)
               return (
@@ -167,7 +192,7 @@ export function Navigation() {
                   href={link.href}
                   role="menuitem"
                   aria-current={isActive ? "page" : undefined}
-                  className={`block px-4 py-3 rounded-lg text-base font-semibold transition-colors ${
+                  className={`block px-4 py-3 mx-2 rounded-lg text-base font-semibold transition-colors ${
                     isActive
                       ? "text-[#1e3a8a] bg-[#1e3a8a]/10"
                       : "text-foreground hover:text-[#1e3a8a] hover:bg-[#1e3a8a]/5"
@@ -177,7 +202,7 @@ export function Navigation() {
                 </Link>
               )
             })}
-            <div className="pt-4 px-4 flex flex-col gap-3">
+            <div className="pt-4 px-4">
               <Link
                 href="/bookings"
                 className="inline-flex items-center justify-center rounded-lg bg-[#1e3a8a] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#1e3a8a]/90 w-full text-center"
@@ -187,7 +212,7 @@ export function Navigation() {
             </div>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
   )
 }
