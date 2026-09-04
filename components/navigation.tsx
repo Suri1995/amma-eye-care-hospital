@@ -12,9 +12,16 @@ const navLinks = [
   { href: "/insurances", label: "Insurances" },
   { href: "/doctors", label: "Doctors" },
   { href: "/about", label: "About" },
-  // { href: "/blogs", label: "Blog" },
+  { href: "/blogs", label: "Blogs" },
   { href: "/contact", label: "Contact" }
 ]
+
+// Shown in the slim utility bar above the main nav (lg and up).
+// Kept out of the main row to reduce clutter at the 1024–1440px range.
+const TOP_BAR_HREFS = ["/about", "/blogs"]
+
+const topBarLinks = navLinks.filter((link) => TOP_BAR_HREFS.includes(link.href))
+const mainNavLinks = navLinks.filter((link) => !TOP_BAR_HREFS.includes(link.href))
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -44,6 +51,9 @@ export function Navigation() {
     }
   }, [isOpen])
 
+  const isLinkActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(href))
+
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-200 ${
@@ -51,6 +61,33 @@ export function Navigation() {
       }`}
       role="banner"
     >
+      {/* Utility bar — Blog & About, lg (1024px) and up only */}
+      <div className="hidden lg:block border-b border-border bg-secondary/50">
+        <div className="container max-w-7xl">
+          <ul className="flex h-9 items-center justify-end gap-6" role="menubar" aria-label="Secondary navigation">
+            {topBarLinks.map((link) => {
+              const isActive = isLinkActive(link.href)
+              return (
+                <li key={link.href} role="none">
+                  <Link
+                    href={link.href}
+                    role="menuitem"
+                    aria-current={isActive ? "page" : undefined}
+                    className={`text-xs font-medium tracking-wide transition-colors ${
+                      isActive
+                        ? "text-[#1e3a8a]"
+                        : "text-muted-foreground hover:text-[#1e3a8a]"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </div>
+
       <nav className="container max-w-7xl" aria-label="Main navigation">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link
@@ -69,9 +106,8 @@ export function Navigation() {
           </Link>
 
           <ul className="hidden lg:flex items-center gap-1" role="menubar">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href || 
-                (link.href !== "/" && pathname.startsWith(link.href))
+            {mainNavLinks.map((link) => {
+              const isActive = isLinkActive(link.href)
               return (
                 <li key={link.href} role="none">
                   <Link
@@ -124,8 +160,7 @@ export function Navigation() {
         >
           <div className="border-t border-border py-4 space-y-1">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href || 
-                (link.href !== "/" && pathname.startsWith(link.href))
+              const isActive = isLinkActive(link.href)
               return (
                 <Link
                   key={link.href}
