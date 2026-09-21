@@ -355,7 +355,7 @@ export const services: Service[] = [
   {
     slug: "glaucoma",
     name: "Glaucoma",
-    image: "/eye-pressure-test.webp",
+    image: "/glaucoma.webp",
     overview:
       "Glaucoma is often called the 'silent thief of sight' because it typically has no early symptoms. We provide comprehensive glaucoma management, including early detection, medical treatment, laser therapy, and surgical options. Our goal is to preserve your vision through regular monitoring and appropriate treatment to control eye pressure.",
     whoNeeds: [
@@ -403,7 +403,7 @@ export const services: Service[] = [
   {
     slug: "vitreoretina-services",
     name: "Vitreoretina Services",
-    image: "/retina-scan.webp",
+    image: "/vitreoretina-services.webp",
     overview:
       "Our Vitreoretina department manages conditions affecting the retina and vitreous - the light-sensing tissue and gel at the back of the eye. From diabetic retinopathy and age-related macular degeneration to retinal detachment and vascular occlusions, our retina specialists combine advanced imaging with medical, laser, and surgical treatment to protect and restore vision.",
     whoNeeds: [
