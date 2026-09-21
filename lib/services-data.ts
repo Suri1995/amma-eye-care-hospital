@@ -451,7 +451,7 @@ export const services: Service[] = [
   {
     slug: "pediatric-ophthalmology-strabismology",
     name: "Pediatric Ophthalmology & Strabismology",
-    image: "/children-eye-checkup.webp",
+    image: "/pediatric-ophthalmology.webp",
     overview:
       "Children's vision is crucial for learning and development. Our pediatric ophthalmology and strabismus (squint) services are designed to be child-friendly and stress-free, covering everything from routine screening to complex eye-alignment surgery. We diagnose and treat lazy eye (amblyopia), crossed or misaligned eyes (strabismus), and refractive errors, with a strong focus on early detection to prevent permanent vision problems.",
     whoNeeds: [
