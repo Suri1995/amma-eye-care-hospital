@@ -878,6 +878,104 @@ export const services: Service[] = [
       },
     ],
   },
+
+  // 19. GLASSES CHECK UP
+  {
+  slug: "glasses-eye-checkup",
+  name: "Glasses Eye Check-up",
+  image: "/glasses-eye-check-up.webp",
+  overview:
+    "Clear, comfortable vision starts with a precise prescription. Our Glasses Eye Check-up combines advanced diagnostic technology with a careful, personalised assessment to measure your visual needs accurately. Whether you are getting glasses for the first time, updating an existing prescription, or experiencing eye strain and blurred vision, our specialists ensure every lens is tailored to your eyes, your lifestyle, and your daily demands.",
+  whoNeeds: [
+    "Blurred or unclear vision at distance or while reading",
+    "Frequent headaches, eye strain, or fatigue after screen use",
+    "Squinting, or difficulty with night driving and glare",
+    "Existing glasses that feel outdated or uncomfortable",
+    "Adults over 40 finding close-up tasks increasingly difficult",
+    "Anyone due for a routine annual vision assessment",
+  ],
+  diagnosis: [
+    "Comprehensive visual acuity assessment",
+    "Computerised autorefraction with detailed subjective refinement",
+    "Binocular vision and eye muscle coordination evaluation",
+    "Slit-lamp examination of the front of the eye",
+    "Intraocular pressure measurement and retinal health screening",
+  ],
+  treatment: [
+    "Precision prescription lenses: single vision, bifocal, or progressive",
+    "Premium lens coatings: anti-glare, blue-light filtering, and UV protection",
+    "Specialised computer and driving glasses for demanding daily use",
+    "Personalised frame guidance based on prescription and lifestyle",
+    "Contact lens assessment and trial fitting, where suitable",
+    "Follow-up reviews to ensure lasting comfort and clarity",
+  ],
+  faqs: [
+    {
+      q: "How often should I have a Glasses Eye Check-up?",
+      a: "We recommend a comprehensive eye check-up every 12 months, or sooner if you notice changes in your vision, headaches, or eye strain. Adults over 40 and those with existing eye conditions may benefit from more frequent reviews.",
+    },
+    {
+      q: "How long does a Glasses Eye Check-up take?",
+      a: "A typical appointment takes 30 to 45 minutes. This includes vision testing, refraction, a health screening of your eyes, and a consultation on the lens options best suited to you.",
+    },
+    {
+      q: "Is the eye test uncomfortable?",
+      a: "Not at all. The assessment is completely non-invasive and gentle. If dilating drops are needed for a closer look at the retina, your specialist will explain why beforehand and guide you through it.",
+    },
+    {
+      q: "What should I bring to my appointment?",
+      a: "Please bring your current glasses or contact lenses, any previous prescriptions, and a list of medications you take. If you spend long hours on screens or drive at night, let us know so we can tailor your lens recommendations.",
+    },
+  ],
+},
+
+  // 20. SQUINT TREATMENT
+  {
+    slug: "squint-treatment",
+    name: "Squint Treatment",
+    image: "/squint-evaluation.webp",
+    overview:
+      "Squint (strabismus) affects eye alignment and can impact vision, depth perception, and self-confidence. Our specialists provide comprehensive evaluation and treatment including non-surgical options (vision therapy, prisms) and surgical correction when needed, for patients of all ages.",
+    whoNeeds: [
+      "Children with misaligned eyes",
+      "Adults with new-onset or long-standing squint",
+      "Those experiencing double vision",
+      "Patients with squint affecting appearance or confidence",
+      "Previous squint surgery needing revision",
+    ],
+    diagnosis: [
+      "Complete orthoptic evaluation",
+      "Measurement of deviation angle",
+      "Assessment of eye movement",
+      "Binocular vision testing",
+      "Sensory testing for depth perception",
+    ],
+    treatment: [
+      "Glasses with prism correction",
+      "Vision therapy and exercises",
+      "Botulinum toxin injection for select cases",
+      "Squint surgery for permanent correction",
+      "Combined treatment approaches",
+    ],
+    faqs: [
+      {
+        q: "Can squint be corrected in adults?",
+        a: "Yes, squint surgery can improve alignment at any age. While binocular vision benefits are best when treated young, cosmetic improvement is achievable in adults.",
+      },
+      {
+        q: "Is squint surgery safe?",
+        a: "Yes, it's a common and safe procedure. Risks are minimal and complications are rare.",
+      },
+      {
+        q: "Will my child need glasses after squint surgery?",
+        a: "Possibly. Surgery corrects alignment but doesn't change refractive error. Many children still need glasses for clear vision.",
+      },
+      {
+        q: "Can squint come back after surgery?",
+        a: "In some cases, yes. Additional surgery or other treatments may be needed for optimal results.",
+      },
+    ],
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
