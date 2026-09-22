@@ -1,9 +1,10 @@
 "use client"
 
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
 import { createPortal } from "react-dom"
-import { CalendarDays, Check, CheckCircle2, ChevronDown } from "lucide-react"
+import { CalendarDays, Check, ChevronDown } from "lucide-react"
 import { DOCTORS } from "@/lib/doctors-detailed-data"
 
 const LOCATIONS = [
@@ -172,14 +173,33 @@ function PremiumServiceSelect({
 }
 
 function HeroAppointmentForm() {
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
+  const router = useRouter()
+  const [status, setStatus] = useState<"idle" | "error">("idle")
   const [submitting, setSubmitting] = useState(false)
+  const [selectedLocation, setSelectedLocation] = useState("")
   const todayStr = new Date().toISOString().slice(0, 10)
+
+  // Only show doctors who practice at the chosen branch. Before a branch
+  // is picked, show everyone so the field isn't empty/confusing.
+  // Note: in doctors-detailed-data, the short branch name ("Kokapet" /
+  // "LB Nagar") is on `address`, not `location` (which holds the full
+  // hospital address string) — filter on `address` accordingly.
+  const filteredDoctors = selectedLocation
+    ? DOCTORS.filter((doctor) => doctor.address === selectedLocation)
+    : DOCTORS
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    // Capture the form element synchronously, before any `await`.
+    // React nulls out event.currentTarget once the synchronous part of the
+    // handler finishes, so using event.currentTarget after an `await` (as
+    // this used to do for `.reset()`) throws a TypeError once the fetch
+    // resolves — which was landing in the catch block and showing
+    // "Unable to submit right now" even though the submission had already
+    // succeeded on the server.
+    const form = event.currentTarget
     setSubmitting(true)
-    const values = new FormData(event.currentTarget)
+    const values = new FormData(form)
     const fullName = String(values.get("name") ?? "").trim()
     const [firstName, ...rest] = fullName.split(" ")
     const lastName = rest.join(" ")
@@ -204,32 +224,15 @@ function HeroAppointmentForm() {
       })
       const result = await response.json()
       if (!response.ok || !result.success) throw new Error("Submission failed")
-      setStatus("success")
-      event.currentTarget.reset()
+      form.reset()
+      setSelectedLocation("")
+      // Navigate to the thank-you page, passing the appointment id along
+      // so ThankYouPage can read it from searchParams and show it.
+      router.push(`/thankyou?id=${encodeURIComponent(result.id ?? "")}`)
     } catch {
       setStatus("error")
-    } finally {
       setSubmitting(false)
     }
-  }
-
-  if (status === "success") {
-    return (
-      <div className="flex flex-col items-center justify-center gap-3 rounded-2xl bg-emerald-50 px-6 py-10 text-center text-emerald-900">
-        <CheckCircle2 className="size-10 text-emerald-600" aria-hidden="true" />
-        <h3 className="text-lg font-bold">Request received</h3>
-        <p className="text-sm leading-6 text-emerald-800">
-          Thank you! Our care team will call you shortly to confirm your appointment.
-        </p>
-        <button
-          type="button"
-          onClick={() => setStatus("idle")}
-          className="mt-2 rounded-xl bg-[#253f92] px-5 py-2.5 text-sm font-semibold text-white"
-        >
-          Book another appointment
-        </button>
-      </div>
-    )
   }
 
   return (
@@ -270,7 +273,8 @@ function HeroAppointmentForm() {
       <select
         required
         name="location"
-        defaultValue=""
+        value={selectedLocation}
+        onChange={(event) => setSelectedLocation(event.target.value)}
         className="w-full appearance-none rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-800 focus:border-[#3B2E8C] focus:outline-none focus:ring-2 focus:ring-[#3B2E8C]/15"
       >
         <option value="" disabled>
@@ -288,6 +292,7 @@ function HeroAppointmentForm() {
 
       <select
         name="doctor"
+        key={selectedLocation}
         defaultValue=""
         className="w-full appearance-none rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-800 focus:border-[#3B2E8C] focus:outline-none focus:ring-2 focus:ring-[#3B2E8C]/15"
       >
@@ -295,7 +300,7 @@ function HeroAppointmentForm() {
           Choose Doctor
         </option>
         <option value="No preference">No preference</option>
-        {DOCTORS.map((doctor) => (
+        {filteredDoctors.map((doctor) => (
           <option key={doctor.slug} value={doctor.name}>
             {doctor.name}
           </option>
