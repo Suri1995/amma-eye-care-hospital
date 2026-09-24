@@ -83,7 +83,7 @@ export function Footer() {
 
               {/* Instagram */}
               <a
-                href="https://www.instagram.com/ammaeyecarehospital/"
+                href="https://www.instagram.com/ammaeyecarehospital_kokapet"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our Instagram profile"
